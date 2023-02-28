@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package powerhouse
+ * @package tindillelectric
  */
 
 get_header();

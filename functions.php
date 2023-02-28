@@ -1,10 +1,10 @@
 <?php
 /**
- * powerhouse functions and definitions
+ * tindillelectric functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package powerhouse
+ * @package tindillelectric
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -19,14 +19,14 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function powerhouse_setup() {
+function tindillelectric_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on powerhouse, use a find and replace
-		* to change 'powerhouse' to the name of your theme in all the template files.
+		* If you're building a theme based on tindillelectric, use a find and replace
+		* to change 'tindillelectric' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'powerhouse', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'tindillelectric', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,7 +49,7 @@ function powerhouse_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'powerhouse' ),
+			'menu-1' => esc_html__( 'Primary', 'tindillelectric' ),
 		)
 	);
 
@@ -74,7 +74,7 @@ function powerhouse_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'powerhouse_custom_background_args',
+			'tindillelectric_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -100,7 +100,7 @@ function powerhouse_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'powerhouse_setup' );
+add_action( 'after_setup_theme', 'tindillelectric_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,22 +109,22 @@ add_action( 'after_setup_theme', 'powerhouse_setup' );
  *
  * @global int $content_width
  */
-function powerhouse_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'powerhouse_content_width', 640 );
+function tindillelectric_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'tindillelectric_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'powerhouse_content_width', 0 );
+add_action( 'after_setup_theme', 'tindillelectric_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function powerhouse_widgets_init() {
+function tindillelectric_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'powerhouse' ),
+			'name'          => esc_html__( 'Sidebar', 'tindillelectric' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'powerhouse' ),
+			'description'   => esc_html__( 'Add widgets here.', 'tindillelectric' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -132,22 +132,22 @@ function powerhouse_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'powerhouse_widgets_init' );
+add_action( 'widgets_init', 'tindillelectric_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function powerhouse_scripts() {
-	wp_enqueue_style( 'powerhouse-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'powerhouse-style', 'rtl', 'replace' );
+function tindillelectric_scripts() {
+	wp_enqueue_style( 'tindillelectric-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'tindillelectric-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'powerhouse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tindillelectric-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'powerhouse_scripts' );
+add_action( 'wp_enqueue_scripts', 'tindillelectric_scripts' );
 
 /**
  * Implement the Custom Header feature.
