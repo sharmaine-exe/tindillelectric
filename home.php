@@ -16,10 +16,6 @@ get_header();
 
 <main>
 
-    <div>
-        <?php wp_tag_cloud(); ?>
-    </div>
-</main>
 
 <div class="flex-container"> 
     <div>
@@ -33,5 +29,6 @@ get_header();
     </div>
 
 </div>
+</main>
 
 <?php get_footer(); ?>
