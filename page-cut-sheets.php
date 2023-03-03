@@ -18,16 +18,23 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-		endwhile; // End of the loop.
+            $args = array(
+                'post_type'      => 'cut-sheets',
+                'posts_per_page' => 25,
+                'order' => 'ASC'
+            );
+            $loop = new WP_Query($args);
+            while ( $loop->have_posts() ) {
+                $loop->the_post();
+            
+                get_template_part('template-parts/content', 'cut-sheets');
+                
+            }
 		?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();
+
