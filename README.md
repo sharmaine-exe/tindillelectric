@@ -1,61 +1,80 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# Tindill Electric 
+## Capstone Project for DMIT2590 Winter 2023
 
-_s
-===
+## Members:
+1. Marjorie Ann Jayme
+2. Munish Munish
+3. Sharmaine Jesm Santos
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+# Project Scope
+** Custom theme for WP site: tindillelectric **
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+### Site Pages
+1. Home
+2. Services
+3. Projects
+4. Single-Service
+5. About Us
+6. Contact Us
+7. Cut Sheets (and Login)
 
-* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
-Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+# Page templates
+(Provided by underscores.me)
 
-Installation
----------------
+Split between team members:
+## Munish:
+1. functions.php
+2. style.css (for header and footer)
+3. index.php
+4. header.php
+5. footer.php 
+6. page-services.php (custom)
+7. single-service.php (custom)
+8. page-projects.php (custom)
+9. single-projects.php (custom)
+## Marjorie:
+10. page.php
+11. single.php
+12. 404.php
+13. front-page.php (custom)
+14. page-about-us.php (custom)
+15. style.css
+## Sharmaine:
+16. search.php
+17. archive.php
+18. category.php
+19. page-contact-us.php (custom)
+20. page-cut-sheets.php (custom)
+21. single-cut-sheet.php (custom)
+22. login.php (for cut sheets)
 
-### Requirements
+# Plugins 
+1. Custom Post types
+2. Advanced Custom Fields
+3. Contact 7 Form
+4. Yoast (SEO)
+5. Wordfence (Security)
+6. Lightbox (Gallery)
+7. WP Optimize (Image optimizer)
+8. All-in-one-migration
 
-`_s` requires the following dependencies:
+# Project Phases
+### Week 1: Team Branding
+### Week 2: Initial Client Set Up + Questionnaire
+### Week 3: Initial Project resrach (platform)
+### Week 3: Secondary Project Research (Plugin, Content, Design)
+### Week 4: Design Sprint 
+### Week 5: Prototyping Low-Fidelity Wireframes, Mood Board, and Content Writing
+### Week 6: Prototyping High-Fidelity Wireframes
+### Week 7-11: Development
+### Week 12: SEO and Testing
+### Week 13: Migration
 
-- [Node.js](https://nodejs.org/)
-- [Composer](https://getcomposer.org/)
 
-### Quick Start
-
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
-
-### Setup
-
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
-
-```sh
-$ composer install
-$ npm install
-```
-
-### Available CLI commands
-
-`_s` comes packed with CLI commands tailored for WordPress theme development :
-
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
-- `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `npm run compile:css` : compiles SASS files to css.
-- `npm run compile:rtl` : generates an RTL stylesheet.
-- `npm run watch` : watches all SASS files and recompiles them to css when they change.
-- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
-- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
-
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+# Development Phase: Five Weeks
+### Week 1:  Fallback pages
+### Week 1 & 2:  Content (backend with ACF/CPT) ; Images
+### Week 2: Custom pages and its template parts; Styling
+### Week 3:  Cut Sheets and functionality; Styling
+### Week 4: Review, Testing
+### Week 5: SEO and Migration
