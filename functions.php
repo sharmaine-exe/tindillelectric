@@ -138,11 +138,13 @@ add_action( 'widgets_init', 'tindillelectric_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tindillelectric_scripts() {
-	// wp_enqueue_style( 'tindillelectric-style', get_stylesheet_uri(), array(), _S_VERSION );
-	// wp_style_add_data( 'tindillelectric-style', 'rtl', 'replace' );
-
-    wp_enqueue_style( 'tindillelectric-style-rtl', get_template_directory_uri() . '/css/style-rtl.css', false, '1.1', 'all');
     wp_enqueue_style( 'tindillelectric-style', get_template_directory_uri() . '/css/style.css', false, '1.1', 'all');
+
+    // google fonts
+    wp_enqueue_style( 'font-space-grotesk', 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap', false );
+
+    wp_enqueue_style( 'font-questrial', 'https://fonts.googleapis.com/css2?family=Questrial&display=swap', false );
+
 
 	wp_enqueue_script( 'tindillelectric-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
