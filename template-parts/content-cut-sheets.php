@@ -17,7 +17,20 @@
 	<?php tindillelectric_post_thumbnail(); ?>
 
 	<div class="entry-content">
+		<?php the_content(); ?>
 
+		<!-- 
+			Removed ACF for better viewing. 
+			With ACF, each cut sheet page will only display the link to view/download it.
+			There will be another link to get directed to the website.
+
+			Added a PDF Embedder instead to simply display the_content() as is, 
+			and will embed to display it on the single cut sheet page itself.
+			Note: If user wants to add a cut sheet in the future, the shortcode is pretty easy:
+
+			[pdf-embedder url="https://example.com/attachmtn1.pdf"]
+
+		-->
 		<?php 
 			$file = get_field('cut_sheet_file'); 
 			if($file):
@@ -49,12 +62,13 @@
 					</div>
 				<?php endif; ?>
 			<?php endif; ?> 
-				<h4 class="">
+
+				<p class="">
 					View / Download
 					<a href="<?php echo $file['url']; ?>">
 						<?php echo $file['filename']; ?>
 					</a>
-				</h4>
+				</p>
 
 			
 			
