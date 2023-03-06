@@ -56,10 +56,9 @@
     <a href="<?php the_permalink();?>">
         <?php the_title('<h3>','</h3>'); ?>
     </a>
-    <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
 
     <!-- advanced custom fields -->
     <?php the_field('description'); ?> 
     
-    <?php the_excerpt(); ?>
+    <?php the_category(); ?>
 </div>
