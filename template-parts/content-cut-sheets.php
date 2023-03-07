@@ -17,17 +17,70 @@
 	<?php tindillelectric_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<?php  ?>
-        <a href="<?php the_permalink();?>">
-            <?php the_field('title'); ?>
-        </a>
+		<?php the_content(); ?>
 
-        <?php the_field('cut_sheet_file'); ?> 
+		<!-- 
+			Removed ACF file type for better viewing. 
+			With ACF, each cut sheet page will only display the link to view/download it.
+			There will be another link to get directed to the website.
+
+			Added a PDF Embedder instead to simply display the_content() as is, 
+			and will embed to display it on the single cut sheet page itself.
+			Note: If user wants to add a cut sheet in the future, the shortcode is pretty easy:
+
+			[pdf-embedder url="https://example.com/attachmtn1.pdf"]
+
+		-->
+		<?php 
+			$file = get_field('cut_sheet_file'); 
+			if($file):
+
+				// Extract variables.
+				$url = $file['url'];
+				$title = $file['title'];
+				$caption = $file['caption'];
+				$icon = $file['icon'];
+
+				// Display image thumbnail when possible.
+				if( $file['type'] == 'image' ) {
+					$icon =  $file['sizes']['thumbnail'];
+				}
+
+				// Begin caption wrap.
+				if( $caption ): ?>
+					<div class="wp-caption">
+				<?php endif; ?>
+			
+				<a href="<?php echo esc_attr($url); ?>" title="<?php echo esc_attr($title); ?>">
+					<img src="<?php echo esc_attr($icon); ?>" />
+				</a>
+			
+				<?php 
+				// End caption wrap.
+				if( $caption ): ?>
+					<p class="wp-caption-text"><?php echo esc_html($caption); ?></p>
+					</div>
+				<?php endif; ?>
+			<?php endif; ?> 
+
+				<p class="">
+					View / Download
+					<a href="<?php echo $file['url']; ?>">
+						<?php echo $file['filename']; ?>
+					</a>
+				</p>
+
+			
+			
+
 
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
+			<div class="cut-sheet-cat-single">
+				<p>Category: <?php the_category(); ?></p>
+			</div>
 			<?php
 			edit_post_link(
 				sprintf(
@@ -50,15 +103,3 @@
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
 
-
-
-<div class="entry-content">
-    <a href="<?php the_permalink();?>">
-        <?php the_title('<h3>','</h3>'); ?>
-    </a>
-
-    <!-- advanced custom fields -->
-    <?php the_field('description'); ?> 
-    
-    <?php the_category(); ?>
-</div>
