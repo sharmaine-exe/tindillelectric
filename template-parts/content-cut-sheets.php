@@ -20,7 +20,7 @@
 		<?php the_content(); ?>
 
 		<!-- 
-			Removed ACF for better viewing. 
+			Removed ACF file type for better viewing. 
 			With ACF, each cut sheet page will only display the link to view/download it.
 			There will be another link to get directed to the website.
 
