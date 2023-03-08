@@ -79,7 +79,7 @@
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<div class="cut-sheet-cat-single">
-				<p>Category: <?php the_category(); ?></p>
+				<?php the_terms( $post->ID, 'cut-sheet-category', 'Category: ', '/ ' ) ?> 
 			</div>
 			<?php
 			edit_post_link(
