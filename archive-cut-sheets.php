@@ -23,13 +23,8 @@ get_header();
 
 			<?php
 			/* Start the Loop */
-            $args = array(
-                'post_type'      => 'cut-sheets'
-            );
 
-            $loop = new WP_Query($args);
-
-			while ( have_posts() ) :
+			while ( have_posts() ) : 
 				the_post();
 
 				get_template_part( 'template-parts/content', 'cut-sheets' );
