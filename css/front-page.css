@@ -23,6 +23,61 @@
     margin-top: 3.6rem;
 }
 
+
+/* ----------------- Featured Projects ----------------- */
+
+
+
+
+
+
+
+
+
+
+/* ----------------- Why Tindill ----------------- */
+.why-tindill {
+    background: #f6fffd;
+}
+
+.why-tindill .container>.d-flex {
+    gap: 8rem;
+}
+
+.wt-left,
+.wt-right {
+    flex: 1;
+}
+
+.wt-left>p {
+    margin-bottom: 3rem;
+}
+
+.wt-item {
+    margin-bottom: 1.8rem;
+}
+
+.wt-item.d-flex {
+    justify-content: start;
+    gap: 1.8rem;
+}
+
+.wt-item svg {
+    width: 4rem;
+}
+
+.wt-item svg {
+    color: var(--color-teal-3);
+}
+
+.wt-item h6 {
+    color: var(--color-teal-2);
+    margin-bottom: 0.25rem;
+}
+
+
+
+
 @media screen and (min-width: 768px) {
     .banner-content {
         width: 75%;
