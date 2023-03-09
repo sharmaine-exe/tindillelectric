@@ -41,7 +41,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
     /* Fonts */
     --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Questrial', sans-serif;
+    --font-body: 'Arial', sans-serif;
 }
 
 *,
@@ -71,7 +71,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    margin-bottom: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -98,6 +98,10 @@ h6 {
     font-size: 1.8rem;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
 
 button,
 input,
@@ -112,6 +116,10 @@ a {
     display: inline-block;
     text-decoration: none;
     color: var(--color-heading);
+}
+
+img {
+    width: 100%;
 }
 
 /* Utility Classes */
