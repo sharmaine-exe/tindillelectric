@@ -18,7 +18,6 @@
         <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
         <div class="entry-content">
             <?php the_excerpt(); ?>
-            
         </div>
     </main>
 </article>

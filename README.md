@@ -46,7 +46,9 @@ Split between team members:
 19. page-contact-us.php (custom)
 20. page-cut-sheets.php (custom)
 21. single-cut-sheet.php (custom)
-22. login.php (for cut sheets)
+22. taxonomy.php (custom)
+23. archive-cut-sheets.php (custom)
+24. login.php (for cut sheets)
 
 # Plugins 
 1. Custom Post types
