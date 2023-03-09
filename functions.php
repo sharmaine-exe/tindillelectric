@@ -131,6 +131,16 @@ function tindillelectric_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar( 
+		array(
+		'name'          => 'footer widgets',
+		'id'            => 'footer_widgets',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2">',
+		'after_title'   => '</h2>',
+	));
 }
 add_action( 'widgets_init', 'tindillelectric_widgets_init' );
 
