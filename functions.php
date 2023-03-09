@@ -137,6 +137,14 @@ add_action( 'widgets_init', 'tindillelectric_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+ function mytheme_scripts() {
+	wp_enqueue_script( 'mytheme-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_style( 'mytheme-styles', get_template_directory_uri() . '/css/styles.css', array(), '1.0', 'all' );
+  }
+  add_action( 'wp_enqueue_scripts', 'mytheme_scripts' );
+
+  
 function tindillelectric_scripts() {
     wp_enqueue_style( 'tindillelectric-style', get_template_directory_uri() . '/css/style.css', false, '1.1', 'all');
 
