@@ -162,6 +162,7 @@ function tindillelectric_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tindillelectric_scripts' );
 
+
 /**
  * Implement the Custom Header feature.
  */
