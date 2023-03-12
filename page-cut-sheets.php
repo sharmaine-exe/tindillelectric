@@ -18,15 +18,18 @@ get_header();
 	<main id="primary" class="site-main">
         <div class="cut-sheet-functions">
             <?php get_search_form(); ?>
-            <select>
-                <?php 
-                    $terms = get_terms('cut-sheet-category');
-                    foreach($terms as $term):
-                        echo '<option value="' . $term->name . '">' . $term->name . '</option>';
-                    endforeach;
-                
-                ?>
-            </select>
+            <form class="terms-dropdown" n>
+                <select>
+                    <?php 
+                        $terms = get_terms('cut-sheet-category');
+                        foreach($terms as $term):
+                            echo '<option value="' . $term->name . '">' . $term->name . '</option>';
+                        endforeach;
+                    
+                    ?>
+                </select>
+                <input type="submit" value="submit" class="hidden"/>
+            </form>
         </div>
 
         <?php
