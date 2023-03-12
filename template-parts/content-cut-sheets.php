@@ -17,6 +17,7 @@
 	<?php tindillelectric_post_thumbnail(); ?>
 
 	<div class="entry-content">
+	
 		<?php the_content(); ?>
 
 		<!-- 
@@ -28,7 +29,7 @@
 			and will embed to display it on the single cut sheet page itself.
 			Note: If user wants to add a cut sheet in the future, the shortcode is pretty easy:
 
-			[pdf-embedder url="https://example.com/attachmtn1.pdf"]
+			[pdf-embedder url="https://example.com/attachment1.pdf"]
 
 		-->
 		<?php 
