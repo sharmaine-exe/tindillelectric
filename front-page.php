@@ -159,4 +159,8 @@
 
 </main>
 
+<aside class="contact-cta">
+    <?php dynamic_sidebar('contact_cta'); ?>
+</aside>
+
 <?php get_footer(); ?>
