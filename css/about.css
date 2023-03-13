@@ -1,0 +1,97 @@
+/* Temporary Slider Styles (just so we can see it work) */
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-slides {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 500px;
+    width: 500px;
+}
+
+.slider-slides li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-slides li.active {
+    opacity: 1;
+}
+
+.slider-control {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 999;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-out;
+}
+
+.slider-prev {
+    left: 0;
+}
+
+.slider-next {
+    right: 0;
+}
+
+.slider-bullets {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% calc(100% + 25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.slider-bullets li button {
+    background: transparent;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.slider-bullets li button:hover {
+    background: #000;
+}
+
+.slider-bullets li.active button {
+    background: #000;
+}
