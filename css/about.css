@@ -66,22 +66,18 @@
 .slider-bullets {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    translate: -50% calc(100% + 25px);
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .slider-bullets li button {
     background: transparent;
-    border: 1px solid black;
-    width: 20px;
-    height: 20px;
+    border: 0.1rem solid black;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;

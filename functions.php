@@ -132,6 +132,16 @@ function tindillelectric_widgets_init() {
 		)
 	);
 
+    register_sidebar( array(
+		'name'          => 'Contact CTA',
+		'id'            => 'contact_cta',
+		'before_widget' => '<div class="contact_cta">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+    
+
 	register_sidebar( 
 		array(
 		'name'          => 'footer widgets',
