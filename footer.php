@@ -15,16 +15,18 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tindillelectric' ) ); ?>">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				// printf( esc_html__( 'Proudly powered by %s', 'tindillelectric' ), 'WordPress' );
+				    the_custom_logo();
 				?>
 			</a>
-			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				// printf( esc_html__( 'Theme: %1$s by %2$s.', 'tindillelectric' ), 'tindillelectric', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
+
+		<?php
+			dynamic_sidebar('footer_widgets');
+		?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
