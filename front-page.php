@@ -123,7 +123,7 @@
                 </div>
 
                 <div class="wt-right">
-                    <img src="https://mjayme1.dmitstudent.ca/dmit2032/powerhouse/wp-content/uploads/2023/03/1-e1678223683793.png" alt="A man doing the electrical wirings.">
+                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-img.jpg" alt="A man doing the electrical wirings.">
                 </div>
             </div>
         </div>
