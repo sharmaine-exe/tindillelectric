@@ -1,0 +1,26 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"sass/style.scss",
+		"sass/abstracts/_mixins.scss",
+		"sass/abstracts/_variables.scss",
+		"sass/base/_base.scss",
+		"sass/base/_typography.scss",
+		"sass/base/_utilities.scss",
+		"sass/components/_button.scss",
+		"sass/components/_form.scss",
+		"sass/layout/_footer.scss",
+		"sass/layout/_grid.scss",
+		"sass/layout/_header.scss",
+		"sass/pages/_home.scss",
+		"sass/pages/_about.scss",
+		"sass/pages/_services.scss",
+		"sass/pages/_projects.scss",
+		"sass/pages/_contact.scss",
+		"sass/pages/_confirmation.scss",
+		"sass/pages/_cutsheets.scss"
+	],
+	"names": [],
+	"mappings": "AAAA;;;;;;;;;;;;;;EAcE"
+}
