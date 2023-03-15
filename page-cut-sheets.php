@@ -18,7 +18,7 @@ get_header();
 	<main id="primary" class="site-main">
         <div class="cut-sheet-functions">
             <?php get_search_form(); ?>
-            <form class="terms-dropdown" n>
+            <form class="terms-dropdown">
                 <select>
                     <?php 
                         $terms = get_terms('cut-sheet-category');
