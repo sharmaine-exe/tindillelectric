@@ -20,7 +20,7 @@
 	
 		<?php //the_content(); ?>  
 		<!-- we do not need the embedder here, just icons are enough -->
-		
+
 		<!-- 
 			Removed ACF file type for better viewing. 
 			With ACF, each cut sheet page will only display the link to view/download it.
@@ -65,12 +65,12 @@
 				<?php endif; ?>
 			<?php endif; ?> 
 
-				<p class="">
+				<!-- <p class="">
 					View / Download
-					<a href="<?php echo $file['url']; ?>">
-						<?php echo $file['filename']; ?>
+					<a href="<?php // echo $file['url']; ?>">
+						<?php // echo $file['filename']; ?>
 					</a>
-				</p>
+				</p> -->
 
 			
 			
@@ -80,9 +80,9 @@
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
-			<div class="cut-sheet-cat-single">
-				<?php the_terms( $post->ID, 'cut-sheet-category', 'Category: ', '/ ' ) ?> 
-			</div>
+			<!-- <div class="cut-sheet-cat-single">
+				<?php // the_terms( $post->ID, 'cut-sheet-category', 'Category: ', '/ ' ) ?> 
+			</div> -->
 			<?php
 			edit_post_link(
 				sprintf(
