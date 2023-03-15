@@ -14,6 +14,19 @@
 
 get_header();
 ?>
+    <!-- the banner -->
+    <div class="banner-container">
+        <h1 class="banner-heading"><?php the_title(); ?></h1>
+        
+        <!-- use which applies -->
+        <div class="banner-content">
+            <h3 class="banner-subheading"></h3>
+            <div class="banner-cta"></div>
+        </div>
+
+
+
+    </div>
 
 	<main id="primary" class="site-main">
         <div class="cut-sheet-functions">
@@ -31,23 +44,25 @@ get_header();
                 <input type="submit" value="submit" class="hidden"/>
             </form>
         </div>
+        
+        <div class="cut-sheet-grid-container">
+            <?php
+                // loop
+                $args = array(
+                    'post_type'      => 'cut-sheets',
+                    'posts_per_page' => 25,
+                    'order' => 'ASC'
+                );
+                $loop = new WP_Query($args);
 
-        <?php
-            // loop
-            $args = array(
-                'post_type'      => 'cut-sheets',
-                'posts_per_page' => 25,
-                'order' => 'ASC'
-            );
-            $loop = new WP_Query($args);
-
-            while ( $loop->have_posts() ) {
-                $loop->the_post();
-            
-                get_template_part('template-parts/content', 'cut-sheets');
+                while ( $loop->have_posts() ) {
+                    $loop->the_post();
                 
-            }
-		?>
+                    get_template_part('template-parts/content', 'cut-sheets');
+                    
+                }
+            ?>
+        </div>
 
 	</main><!-- #main -->
 
