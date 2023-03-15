@@ -18,8 +18,9 @@
 
 	<div class="entry-content">
 	
-		<?php the_content(); ?>
-
+		<?php //the_content(); ?>  
+		<!-- we do not need the embedder here, just icons are enough -->
+		
 		<!-- 
 			Removed ACF file type for better viewing. 
 			With ACF, each cut sheet page will only display the link to view/download it.
