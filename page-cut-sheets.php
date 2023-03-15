@@ -31,23 +31,25 @@ get_header();
                 <input type="submit" value="submit" class="hidden"/>
             </form>
         </div>
+        
+        <div class="cut-sheet-grid-container">
+            <?php
+                // loop
+                $args = array(
+                    'post_type'      => 'cut-sheets',
+                    'posts_per_page' => 25,
+                    'order' => 'ASC'
+                );
+                $loop = new WP_Query($args);
 
-        <?php
-            // loop
-            $args = array(
-                'post_type'      => 'cut-sheets',
-                'posts_per_page' => 25,
-                'order' => 'ASC'
-            );
-            $loop = new WP_Query($args);
-
-            while ( $loop->have_posts() ) {
-                $loop->the_post();
-            
-                get_template_part('template-parts/content', 'cut-sheets');
+                while ( $loop->have_posts() ) {
+                    $loop->the_post();
                 
-            }
-		?>
+                    get_template_part('template-parts/content', 'cut-sheets');
+                    
+                }
+            ?>
+        </div>
 
 	</main><!-- #main -->
 
