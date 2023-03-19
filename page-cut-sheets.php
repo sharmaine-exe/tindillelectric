@@ -23,9 +23,6 @@ get_header();
             <h3 class="banner-subheading"></h3>
             <div class="banner-cta"></div>
         </div>
-
-
-
     </div>
 
 	<main id="primary" class="site-main">

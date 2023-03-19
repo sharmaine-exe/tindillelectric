@@ -177,6 +177,11 @@ function tindillelectric_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tindillelectric_scripts' );
 
+add_filter( 'wpmem_login_form_defaults', function( $args ) {
+    $args['heading'] = "Hello there. Please log in to view the cut sheets.";
+    return $args;
+});
+
 
 /**
  * Implement the Custom Header feature.
