@@ -14,6 +14,8 @@
 
 get_header();
 ?>
+
+
     <!-- the banner -->
     <div class="banner-container">
         <h1 class="banner-heading"><?php the_title(); ?></h1>
@@ -32,18 +34,26 @@ get_header();
 	<main id="primary" class="site-main">
         <div class="cut-sheet-functions">
             <?php get_search_form(); ?>
-            <form class="terms-dropdown">
-                <select>
+            <form class="terms-dropdown" name="csCatForm">
+                <select onchange="selectCat();" name="cs-cat-select" id="csCat">
                     <?php 
                         $terms = get_terms('cut-sheet-category');
                         foreach($terms as $term):
-                            echo '<option value="' . $term->name . '">' . $term->name . '</option>';
+                            echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
                         endforeach;
                     
                     ?>
                 </select>
                 <input type="submit" value="submit" class="hidden"/>
             </form>
+
+            <script type="text/javascript">
+                function selectCat(){
+                    var cat = document.getElementById('csCat').value;
+                    console.log(cat);
+                    console.log("https://tindill.web.dmitcapstone.ca/cut-sheet-category/" + cat);
+                }
+            </script>
         </div>
         
         <div class="cut-sheet-grid-container cut-sheet-flex">
