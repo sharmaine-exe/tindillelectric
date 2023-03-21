@@ -46,7 +46,7 @@ get_header();
             </form>
         </div>
         
-        <div class="cut-sheet-grid-container">
+        <div class="cut-sheet-grid-container cut-sheet-flex">
             <?php
                 // loop
                 $args = array(
