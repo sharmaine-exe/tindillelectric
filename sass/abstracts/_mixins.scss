@@ -1,0 +1,33 @@
+@mixin alignCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// MEDIA QUERY MANAGER
+/*
+$breakpoint arguement choices:
+- medium
+- large
+
+1rem = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint ==medium {
+        @media only screen and (min-width: 62rem) {
+            @content
+        }
+
+        ; //992px
+    }
+
+    @if $breakpoint ==large {
+        @media only screen and (min-width: 75rem) {
+            @content
+        }
+
+        ; //1200px
+    }
+}

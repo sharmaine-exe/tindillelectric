@@ -1,0 +1,13 @@
+.banner {
+
+    &--home {
+        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
+        min-height: 90vh;
+        // TODO: Adjust vh based on header height 
+        background-size: cover;
+        background-position: 60% 0;
+        @include alignCenter;
+        flex-direction: column;
+        align-items: start;
+    }
+}

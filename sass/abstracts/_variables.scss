@@ -1,0 +1,36 @@
+// COLORS
+$color-primary: #F2A024;
+$color-primary-light: #FFBD59;
+$color-primary-dark: #E68B00;
+
+$color-secondary: #3C6677;
+$color-secondary-light: #568091;
+$color-secondary-light-bg: #f3fffc;
+$color-secondary-dark: #022731;
+
+$color-grey-1: #D3D3D5;
+$color-grey-2: #414042;
+$color-grey-3: #252525;
+
+$color-white: #fff;
+$color-black: #000;
+
+// BACKGROUND COLORS
+$bg-banner: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+
+
+// FONT
+$default-font-size: 1.6rem;
+
+@include respond(medium) {
+    $default-font-size: 1.8rem;
+}
+
+$font-heading: 'Space Grotesk', sans-serif;
+$font-body: 'Arial', sans-serif;
+
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 2rem;
+$gutter-horizontal: 6rem;

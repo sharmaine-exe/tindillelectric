@@ -1,7 +1,6 @@
-<li>
-    <p><?php the_field('reviewer'); ?></p>
-    <p><?php the_field('testimonial'); ?></p>
-    <p class="rating mt-2 mb-0">
+<li class="slider-item">
+    <div class="comment"><?php the_field('testimonial'); ?></div>
+    <div class="rating">
         <?php
             $rating = get_field('rating'); // Replace 'rating' with the name of your ACF field
             $stars = '';
@@ -27,6 +26,6 @@
         ?>
 
         <p><?php echo $stars; ?></p>
-    </p>
-    <p><?php the_field('date_reviewed'); ?></p>
+    </div>
+    <div class="reviewer"><?php the_field('reviewer'); ?></div>
 </li>
