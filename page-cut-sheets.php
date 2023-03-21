@@ -17,11 +17,15 @@ get_header();
     <!-- the banner -->
     <div class="banner-container">
         <h1 class="banner-heading"><?php the_title(); ?></h1>
+        <!-- 
+            add bg as img for the bg overlay:
+                Commercial-2.jpg
+        -->
         
         <!-- use which applies -->
         <div class="banner-content">
-            <h3 class="banner-subheading"></h3>
-            <div class="banner-cta"></div>
+            <!-- <h3 class="banner-subheading"></h3> -->
+            <!-- <div class="banner-cta"></div> -->
         </div>
     </div>
 
