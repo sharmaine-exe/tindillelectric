@@ -15,7 +15,6 @@
 get_header();
 ?>
 
-
     <!-- the banner -->
     <div class="banner-container">
         <h1 class="banner-heading"><?php the_title(); ?></h1>
@@ -76,6 +75,7 @@ get_header();
         </div>
 
 	</main><!-- #main -->
+
 
 <?php
 
