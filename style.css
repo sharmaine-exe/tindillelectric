@@ -13,5 +13,321 @@ Text Domain: twentytwenty
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+/*
+$breakpoint arguement choices:
+- medium
+- large
+
+1rem = 16px
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: "Arial", sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #414042;
+}
+
+@media only screen and (min-width: 75rem) {
+	body {
+		font-size: 1.8rem;
+	}
+}
+
+.heading-primary {
+	color: #fff;
+	margin-bottom: 3.5rem;
+}
+
+.heading-primary--main {
+	font-size: 4.5rem;
+	font-weight: bold;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+@media only screen and (min-width: 62rem) {
+	.heading-primary--main {
+		font-size: 7rem;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
+	.heading-primary--main {
+		font-size: 9rem;
+	}
+}
+
+.heading-primary--sub {
+	display: block;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+@media only screen and (min-width: 62rem) {
+	.heading-primary--sub {
+		font-size: 2.4rem;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
+	.heading-primary--sub {
+		font-size: 2.8rem;
+	}
+}
+
+.heading-secondary {
+	color: #252525;
+	margin-bottom: 1rem;
+	font-size: 3rem;
+	font-weight: bold;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+@media only screen and (min-width: 62rem) {
+	.heading-secondary {
+		font-size: 4.5rem;
+	}
+}
+
+.heading-secondary--white {
+	color: #fff;
+}
+
+.heading-tertiary {
+	color: #252525;
+	margin-bottom: 0.5rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+@media only screen and (min-width: 62rem) {
+	.heading-tertiary {
+		font-size: 2rem;
+	}
+}
+
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+	padding: 6rem 2rem;
+}
+
+@media only screen and (min-width: 75rem) {
+	.container .container {
+		padding: 7rem 0;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.banner--home {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
+	min-height: 90vh;
+	background-size: cover;
+	background-position: 60% 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-items: start;
+}
+
+.btn, .btn:link, .btn:visited {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 1.25rem 3.5rem;
+	display: inline-block;
+	border-radius: 0.25rem;
+	font-size: 1.6rem;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:active, .btn:focus {
+	outline: none;
+}
+
+.btn--banner {
+	background-color: #FFBD59;
+	color: #252525;
+}
+
+.btn--content {
+	background-color: #F2A024;
+	color: #fff;
+	margin-top: 3rem;
+}
+
+.btn--white {
+	background-color: #fff;
+	color: #252525;
+}
+
+.btn-text:link, .btn-text:visited {
+	font-size: 1.6rem;
+	color: #3C6677;
+	display: inline-block;
+	text-decoration: none;
+	border-bottom: 0.1px solid #3C6677;
+	padding-bottom: 0.3rem;
+	transition: all .2s;
+}
+
+.btn-text:hover {
+	background-color: #022731;
+	color: #fff;
+	transform: translateY(-2px);
+}
+
+.why-tindill {
+	background-color: #f3fffc;
+	box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.why-tindill--inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.wt-right {
+	order: -1;
+	width: 100%;
+}
+
+.wt-right img {
+	height: 20rem;
+	object-fit: cover;
+	object-position: center;
+	margin-bottom: 2rem;
+	border-radius: 0.25rem;
+}
+
+.wt-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	margin: 2.5rem 0;
+}
+
+.wt-item .wt-icon svg {
+	width: 4.5rem;
+	color: #3C6677;
+}
+
+.wt-item .wt-content .heading-tertiary {
+	color: #3C6677;
+}
+
+.testimonials {
+	background: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg") center/cover no-repeat;
+}
+
+.testimonials-inner {
+	background-color: rgba(37, 38, 46, 0.85);
+}
+
+.testimonials .heading-secondary {
+	margin-bottom: 8rem;
+}
+
+.testimonials .quote-icon img {
+	width: 5rem;
+}
+
+.slider {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.slider .slider-slides {
+	position: relative;
+	height: 30rem;
+	width: 100%;
+	transition: transform 0.3s ease-in-out;
+}
+
+.slider .slider-slides .slider-item {
+	width: 100%;
+	margin-right: 30px;
+	position: absolute;
+	text-align: center;
+}
+
+.slider .slider-slides .slider-item p {
+	color: #D3D3D5;
+	font-style: italic;
+}
+
+.slider .slider-slides .slider-item .rating p {
+	color: #FFBD59;
+}
+
+.slider .slider-slides .slider-item .reviewer {
+	color: #D3D3D5;
+	font-family: "Space Grotesk", sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+}
+
+.slider .slider-slides .slider-item.active {
+	opacity: 1;
+}
+
+.slider .slider-slides .slider-item:not(.active) {
+	opacity: 0;
+}
+
+.slider .slider-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.slider .slider-controls .slider-control {
+	line-height: 0;
+}
+
+.slider .slider-controls .slider-control svg {
+	color: #D3D3D5;
+	cursor: pointer;
+	width: 2.5rem;
+}
+
+.slider .slider-controls .slider-control svg:hover {
+	color: #fff;
+}
+
+.slider .slider-controls .slider-labels span {
+	color: #D3D3D5;
+}
 
 /*# sourceMappingURL=style.css.map */

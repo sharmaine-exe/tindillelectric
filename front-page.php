@@ -15,13 +15,13 @@
 <main id="primary" class="site-main home">
 
     <!-- Banner -->
-    <section class="banner d-flex">
+    <section class="banner banner--home">
         <?php while ( have_posts() ) : the_post(); ?>
             <div class="container">
-                <div class="banner-content">
-                    <h1><?php the_field('banner_heading'); ?></h1>
-                    <p><?php the_field('banner_tagline'); ?></p>
-                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn-primary">See our Services</a>
+                <div>
+                    <h1 class="heading-primary heading-primary--main"><?php the_field('banner_heading'); ?></h1>
+                    <p class="heading-primary heading-primary--sub"><?php the_field('banner_tagline'); ?></p>
+                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn--banner">See our Services</a>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -31,16 +31,20 @@
 
     <!-- Featured Projects -->
     <section class="featured-projects">
-        <h3>Featured Projects</h3>
-        <p>
-            We have worked on multiple projects for the past year. With almost 15 years of experience, Tindill Electric will meet your electrical needs and make your unique projects come to life. 
-        </p>
-        
-        <div>
-            <!-- TODO: custom post type -->
-        </div>
+        <div class="container">
+            <h3 class="heading-secondary">Featured Projects</h3>
+            <p>
+                We have worked on multiple projects for the past year. With almost 15 years of experience, Tindill Electric will meet your electrical needs and make your unique projects come to life. 
+            </p>
+            
+            <div>
+                <!-- TODO: custom post type -->
+            </div>
 
-        <a href="<?php echo esc_url( home_url( '/projects' ) ); ?>">See All Projects</a>
+            <div class="text-center">
+                <a href="<?php echo esc_url( home_url( '/projects' ) ); ?>" class="btn btn--content">See All Projects</a>
+            </div>
+        </div>
     </section>
     <!-- End of Featured Projects -->
 
@@ -48,15 +52,15 @@
     <!-- Why Tindill Electric -->
     <section class="why-tindill">
         <div class="container">
-            <div class="d-flex">
+            <div class="why-tindill--inner">
                 <div class="wt-left">
-                    <h3>Why Tindill Electric?</h3>
+                    <h3 class="heading-secondary">Why Tindill Electric?</h3>
                     <p>
                         Tindill Electric gives you peace of mind as we handle each project like it’s our own. As an Albertan electrician for Albertans, the quality of work will always be our focus. 
                     </p>
 
                     <!-- Item 1 -->
-                    <div class="wt-item d-flex">
+                    <div class="wt-item">
                         <div class="wt-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-check" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -66,13 +70,13 @@
                         </div>
                         
                         <div class="wt-content">
-                            <h6>Quality of Work </h6>
+                            <h4 class="heading-tertiary">Quality of Work </h4>
                             <p>We assure to complete the job right and exceed expectations.</p>
                         </div>
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="wt-item d-flex">
+                    <div class="wt-item">
                         <div class="wt-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -82,13 +86,13 @@
                             </svg>  
                         </div>
                         <div class="wt-content">
-                            <h6>Exceptional Customer Service</h6>
+                            <h4 class="heading-tertiary">Exceptional Customer Service</h4>
                             <p>Dependability and reliability matter, so we are here to assist with your needs.</p>
                         </div>
                     </div>
 
                         <!-- Item 3 -->
-                    <div class="wt-item d-flex">
+                    <div class="wt-item">
                         <div class="wt-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-shield" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -98,13 +102,13 @@
                             </svg>
                         </div>
                         <div class="wt-content">
-                            <h6>Safety</h6>
+                            <h4 class="heading-tertiary">Safety</h4>
                             <p>Our top priority is safety and ensuring that everything is up to code. </p>
                         </div>
                     </div>
 
                         <!-- Item 4 -->
-                    <div class="wt-item d-flex">
+                    <div class="wt-item">
                         <div class="wt-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -114,12 +118,12 @@
                         </svg>  
                         </div>
                         <div class="wt-content">
-                            <h6>Expertise</h6>
+                            <h4 class="heading-tertiary">Expertise</h4>
                             <p>We have almost 15 years of knowledge to achieve the best version of your project. </p>
                         </div>
                     </div>
 
-                    <a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">Learn More</a>
+                    <a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>" class="btn btn--content">Learn More</a>
                 </div>
 
                 <div class="wt-right">
@@ -132,26 +136,51 @@
 
     
     <!-- Testimonials -->
-    <section class="testimonials">
-        <div>
-            <h4>What Our Clients Say</h4>
-            <div id="slider" class="slider">
-                <a href="javascript:void(0)" class="slider-control slider-prev">←</a>
-                <a href="javascript:void(0)" class="slider-control slider-next">→</a>
-                <ul class="slider-slides">
-                    
+    <section class="testimonials text-center">
+        <div class="testimonials-inner">
+            <div class="container">
+                <h3 class="heading-secondary heading-secondary--white">What Our Clients Say</h3>
+                <div class="quote-icon">
+                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/quote-left.svg" alt="Quote SVG">
+                </div>
+                <div id="slider" class="slider">
+                    <ul class="slider-slides">
                         <?php
                             $args = array(
                                 'post_type'      => 'testimonials',
                                 'posts_per_page' => 3,
                             );
                             $loop = new WP_Query($args);
+                            $count = 1;
                             while ( $loop->have_posts() ) {
                                 $loop->the_post();
-                                    get_template_part( 'template-parts/content', 'testimonials' );
+                                get_template_part( 'template-parts/content', 'testimonials' );
+                                $count++;
                             }
                         ?>
-                </ul>
+                    </ul>
+
+                    <div class="slider-controls">
+                        <a href="javascript:void(0)" class="slider-control slider-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M15 6l-6 6l6 6"></path>
+                            </svg>
+                        </a>
+
+                        <div class="slider-labels">
+                            <span id="slideNo"></span>
+                        </div>
+
+                        <a href="javascript:void(0)" class="slider-control slider-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9 6l6 6l-6 6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </section>
