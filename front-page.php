@@ -15,7 +15,7 @@
 <main id="primary" class="site-main home">
 
     <!-- Banner -->
-    <section class="banner banner--home">
+    <section class="banner banner-home">
         <?php while ( have_posts() ) : the_post(); ?>
             <div class="container">
                 <div>
@@ -123,7 +123,7 @@
                         </div>
                     </div>
 
-                    <a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>" class="btn btn--content">Learn More</a>
+                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="btn btn--content">Learn More</a>
                 </div>
 
                 <div class="wt-right">
@@ -188,7 +188,7 @@
 
 </main>
 
-<aside class="contact-cta">
+<aside>
     <?php dynamic_sidebar('contact_cta'); ?>
 </aside>
 
