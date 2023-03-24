@@ -43,7 +43,6 @@ get_header();
                     
                     ?>
                 </select>
-                <input type="submit" value="submit" class="hidden"/>
             </form>
 
             <script type="text/javascript">
