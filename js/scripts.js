@@ -7,7 +7,6 @@ jQuery(document).ready(function ($) {
 
 
 /* ------------- Testimonial Slider ------------- */
-/* Testimonial Slider */
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider-slides li");
 const slideCount = slides.length;
@@ -42,7 +41,7 @@ const createBullet = (index) => {
 
 const updateSlideNo = (number) => {
     const slideNo = document.querySelector("#slideNo");
-    slideNo.innerHTML = `Slide ${number} of ${slideCount}`;
+    slideNo.innerHTML = `Review ${number} of ${slideCount}`;
 };
 
 const startAutoSlide = () => {
@@ -81,3 +80,11 @@ updateSlideNo(1);
 
 // Start automatic sliding
 startAutoSlide();
+
+// See more button
+const link = document.getElementById('myLink');
+const modal = document.getElementById('myModal');
+const closeBtn = document.getElementsByClassName('close')[0];
+const modalParagraph = document.getElementById('modalParagraph');
+const paragraph = document.querySelector('myParagraph');
+

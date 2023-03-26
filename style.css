@@ -36,6 +36,10 @@ img {
 	width: 100%;
 }
 
+p {
+	margin-bottom: 1.8rem;
+}
+
 body {
 	font-size: 1.6rem;
 	font-family: "Arial", sans-serif;
@@ -139,16 +143,31 @@ body {
 	text-align: center;
 }
 
-.banner--home {
-	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
-	min-height: 90vh;
-	background-size: cover;
-	background-position: 60% 0;
+.banner {
+	background-size: cover !important;
+	background-position: 60% 0 !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.banner-home {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
+	min-height: 90vh;
 	flex-direction: column;
 	align-items: start;
+}
+
+.banner-title {
+	height: 25vh;
+}
+
+.banner-title h3.heading-primary {
+	margin-bottom: 0;
+}
+
+.banner-title--about {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-banner.jpg");
 }
 
 .btn, .btn:link, .btn:visited {
@@ -183,6 +202,14 @@ body {
 .btn--white {
 	background-color: #fff;
 	color: #252525;
+	display: block;
+}
+
+.btn--outline {
+	background-color: transparent;
+	color: #fff;
+	border: 0.2rem solid #fff;
+	display: block;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -199,6 +226,24 @@ body {
 	background-color: #022731;
 	color: #fff;
 	transform: translateY(-2px);
+}
+
+.contact_cta {
+	background-color: #F2A024;
+}
+
+.contact_cta p {
+	color: #fff;
+}
+
+.contact_cta .is-layout-flex {
+	flex-direction: column;
+}
+
+.contact_cta .wp-block-buttons > .wp-block-button {
+	display: block;
+	width: 100%;
+	text-align: center;
 }
 
 .why-tindill {
@@ -231,7 +276,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
-	margin: 2.5rem 0;
+	margin: 1rem 0 0;
 }
 
 .wt-item .wt-icon svg {
@@ -268,7 +313,7 @@ body {
 
 .slider .slider-slides {
 	position: relative;
-	height: 30rem;
+	height: 38rem;
 	width: 100%;
 	transition: transform 0.3s ease-in-out;
 }
@@ -295,6 +340,10 @@ body {
 	text-transform: uppercase;
 	font-weight: 500;
 	letter-spacing: 0.05rem;
+}
+
+.slider .slider-slides .slider-item .comment {
+	margin: 4rem 0;
 }
 
 .slider .slider-slides .slider-item.active {
@@ -328,6 +377,47 @@ body {
 
 .slider .slider-controls .slider-labels span {
 	color: #D3D3D5;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.close {
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.about .intro {
+	background-color: #f3fffc;
+}
+
+.about .intro {
+	background-color: #f3fffc;
 }
 
 /*# sourceMappingURL=style.css.map */
