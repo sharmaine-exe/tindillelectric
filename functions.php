@@ -177,11 +177,17 @@ function tindillelectric_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tindillelectric_scripts' );
 
-// to change the login heading
-add_filter( 'wpmem_login_form_defaults', function( $args ) {
-    $args['heading'] = "LOGIN";
-    return $args;
-});
+function search_template($template) {
+	global $wp_query;
+	$post_type = get_query_var('post_type');
+	
+	if( $wp_query->is_search && $post_type == 'cut-sheets' ){
+		return locate_template('cut-sheets-search.php'); // redirect to cut-sheets-search.php
+	}
+	
+	return $template;
+}
+add_filter('template_include', 'search_template');
 
 
 /**

@@ -32,26 +32,15 @@ get_header();
 
 	<main id="primary" class="site-main">
         <div class="cut-sheet-functions">
-            <?php get_search_form(); ?>
-            <form class="terms-dropdown" name="csCatForm">
-                <select onchange="selectCat();" name="cs-cat-select" id="csCat">
-                    <?php 
-                        $terms = get_terms('cut-sheet-category');
-                        foreach($terms as $term):
-                            echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
-                        endforeach;
-                    
-                    ?>
-                </select>
+            <!-- search form -->
+            <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+                <label>
+                    <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+                    <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search for ...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+                    <input type="hidden" name="post_type" value="cut-sheets" />
+                </label>
+                <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
             </form>
-
-            <script type="text/javascript">
-                function selectCat(){
-                    var cat = document.getElementById('csCat').value;
-                    console.log(cat);
-                    console.log("https://tindill.web.dmitcapstone.ca/cut-sheet-category/" + cat);
-                }
-            </script>
         </div>
         
         <div class="cut-sheet-grid-container cut-sheet-flex">
