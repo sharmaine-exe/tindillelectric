@@ -1,7 +1,6 @@
 <li class="slider-item">
     <div class="comment">
         <?php the_field('testimonial'); ?>
-        <!-- <a href="#" id="myLink">See more</a> -->
     </div>
     <div class="rating">
         <?php
@@ -33,5 +32,4 @@
     <div class="reviewer"><?php the_field('reviewer'); ?></div>
 </li>
 
-
-
+   

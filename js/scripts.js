@@ -6,6 +6,7 @@ jQuery(document).ready(function ($) {
 });
 
 
+
 /* ------------- Testimonial Slider ------------- */
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider-slides li");
@@ -80,11 +81,3 @@ updateSlideNo(1);
 
 // Start automatic sliding
 startAutoSlide();
-
-// See more button
-const link = document.getElementById('myLink');
-const modal = document.getElementById('myModal');
-const closeBtn = document.getElementsByClassName('close')[0];
-const modalParagraph = document.getElementById('modalParagraph');
-const paragraph = document.querySelector('myParagraph');
-

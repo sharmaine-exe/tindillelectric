@@ -21,7 +21,7 @@
                 <div>
                     <h1 class="heading-primary heading-primary--main"><?php the_field('banner_heading'); ?></h1>
                     <p class="heading-primary heading-primary--sub"><?php the_field('banner_tagline'); ?></p>
-                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn--banner">See our Services</a>
+                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn-banner">See our Services</a>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -42,7 +42,7 @@
             </div>
 
             <div class="text-center">
-                <a href="<?php echo esc_url( home_url( '/projects' ) ); ?>" class="btn btn--content">See All Projects</a>
+                <a href="<?php echo esc_url( home_url( '/projects' ) ); ?>" class="btn btn-content">See All Projects</a>
             </div>
         </div>
     </section>
@@ -123,7 +123,7 @@
                         </div>
                     </div>
 
-                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="btn btn--content">Learn More</a>
+                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="btn btn-content">Learn More</a>
                 </div>
 
                 <div class="wt-right">

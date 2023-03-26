@@ -7,14 +7,11 @@
         text-decoration: none;
         padding: 1.25rem 3.5rem;
         display: inline-block;
-        border-radius: 0.25rem;
+        border-radius: $border-radius;
         font-size: $default-font-size;
         font-family: $font-heading;
         font-weight: 500;
         letter-spacing: 0.05rem;
-
-        // Change for the <button> element
-        border: none;
         cursor: pointer;
     }
 
@@ -23,28 +20,35 @@
         outline: none;
     }
 
-    &--banner {
+    &-banner {
         background-color: $color-primary-light;
         color: $color-grey-3;
     }
 
-    &--content {
+    &-content {
         background-color: $color-primary;
         color: $color-white;
         margin-top: 3rem;
     }
 
-    &--white {
+    &-white {
         background-color: $color-white;
         color: $color-grey-3;
         display: block;
     }
 
-    &--outline {
+    &-white--outline {
         background-color: transparent;
         color: $color-white;
         border: 0.2rem solid $color-white;
         display: block;
+        width: 100%;
+    }
+
+    &-yellow--outline {
+        background-color: transparent;
+        color: $color-primary;
+        border: 0.2rem solid $color-primary;
     }
 }
 

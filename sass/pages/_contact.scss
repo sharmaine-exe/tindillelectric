@@ -1,0 +1,19 @@
+form {
+    margin-top: $gutter-horizontal;
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    input {
+        &.wpcf7-submit {
+            background-color: $color-primary;
+            color: $color-white;
+
+            &:focus {
+                border-color: none;
+            }
+        }
+    }
+
+}

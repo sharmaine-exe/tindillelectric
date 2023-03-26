@@ -27,10 +27,13 @@ $default-font-size: 1.6rem;
 }
 
 $font-heading: 'Space Grotesk', sans-serif;
-$font-body: 'Arial', sans-serif;
+$font-body: 'Helvetica Neue', 'Arial', sans-serif;
 
 
 // GRID
 $grid-width: 114rem;
 $gutter-vertical: 2rem;
 $gutter-horizontal: 6rem;
+
+// OTHERS
+$border-radius: 0.25rem;

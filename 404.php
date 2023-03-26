@@ -12,11 +12,11 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<section class="error-404 not-found text-center d-flex">
+		<section class="banner banner-404 error-404 not-found text-center d-flex">
             <div class="container">
                 <header class="page-header">
                     <p class="page-title">404</p>
-                    <p>Page Not Found</p>
+                    <p class="text-uppercase">Page Not Found</p>
                 </header>
 
                 <div class="page-content">
@@ -30,6 +30,11 @@ get_header();
 			
 		</section>
 	</main>
+
+    <script>
+        const input = document.querySelector('.search-form .search-submit');
+        input.classList.add('btn', 'btn-content');
+    </script>
 
 <?php
 get_footer();

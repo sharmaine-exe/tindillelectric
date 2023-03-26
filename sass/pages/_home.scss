@@ -19,7 +19,7 @@
         object-fit: cover;
         object-position: center;
         margin-bottom: 2rem;
-        border-radius: 0.25rem;
+        border-radius: $border-radius;
     }
 }
 
@@ -67,7 +67,7 @@
 
     .slider-slides {
         position: relative;
-        height: 38rem;
+        height: 45rem;
         width: 100%;
         transition: transform 0.3s ease-in-out;
 
@@ -96,6 +96,7 @@
 
             .comment {
                 margin: 4rem 0;
+                font-size: 1.4rem;
             }
 
             &.active {
@@ -132,38 +133,4 @@
             }
         }
     }
-}
-
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }

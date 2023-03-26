@@ -11,6 +11,14 @@
         align-items: start;
     }
 
+    &-404 {
+        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg");
+        min-height: 90vh;
+        // TODO: Adjust vh based on header height 
+        flex-direction: column;
+        align-items: start;
+    }
+
     &-title {
         height: 25vh;
 
@@ -20,6 +28,10 @@
 
         &--about {
             background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-banner.jpg");
+        }
+
+        &--contact {
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/contact-banner.jpg");
         }
     }
 }
