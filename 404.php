@@ -20,7 +20,7 @@ get_header();
                 </header>
 
                 <div class="page-content">
-                    <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'tindillelectric' ); ?></p>
+                    <p class="text-center"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'tindillelectric' ); ?></p>
 
                     <div class="search-form">
                         <?php get_search_form(); ?>

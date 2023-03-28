@@ -690,14 +690,18 @@ form .wpcf7-not-valid-tip {
 	color: rgba(255, 255, 255, 0.95);
 }
 
-.error-404 .page-title {
+.error-404 .page-header {
+	margin-top: -5rem;
+}
+
+.error-404 .page-header .page-title {
 	color: #F2A024;
 	font-family: "Space Grotesk", sans-serif;
-	font-size: clamp(15rem, 13vw, 18rem);
+	font-size: clamp(15rem, 13vw, 22rem);
 	font-weight: bold;
 }
 
-.error-404 .page-title + p {
+.error-404 .page-header .page-title + p {
 	font-family: "Space Grotesk", sans-serif;
 	font-size: clamp(3.5rem, 3vw, 5rem);
 	font-weight: bold;
@@ -705,15 +709,46 @@ form .wpcf7-not-valid-tip {
 }
 
 .error-404 .page-content p {
-	max-width: 60ch;
 	margin: 0 0 2.5rem;
 }
 
-.error-404 input[type="submit"] {
+@media only screen and (min-width: 50rem) {
+	.error-404 .page-content form.search-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-items: stretch;
+	}
+	.error-404 .page-content form.search-form label {
+		flex: 2;
+	}
+	.error-404 .page-content form.search-form label input {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
+	.error-404 .page-content form.search-form {
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+.error-404 .page-content form.search-form input[type="submit"] {
 	display: block;
 	width: 100%;
 	text-align: center;
 	margin-top: 0;
+}
+
+@media only screen and (min-width: 50rem) {
+	.error-404 .page-content form.search-form input[type="submit"] {
+		display: inline-block;
+		width: unset;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */
