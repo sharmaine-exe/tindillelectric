@@ -4,11 +4,10 @@
     padding: 6rem 2rem;
 
     @include respond(large) {
-        .container {
-            padding: 7rem 0;
-        }
+        padding: 8rem 4rem;
     }
 }
+
 
 .text-center {
     text-align: center;

@@ -40,12 +40,21 @@ p {
 	margin-bottom: 1.8rem;
 }
 
+a {
+	text-decoration: none;
+	color: #4b4a4c;
+}
+
+ul {
+	list-style-type: none;
+}
+
 body {
 	font-size: 1.6rem;
 	font-family: "Helvetica Neue", "Arial", sans-serif;
 	font-weight: 400;
 	line-height: 1.5;
-	color: #414042;
+	color: #4b4a4c;
 }
 
 @media only screen and (min-width: 75rem) {
@@ -65,15 +74,17 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 50rem) {
 	.heading-primary--main {
 		font-size: 7rem;
+		width: 15ch;
 	}
 }
 
 @media only screen and (min-width: 75rem) {
 	.heading-primary--main {
-		font-size: 9rem;
+		font-size: 8rem;
+		line-height: 1.25;
 	}
 }
 
@@ -83,29 +94,23 @@ body {
 	font-weight: 400;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 50rem) {
 	.heading-primary--sub {
 		font-size: 2.4rem;
 	}
 }
 
-@media only screen and (min-width: 75rem) {
-	.heading-primary--sub {
-		font-size: 2.8rem;
-	}
-}
-
 .heading-secondary {
 	color: #252525;
-	margin-bottom: 1rem;
+	margin-bottom: 1.8rem;
 	font-size: 3rem;
 	font-weight: bold;
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 50rem) {
 	.heading-secondary {
-		font-size: 4.5rem;
+		font-size: 4rem;
 	}
 }
 
@@ -121,7 +126,7 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 75rem) {
 	.heading-tertiary {
 		font-size: 2rem;
 	}
@@ -134,8 +139,8 @@ body {
 }
 
 @media only screen and (min-width: 75rem) {
-	.container .container {
-		padding: 7rem 0;
+	.container {
+		padding: 8rem 4rem;
 	}
 }
 
@@ -149,7 +154,7 @@ body {
 
 .banner {
 	background-size: cover !important;
-	background-position: 60% 0 !important;
+	background-position: center !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -173,8 +178,20 @@ body {
 	height: 25vh;
 }
 
+@media only screen and (min-width: 75rem) {
+	.banner-title {
+		height: 32vh;
+	}
+}
+
 .banner-title h3.heading-primary {
 	margin-bottom: 0;
+}
+
+@media only screen and (min-width: 50rem) {
+	.banner-title h3.heading-primary {
+		font-size: 6rem;
+	}
 }
 
 .banner-title--about {
@@ -196,6 +213,7 @@ body {
 	font-weight: 500;
 	letter-spacing: 0.05rem;
 	cursor: pointer;
+	transition: all 200ms ease-in-out;
 }
 
 .btn:active, .btn:focus {
@@ -207,30 +225,40 @@ body {
 	color: #252525;
 }
 
+.btn-banner:hover {
+	background-color: #F2A024;
+}
+
 .btn-content {
 	background-color: #F2A024;
 	color: #fff;
 	margin-top: 3rem;
 }
 
+.btn-content:hover {
+	background-color: #EB8F05;
+}
+
 .btn-white {
 	background-color: #fff;
 	color: #252525;
-	display: block;
+	border: 0.2rem solid #fff;
 }
 
 .btn-white--outline {
 	background-color: transparent;
 	color: #fff;
 	border: 0.2rem solid #fff;
-	display: block;
-	width: 100%;
 }
 
 .btn-yellow--outline {
 	background-color: transparent;
 	color: #F2A024;
 	border: 0.2rem solid #F2A024;
+}
+
+.btn-yellow--outline:hover {
+	border: 0.2rem solid #EB8F05;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -249,37 +277,82 @@ body {
 	transform: translateY(-2px);
 }
 
-.contact_cta {
-	background-color: #F2A024;
+.contact-cta {
+	background-color: #FFBD59;
 }
 
-.contact_cta p {
+.contact-cta .container > div {
+	flex: 1;
+}
+
+@media only screen and (min-width: 75rem) {
+	.contact-cta .container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
+		padding: 6rem 4rem;
+	}
+}
+
+.contact-cta .container div:nth-of-type(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1.6rem;
+	margin-top: 4rem;
+}
+
+@media only screen and (min-width: 50rem) {
+	.contact-cta .container div:nth-of-type(2) {
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-top: 0;
+	}
+}
+
+.contact-cta .heading-secondary,
+.contact-cta p {
 	color: #fff;
 }
 
-.contact_cta .is-layout-flex {
-	flex-direction: column;
+.contact-cta .heading-secondary {
+	margin-bottom: 1rem;
 }
 
-.contact_cta .wp-block-buttons > .wp-block-button {
+.contact-cta a.btn {
 	display: block;
 	width: 100%;
-	text-align: center;
+}
+
+@media only screen and (min-width: 75rem) {
+	.contact-cta a.btn {
+		display: inline-block;
+		width: unset;
+	}
+}
+
+.contact-cta a:nth-of-type(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
 }
 
 form input,
 form textarea,
 form select {
-	color: #414042;
+	color: #4b4a4c;
 	font-family: "Helvetica Neue", "Arial", sans-serif;
 	display: block;
 	width: 100%;
 	line-height: 1.5;
-	padding: 0.8rem 1.2rem;
+	padding: 1.1rem;
 	font-size: 1.6rem;
 	background-color: #fff;
 	background-clip: padding-box;
-	border: 1px solid #D3D3D5;
+	border: 1px solid #C3C3C3;
 	border-radius: 0.25rem;
 }
 
@@ -289,6 +362,14 @@ form select:focus {
 	border-color: #86b7fe;
 	outline: 0;
 	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+@media only screen and (min-width: 75rem) {
+	form input,
+	form textarea,
+	form select {
+		font-size: 1.8rem;
+	}
 }
 
 form input[type="submit"] {
@@ -301,15 +382,42 @@ form .form-label {
 	margin-bottom: 0.75rem;
 }
 
+form .form-label.required::before {
+	color: #F2A024;
+	content: "*";
+	position: absolute;
+	margin-left: -15px;
+	font-weight: bold;
+}
+
 form textarea {
 	height: 15rem;
 }
 
-form .caption {
+form .caption,
+form .wpcf7-not-valid-tip {
 	display: inline-block;
 	margin-top: 0.5rem;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	color: #7a838b;
+}
+
+form .wpcf7-not-valid-tip {
+	color: red;
+}
+
+@media only screen and (min-width: 75rem) {
+	.banner .container,
+	.contact-cta .container {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 50rem) {
+	.featured-projects p {
+		max-width: 90ch;
+		margin: 1.8rem auto;
+	}
 }
 
 .why-tindill {
@@ -324,9 +432,23 @@ form .caption {
 	flex-direction: column;
 }
 
+@media only screen and (min-width: 75rem) {
+	.why-tindill--inner {
+		flex-direction: row;
+		gap: 7rem;
+	}
+}
+
 .wt-right {
 	order: -1;
 	width: 100%;
+}
+
+@media only screen and (min-width: 75rem) {
+	.wt-right {
+		order: 0;
+		flex: 40%;
+	}
 }
 
 .wt-right img {
@@ -337,12 +459,28 @@ form .caption {
 	border-radius: 0.25rem;
 }
 
+@media only screen and (min-width: 75rem) {
+	.wt-right img {
+		height: 100%;
+	}
+}
+
 .wt-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
 	margin: 1rem 0 0;
+}
+
+@media only screen and (min-width: 50rem) {
+	.wt-item {
+		justify-content: start;
+	}
+}
+
+.wt-item:first-of-type {
+	margin-top: 3rem;
 }
 
 .wt-item .wt-icon svg {
@@ -354,12 +492,28 @@ form .caption {
 	color: #3C6677;
 }
 
+@media only screen and (min-width: 75rem) {
+	.wt-left {
+		flex: 60%;
+	}
+}
+
 .testimonials {
 	background: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg") center/cover no-repeat;
 }
 
 .testimonials-inner {
 	background-color: rgba(37, 38, 46, 0.85);
+}
+
+@media only screen and (min-width: 75rem) {
+	.testimonials-inner {
+		width: 60%;
+		margin-left: auto;
+	}
+	.testimonials-inner .container {
+		padding: 7rem 10rem;
+	}
 }
 
 .testimonials .heading-secondary {
@@ -413,6 +567,12 @@ form .caption {
 	font-size: 1.4rem;
 }
 
+@media only screen and (min-width: 50rem) {
+	.slider .slider-slides .slider-item .comment {
+		font-size: 1.6rem;
+	}
+}
+
 .slider .slider-slides .slider-item.active {
 	opacity: 1;
 }
@@ -433,9 +593,9 @@ form .caption {
 }
 
 .slider .slider-controls .slider-control svg {
-	color: #D3D3D5;
+	color: rgba(211, 211, 213, 0.5);
 	cursor: pointer;
-	width: 2.5rem;
+	width: 2.25rem;
 }
 
 .slider .slider-controls .slider-control svg:hover {
@@ -443,11 +603,19 @@ form .caption {
 }
 
 .slider .slider-controls .slider-labels span {
-	color: #D3D3D5;
+	color: rgba(211, 211, 213, 0.5);
+	font-size: 1.6rem;
 }
 
 .about .intro {
 	background-color: #f3fffc;
+}
+
+@media only screen and (min-width: 50rem) {
+	.about .intro p {
+		max-width: 90ch;
+		margin: 1.8rem auto;
+	}
 }
 
 .about .why-tindill {
@@ -458,25 +626,64 @@ form .caption {
 	background-color: #f3fffc;
 }
 
+@media only screen and (min-width: 50rem) {
+	.about .intro p {
+		max-width: 90ch;
+		margin: 1.8rem auto;
+	}
+}
+
 .about .why-tindill {
 	background-color: unset;
 }
 
-form {
+@media only screen and (min-width: 75rem) {
+	.contact .container {
+		max-width: 110rem;
+	}
+}
+
+.contact form {
 	margin-top: 6rem;
 }
 
-form p {
-	margin-bottom: 2rem;
+.contact form p {
+	margin-bottom: 0;
 }
 
-form input.wpcf7-submit {
+.contact form p:nth-of-type(5) {
+	grid-column: 1 / -1;
+}
+
+.contact form input.wpcf7-submit {
 	background-color: #F2A024;
 	color: #fff;
 }
 
-form input.wpcf7-submit:focus {
+.contact form input.wpcf7-submit:focus {
 	border-color: none;
+}
+
+.contact form input.wpcf7-submit:hover {
+	background-color: #EB8F05;
+}
+
+@media only screen and (min-width: 75rem) {
+	.contact form input.wpcf7-submit {
+		width: 25%;
+	}
+}
+
+.contact form select {
+	padding: 1.3rem 1.2rem;
+}
+
+.contact .grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	grid-gap: 2.5rem;
+	align-items: stretch;
+	margin: 4rem 0;
 }
 
 .error-404 {

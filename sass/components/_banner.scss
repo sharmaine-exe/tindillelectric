@@ -1,6 +1,6 @@
 .banner {
     background-size: cover !important;
-    background-position: 60% 0 !important;
+    background-position: center !important;
     @include alignCenter;
 
     &-home {
@@ -22,8 +22,16 @@
     &-title {
         height: 25vh;
 
+        @include respond(large) {
+            height: 32vh;
+        }
+
         h3.heading-primary {
             margin-bottom: 0;
+
+            @include respond(medium) {
+                font-size: 6rem;
+            }
         }
 
         &--about {

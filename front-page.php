@@ -30,7 +30,7 @@
 
 
     <!-- Featured Projects -->
-    <section class="featured-projects">
+    <section class="featured-projects text-center">
         <div class="container">
             <h3 class="heading-secondary">Featured Projects</h3>
             <p>
@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="wt-right">
-                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-img.jpg" alt="A man doing the electrical wirings.">
+                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-img-e1679975845145.jpg" alt="A man doing the electrical wirings.">
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
 </main>
 
 <aside>
-    <?php dynamic_sidebar('contact_cta'); ?>
+    <?php get_template_part( 'template-parts/content', 'contact-cta' ); ?>
 </aside>
 
 <?php get_footer(); ?>

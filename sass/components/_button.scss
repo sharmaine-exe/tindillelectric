@@ -13,6 +13,9 @@
         font-weight: 500;
         letter-spacing: 0.05rem;
         cursor: pointer;
+        transition: all 200ms ease-in-out;
+
+
     }
 
     &:active,
@@ -23,32 +26,42 @@
     &-banner {
         background-color: $color-primary-light;
         color: $color-grey-3;
+
+        &:hover {
+            background-color: $color-primary;
+        }
     }
 
     &-content {
         background-color: $color-primary;
         color: $color-white;
         margin-top: 3rem;
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
     }
 
     &-white {
         background-color: $color-white;
         color: $color-grey-3;
-        display: block;
+        border: 0.2rem solid $color-white;
     }
 
     &-white--outline {
         background-color: transparent;
         color: $color-white;
         border: 0.2rem solid $color-white;
-        display: block;
-        width: 100%;
     }
 
     &-yellow--outline {
         background-color: transparent;
         color: $color-primary;
         border: 0.2rem solid $color-primary;
+
+        &:hover {
+            border: 0.2rem solid $color-primary-dark;
+        }
     }
 }
 

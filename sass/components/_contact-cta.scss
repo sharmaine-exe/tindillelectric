@@ -1,17 +1,53 @@
-.contact_cta {
-    background-color: $color-primary;
+.contact-cta {
+    background-color: $color-primary-light;
 
+    .container {
+        &>div {
+            flex: 1;
+        }
+
+        @include respond(large) {
+            @include alignCenter;
+            gap: 4rem;
+            padding: 6rem 4rem;
+        }
+
+        div:nth-of-type(2) {
+            @include alignCenter;
+            flex-direction: column;
+            gap: 1.6rem;
+            margin-top: 4rem;
+
+            @include respond(medium) {
+                flex-direction: row;
+                justify-content: flex-end;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .heading-secondary,
     p {
         color: $color-white;
     }
 
-    .is-layout-flex {
-        flex-direction: column;
+    .heading-secondary {
+        margin-bottom: 1rem;
     }
 
-    .wp-block-buttons>.wp-block-button {
+    a.btn {
         display: block;
         width: 100%;
-        text-align: center;
+
+        @include respond(large) {
+            display: inline-block;
+            width: unset;
+        }
     }
+
+    a:nth-of-type(2) {
+        @include alignCenter;
+        gap: 1rem;
+    }
+
 }

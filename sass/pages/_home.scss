@@ -1,3 +1,22 @@
+.banner,
+.contact-cta {
+    .container {
+        @include respond(large) {
+            width: 100%;
+        }
+    }
+}
+
+
+.featured-projects {
+    @include respond(medium) {
+        p {
+            @include paraIntro;
+        }
+    }
+
+}
+
 // Why Tindill
 
 .why-tindill {
@@ -7,6 +26,11 @@
     &--inner {
         @include alignCenter;
         flex-direction: column;
+
+        @include respond(large) {
+            flex-direction: row;
+            gap: 7rem;
+        }
     }
 }
 
@@ -14,12 +38,21 @@
     order: -1;
     width: 100%;
 
+    @include respond(large) {
+        order: 0;
+        flex: 40%;
+    }
+
     img {
         height: 20rem;
         object-fit: cover;
         object-position: center;
         margin-bottom: 2rem;
         border-radius: $border-radius;
+
+        @include respond(large) {
+            height: 100%
+        }
     }
 }
 
@@ -27,6 +60,14 @@
     @include alignCenter;
     gap: 2rem;
     margin: 1rem 0 0;
+
+    @include respond(medium) {
+        justify-content: start;
+    }
+
+    &:first-of-type {
+        margin-top: 3rem;
+    }
 
     .wt-icon svg {
         width: 4.5rem;
@@ -40,13 +81,28 @@
     }
 }
 
+.wt-left {
+    @include respond(large) {
+        flex: 60%;
+    }
+}
+
 // Testimonials
 
 .testimonials {
     background: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg") center / cover no-repeat;
 
     &-inner {
-        background-color: rgba(37, 38, 46, 0.85);
+        background-color: rgba($color: #25262E, $alpha: 0.85);
+
+        @include respond(large) {
+            width: 60%;
+            margin-left: auto;
+
+            .container {
+                padding: 7rem 10rem;
+            }
+        }
     }
 
     .heading-secondary {
@@ -97,6 +153,10 @@
             .comment {
                 margin: 4rem 0;
                 font-size: 1.4rem;
+
+                @include respond(medium) {
+                    font-size: $default-font-size;
+                }
             }
 
             &.active {
@@ -117,9 +177,9 @@
             line-height: 0;
 
             svg {
-                color: $color-grey-1;
+                color: rgba($color: $color-grey-1, $alpha: 0.5);
                 cursor: pointer;
-                width: 2.5rem;
+                width: 2.25rem;
             }
 
             svg:hover {
@@ -129,7 +189,8 @@
 
         .slider-labels {
             span {
-                color: $color-grey-1;
+                color: rgba($color: $color-grey-1, $alpha: 0.5);
+                font-size: $default-font-size;
             }
         }
     }
