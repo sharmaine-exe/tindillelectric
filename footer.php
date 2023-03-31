@@ -13,15 +13,9 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tindillelectric' ) ); ?>">
-				<?php
-				    the_custom_logo();
-				?>
+			<a href="<?php echo esc_url( __( 'http://tindill.web.dmitcapstone.ca/', 'tindillelectric' ) ); ?>">
+				<img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/logo-white.png" alt="footer-logo">
 			</a>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				// printf( esc_html__( 'Theme: %1$s by %2$s.', 'tindillelectric' ), 'tindillelectric', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
 		</div><!-- .site-info -->
 
 		<?php

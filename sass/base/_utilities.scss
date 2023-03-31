@@ -4,12 +4,21 @@
     padding: 6rem 2rem;
 
     @include respond(large) {
-        .container {
-            padding: 7rem 0;
-        }
+        padding: 8rem 4rem;
     }
 }
 
+
 .text-center {
     text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.sr-only {
+    position: absolute;
+    top: -999rem;
+    left: -999rem;
 }

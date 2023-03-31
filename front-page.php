@@ -13,6 +13,7 @@
 <?php get_header(); ?>
 
 <main id="primary" class="site-main home">
+    <h1 class="sr-only">Tindill Electric</h1>
 
     <!-- Banner -->
     <section class="banner banner-home">
@@ -21,7 +22,7 @@
                 <div>
                     <h1 class="heading-primary heading-primary--main"><?php the_field('banner_heading'); ?></h1>
                     <p class="heading-primary heading-primary--sub"><?php the_field('banner_tagline'); ?></p>
-                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn--banner">See our Services</a>
+                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn-banner">See our Services</a>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -30,19 +31,19 @@
 
 
     <!-- Featured Projects -->
-    <section class="featured-projects">
+    <section class="featured-projects text-center">
         <div class="container">
             <h3 class="heading-secondary">Featured Projects</h3>
             <p>
                 We have worked on multiple projects for the past year. With almost 15 years of experience, Tindill Electric will meet your electrical needs and make your unique projects come to life. 
             </p>
             
-            <div>
-                <!-- TODO: custom post type -->
+            <div class="projects">
+                <?php the_content() ?>
             </div>
 
             <div class="text-center">
-                <a href="<?php echo esc_url( home_url( '/projects' ) ); ?>" class="btn btn--content">See All Projects</a>
+                <a href="<?php echo esc_url( home_url( '/projects' ) ); ?>" class="btn btn-content">See All Projects</a>
             </div>
         </div>
     </section>
@@ -123,11 +124,11 @@
                         </div>
                     </div>
 
-                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="btn btn--content">Learn More</a>
+                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="btn btn-content">Learn More</a>
                 </div>
 
                 <div class="wt-right">
-                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-img.jpg" alt="A man doing the electrical wirings.">
+                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-img-e1679975845145.jpg" alt="A man doing the electrical wirings.">
                 </div>
             </div>
         </div>
@@ -189,7 +190,7 @@
 </main>
 
 <aside>
-    <?php dynamic_sidebar('contact_cta'); ?>
+    <?php get_template_part( 'template-parts/content', 'contact-cta' ); ?>
 </aside>
 
 <?php get_footer(); ?>

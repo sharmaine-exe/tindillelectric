@@ -5,6 +5,12 @@
 }
 
 
+@mixin paraIntro {
+    max-width: 90ch;
+    margin: 1.8rem auto;
+}
+
+
 // MEDIA QUERY MANAGER
 /*
 $breakpoint arguement choices:
@@ -15,11 +21,11 @@ $breakpoint arguement choices:
 */
 @mixin respond($breakpoint) {
     @if $breakpoint ==medium {
-        @media only screen and (min-width: 62rem) {
+        @media only screen and (min-width: 50rem) {
             @content
         }
 
-        ; //992px
+        ; //800px
     }
 
     @if $breakpoint ==large {

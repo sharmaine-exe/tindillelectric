@@ -7,15 +7,13 @@
         text-decoration: none;
         padding: 1.25rem 3.5rem;
         display: inline-block;
-        border-radius: 0.25rem;
+        border-radius: $border-radius;
         font-size: $default-font-size;
         font-family: $font-heading;
         font-weight: 500;
         letter-spacing: 0.05rem;
-
-        // Change for the <button> element
-        border: none;
         cursor: pointer;
+        transition: all 200ms ease-in-out;
     }
 
     &:active,
@@ -23,28 +21,55 @@
         outline: none;
     }
 
-    &--banner {
+    &-banner {
         background-color: $color-primary-light;
         color: $color-grey-3;
+
+        &:hover {
+            background-color: $color-primary;
+        }
     }
 
-    &--content {
+    &-content {
         background-color: $color-primary;
         color: $color-white;
         margin-top: 3rem;
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
     }
 
-    &--white {
+    &-white {
         background-color: $color-white;
         color: $color-grey-3;
-        display: block;
+        border: 0.2rem solid $color-white;
     }
 
-    &--outline {
+    &-white--outline {
         background-color: transparent;
         color: $color-white;
         border: 0.2rem solid $color-white;
-        display: block;
+    }
+
+    &-yellow--outline {
+        background-color: transparent;
+        color: $color-primary;
+        border: 0.2rem solid $color-primary;
+
+        &:hover {
+            border: 0.2rem solid $color-primary-dark;
+        }
+    }
+
+    &-underline {
+        color: $color-secondary;
+        border-bottom: 0.1rem solid $color-secondary;
+        padding: 0 !important;
+
+        &:hover {
+            color: $color-secondary-dark;
+        }
     }
 }
 

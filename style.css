@@ -40,12 +40,21 @@ p {
 	margin-bottom: 1.8rem;
 }
 
+a {
+	text-decoration: none;
+	color: #4b4a4c;
+}
+
+ul {
+	list-style-type: none;
+}
+
 body {
 	font-size: 1.6rem;
-	font-family: "Arial", sans-serif;
+	font-family: "Helvetica Neue", "Arial", sans-serif;
 	font-weight: 400;
 	line-height: 1.5;
-	color: #414042;
+	color: #4b4a4c;
 }
 
 @media only screen and (min-width: 75rem) {
@@ -65,15 +74,17 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 50rem) {
 	.heading-primary--main {
 		font-size: 7rem;
+		width: 15ch;
 	}
 }
 
 @media only screen and (min-width: 75rem) {
 	.heading-primary--main {
-		font-size: 9rem;
+		font-size: 8rem;
+		line-height: 1.25;
 	}
 }
 
@@ -83,29 +94,23 @@ body {
 	font-weight: 400;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 50rem) {
 	.heading-primary--sub {
 		font-size: 2.4rem;
 	}
 }
 
-@media only screen and (min-width: 75rem) {
-	.heading-primary--sub {
-		font-size: 2.8rem;
-	}
-}
-
 .heading-secondary {
 	color: #252525;
-	margin-bottom: 1rem;
+	margin-bottom: 1.8rem;
 	font-size: 3rem;
 	font-weight: bold;
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 50rem) {
 	.heading-secondary {
-		font-size: 4.5rem;
+		font-size: 4rem;
 	}
 }
 
@@ -121,7 +126,7 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 75rem) {
 	.heading-tertiary {
 		font-size: 2rem;
 	}
@@ -134,8 +139,8 @@ body {
 }
 
 @media only screen and (min-width: 75rem) {
-	.container .container {
-		padding: 7rem 0;
+	.container {
+		padding: 8rem 4rem;
 	}
 }
 
@@ -143,9 +148,19 @@ body {
 	text-align: center;
 }
 
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.sr-only {
+	position: absolute;
+	top: -999rem;
+	left: -999rem;
+}
+
 .banner {
 	background-size: cover !important;
-	background-position: 60% 0 !important;
+	background-position: center !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -158,16 +173,47 @@ body {
 	align-items: start;
 }
 
+.banner-404 {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg");
+	min-height: 90vh;
+	flex-direction: column;
+	align-items: start;
+}
+
 .banner-title {
 	height: 25vh;
+}
+
+@media only screen and (min-width: 75rem) {
+	.banner-title {
+		height: 32vh;
+	}
 }
 
 .banner-title h3.heading-primary {
 	margin-bottom: 0;
 }
 
+@media only screen and (min-width: 50rem) {
+	.banner-title h3.heading-primary {
+		font-size: 6rem;
+	}
+}
+
 .banner-title--about {
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-banner.jpg");
+}
+
+.banner-title--contact {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/contact-banner.jpg");
+}
+
+.banner-title--projects {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/projects-banner.jpg");
+}
+
+.banner-title--services {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/services-banner.jpg");
 }
 
 .btn, .btn:link, .btn:visited {
@@ -180,36 +226,63 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 500;
 	letter-spacing: 0.05rem;
-	border: none;
 	cursor: pointer;
+	transition: all 200ms ease-in-out;
 }
 
 .btn:active, .btn:focus {
 	outline: none;
 }
 
-.btn--banner {
+.btn-banner {
 	background-color: #FFBD59;
 	color: #252525;
 }
 
-.btn--content {
+.btn-banner:hover {
+	background-color: #F2A024;
+}
+
+.btn-content {
 	background-color: #F2A024;
 	color: #fff;
 	margin-top: 3rem;
 }
 
-.btn--white {
-	background-color: #fff;
-	color: #252525;
-	display: block;
+.btn-content:hover {
+	background-color: #EB8F05;
 }
 
-.btn--outline {
+.btn-white {
+	background-color: #fff;
+	color: #252525;
+	border: 0.2rem solid #fff;
+}
+
+.btn-white--outline {
 	background-color: transparent;
 	color: #fff;
 	border: 0.2rem solid #fff;
-	display: block;
+}
+
+.btn-yellow--outline {
+	background-color: transparent;
+	color: #F2A024;
+	border: 0.2rem solid #F2A024;
+}
+
+.btn-yellow--outline:hover {
+	border: 0.2rem solid #EB8F05;
+}
+
+.btn-underline {
+	color: #3C6677;
+	border-bottom: 0.1rem solid #3C6677;
+	padding: 0 !important;
+}
+
+.btn-underline:hover {
+	color: #022731;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -228,22 +301,364 @@ body {
 	transform: translateY(-2px);
 }
 
-.contact_cta {
-	background-color: #F2A024;
+.contact-cta {
+	background-color: #FFBD59;
 }
 
-.contact_cta p {
+.contact-cta .container > div {
+	flex: 1;
+}
+
+@media only screen and (min-width: 75rem) {
+	.contact-cta .container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
+		padding: 6rem 4rem;
+	}
+}
+
+.contact-cta .container div:nth-of-type(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1.6rem;
+	margin-top: 4rem;
+}
+
+@media only screen and (min-width: 50rem) {
+	.contact-cta .container div:nth-of-type(2) {
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-top: 0;
+	}
+}
+
+.contact-cta .heading-secondary,
+.contact-cta p {
 	color: #fff;
 }
 
-.contact_cta .is-layout-flex {
-	flex-direction: column;
+.contact-cta .heading-secondary {
+	margin-bottom: 1rem;
 }
 
-.contact_cta .wp-block-buttons > .wp-block-button {
+.contact-cta a.btn {
 	display: block;
 	width: 100%;
+}
+
+@media only screen and (min-width: 75rem) {
+	.contact-cta a.btn {
+		display: inline-block;
+		width: unset;
+	}
+}
+
+.contact-cta a:nth-of-type(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+form input,
+form textarea,
+form select {
+	color: #4b4a4c;
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	display: block;
+	width: 100%;
+	line-height: 1.5;
+	padding: 1.1rem;
+	font-size: 1.6rem;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #C3C3C3;
+	border-radius: 0.25rem;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+@media only screen and (min-width: 75rem) {
+	form input,
+	form textarea,
+	form select {
+		font-size: 1.8rem;
+	}
+}
+
+form input[type="submit"] {
+	border: none;
+}
+
+form .form-label {
+	font-weight: 500;
+	display: inline-block;
+	margin-bottom: 0.75rem;
+}
+
+form .form-label.required::before {
+	color: #F2A024;
+	content: "*";
+	position: absolute;
+	margin-left: -15px;
+	font-weight: bold;
+}
+
+form textarea {
+	height: 15rem;
+}
+
+form .caption,
+form .wpcf7-not-valid-tip {
+	display: inline-block;
+	margin-top: 0.5rem;
+	font-size: 1.5rem;
+	color: #7a838b;
+}
+
+form .wpcf7-not-valid-tip {
+	color: red;
+}
+
+footer div {
+	background-color: #252525;
+}
+
+footer .site-info a img {
+	width: 20rem;
+	height: 9rem;
+	padding-top: 2rem;
+}
+
+footer .wp-block-columns {
+	padding: 1rem;
+	margin-bottom: 0rem;
+}
+
+footer .wp-block-column {
+	border-bottom: 2px solid #4b4a4c;
+}
+
+footer .wp-block-column h4 {
+	color: #FFBD59;
+	margin-bottom: 2rem;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+footer .wp-block-column p {
+	color: #fff;
+	font-family: "Space Grotesk", sans-serif;
+	margin-bottom: 2rem;
+}
+
+footer .wp-block-column .widget .menu .menu-item a {
+	color: #fff;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+footer .wp-block-column .widget .menu {
+	margin-bottom: 2rem;
+	padding-bottom: 0.8rem;
+}
+
+footer .wp-block-column .widget .menu {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+footer .wp-block-column .widget .menu li {
+	width: 50%;
+}
+
+footer .wp-block-social-links {
+	margin-bottom: 2rem;
+}
+
+footer p {
+	margin-bottom: 0rem;
+}
+
+footer h5 {
+	color: #fff;
+	padding: 1rem;
 	text-align: center;
+	font-size: 1.5rem;
+}
+
+header .site-branding img {
+	width: 18rem;
+	height: 7rem;
+}
+
+header nav {
+	background-color: #252525;
+	position: absolute;
+	width: 100%;
+}
+
+header .menu .main-menu a {
+	font-size: 2.2rem;
+	color: #fff;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+header .menu .main-menu {
+	padding: 1.2rem 0;
+	padding-left: 1rem;
+	border-bottom: 2px solid #4b4a4c;
+}
+
+header .menu .main-menu:last-of-type {
+	text-align: center;
+	border: 2px solid #FFBD59;
+	margin: 0 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+header .menu .main-menu:last-of-type a {
+	color: #FFBD59;
+}
+
+header .main-menu:last-of-type::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/telephone-1.png");
+	/* replace with the URL of your image */
+	color: #FFBD59;
+	background-size: cover;
+	vertical-align: text-bottom;
+	margin-right: 2rem;
+	/* add a little space between icon and text */
+}
+
+header .hamburger {
+	cursor: pointer;
+	display: none;
+	padding: 15px 15px;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	header .main-menu {
+		display: none;
+	}
+	header .show {
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header .hamburger {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header nav {
+		background-color: transparent;
+		top: -1rem;
+		right: 0;
+	}
+	header ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	header .menu .main-menu {
+		border-bottom: 0px;
+		display: inline;
+	}
+	header .menu .main-menu a {
+		color: #000;
+		font-size: 1.5rem;
+	}
+	header .menu-primary-menu-container {
+		position: absolute;
+		right: 1rem;
+		top: 2.6rem;
+	}
+	header .menu .main-menu:last-of-type {
+		margin-top: 0rem;
+	}
+	header .menu .main-menu:last-of-type a {
+		color: #568091;
+		padding-right: 1rem;
+	}
+	header .menu .main-menu:last-of-type {
+		border: none;
+	}
+	header .main-menu:last-of-type::before {
+		content: "";
+		background-image: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/mobile.png");
+		/* replace with the URL of your image */
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	header .menu .main-menu a {
+		color: #000;
+		font-size: 1.8rem;
+		padding-right: 2rem;
+	}
+	header .menu-primary-menu-container {
+		right: 3rem;
+	}
+	header .site-branding img {
+		margin-left: 2rem;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	header .menu .main-menu a {
+		color: #000;
+		font-size: 2rem;
+		padding-right: 3rem;
+	}
+	header .menu-primary-menu-container {
+		right: 5rem;
+	}
+	header .site-branding img {
+		width: 22rem;
+		height: 8rem;
+		margin-left: 25rem;
+	}
+}
+
+.home .sr-only {
+	display: none;
+}
+
+@media only screen and (min-width: 75rem) {
+	.banner .container,
+	.contact-cta .container {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 50rem) {
+	.featured-projects p {
+		max-width: 90ch;
+		margin: 1.8rem auto;
+	}
+}
+
+.featured-projects .projects {
+	margin: 6rem 0 3rem;
 }
 
 .why-tindill {
@@ -258,9 +673,23 @@ body {
 	flex-direction: column;
 }
 
+@media only screen and (min-width: 75rem) {
+	.why-tindill--inner {
+		flex-direction: row;
+		gap: 7rem;
+	}
+}
+
 .wt-right {
 	order: -1;
 	width: 100%;
+}
+
+@media only screen and (min-width: 75rem) {
+	.wt-right {
+		order: 0;
+		flex: 40%;
+	}
 }
 
 .wt-right img {
@@ -271,12 +700,28 @@ body {
 	border-radius: 0.25rem;
 }
 
+@media only screen and (min-width: 75rem) {
+	.wt-right img {
+		height: 100%;
+	}
+}
+
 .wt-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
 	margin: 1rem 0 0;
+}
+
+@media only screen and (min-width: 50rem) {
+	.wt-item {
+		justify-content: start;
+	}
+}
+
+.wt-item:first-of-type {
+	margin-top: 3rem;
 }
 
 .wt-item .wt-icon svg {
@@ -288,12 +733,28 @@ body {
 	color: #3C6677;
 }
 
+@media only screen and (min-width: 75rem) {
+	.wt-left {
+		flex: 60%;
+	}
+}
+
 .testimonials {
 	background: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg") center/cover no-repeat;
 }
 
 .testimonials-inner {
 	background-color: rgba(37, 38, 46, 0.85);
+}
+
+@media only screen and (min-width: 75rem) {
+	.testimonials-inner {
+		width: 60%;
+		margin-left: auto;
+	}
+	.testimonials-inner .container {
+		padding: 7rem 10rem;
+	}
 }
 
 .testimonials .heading-secondary {
@@ -313,7 +774,7 @@ body {
 
 .slider .slider-slides {
 	position: relative;
-	height: 38rem;
+	height: 45rem;
 	width: 100%;
 	transition: transform 0.3s ease-in-out;
 }
@@ -344,6 +805,13 @@ body {
 
 .slider .slider-slides .slider-item .comment {
 	margin: 4rem 0;
+	font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 50rem) {
+	.slider .slider-slides .slider-item .comment {
+		font-size: 1.6rem;
+	}
 }
 
 .slider .slider-slides .slider-item.active {
@@ -366,9 +834,9 @@ body {
 }
 
 .slider .slider-controls .slider-control svg {
-	color: #D3D3D5;
+	color: rgba(211, 211, 213, 0.5);
 	cursor: pointer;
-	width: 2.5rem;
+	width: 2.25rem;
 }
 
 .slider .slider-controls .slider-control svg:hover {
@@ -376,48 +844,185 @@ body {
 }
 
 .slider .slider-controls .slider-labels span {
-	color: #D3D3D5;
+	color: rgba(211, 211, 213, 0.5);
+	font-size: 1.6rem;
 }
 
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.5);
+.about .intro {
+	background-color: #f3fffc;
 }
 
-.modal-content {
-	background-color: #fff;
-	margin: 15% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
+@media only screen and (min-width: 50rem) {
+	.about .intro p {
+		max-width: 90ch;
+		margin: 1.8rem auto;
+	}
 }
 
-.close {
-	float: right;
-	font-size: 28px;
+.about .why-tindill {
+	background-color: unset;
+}
+
+.about .intro {
+	background-color: #f3fffc;
+}
+
+@media only screen and (min-width: 50rem) {
+	.about .intro p {
+		max-width: 90ch;
+		margin: 1.8rem auto;
+	}
+}
+
+.about .why-tindill {
+	background-color: unset;
+}
+
+@media only screen and (min-width: 50rem) {
+	.contact .container {
+		max-width: 110rem;
+	}
+}
+
+.contact form {
+	margin-top: 6rem;
+}
+
+.contact form p {
+	margin-bottom: 0;
+}
+
+.contact form p:nth-of-type(5) {
+	grid-column: 1 / -1;
+}
+
+.contact form input.wpcf7-submit {
+	background-color: #F2A024;
+	color: #fff;
+}
+
+.contact form input.wpcf7-submit:focus {
+	border-color: none;
+}
+
+.contact form input.wpcf7-submit:hover {
+	background-color: #EB8F05;
+}
+
+@media only screen and (min-width: 75rem) {
+	.contact form input.wpcf7-submit {
+		width: 25%;
+	}
+}
+
+.contact form select {
+	padding: 1.3rem 1.2rem;
+}
+
+.contact .grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+	grid-gap: 2.5rem;
+	align-items: stretch;
+	margin: 4rem 0;
+}
+
+.confirmation .container {
+	padding: 8rem 2rem;
+}
+
+@media only screen and (min-width: 50rem) {
+	.confirmation .container {
+		padding: 12rem 2rem;
+		max-width: 100rem;
+	}
+}
+
+.confirmation h3 span {
+	color: #568091;
+}
+
+.confirmation a.link {
+	color: #3C6677;
+}
+
+.confirmation a.link:hover {
+	color: #EB8F05;
+}
+
+.confirmation .btn-underline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-start;
+	width: fit-content;
+	gap: 0.5rem;
+	margin-top: 3rem;
+}
+
+.error-404 {
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.error-404 .page-header {
+	margin-top: -5rem;
+}
+
+.error-404 .page-header .page-title {
+	color: #F2A024;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: clamp(15rem, 13vw, 22rem);
 	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
+.error-404 .page-header .page-title + p {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: clamp(3.5rem, 3vw, 5rem);
+	font-weight: bold;
+	margin-top: -3rem;
 }
 
-.about .intro {
-	background-color: #f3fffc;
+.error-404 .page-content p {
+	margin: 0 0 2.5rem;
 }
 
-.about .intro {
-	background-color: #f3fffc;
+@media only screen and (min-width: 50rem) {
+	.error-404 .page-content form.search-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-items: stretch;
+	}
+	.error-404 .page-content form.search-form label {
+		flex: 2;
+	}
+	.error-404 .page-content form.search-form label input {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
+	.error-404 .page-content form.search-form {
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+.error-404 .page-content form.search-form input[type="submit"] {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 0;
+}
+
+@media only screen and (min-width: 50rem) {
+	.error-404 .page-content form.search-form input[type="submit"] {
+		display: inline-block;
+		width: unset;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

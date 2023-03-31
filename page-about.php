@@ -14,7 +14,7 @@
 <main id="primary" class="site-main about">
     
     <!-- Banner -->
-    <section class="banner banner-title banner-title--about">
+    <section class="banner banner-title banner-title--about text-center">
         <?php while ( have_posts() ) : the_post(); ?>
             <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
         <?php endwhile; ?>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="wt-right">
-                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-img.jpg" alt="A man working on electrical wiring.">
+                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-img-e1679975845145.jpg" alt="A man working on electrical wiring.">
                 </div>
             </div>
         </div>
@@ -111,8 +111,8 @@
 
 </main>
 
-<aside class="contact-cta">
-    <?php dynamic_sidebar('contact_cta'); ?>
+<aside>
+    <?php get_template_part( 'template-parts/content', 'contact-cta' ); ?>
 </aside>
 
 <?php get_footer(); ?>
