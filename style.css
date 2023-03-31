@@ -649,6 +649,10 @@ header .hamburger {
 	}
 }
 
+.featured-projects .projects {
+	margin: 6rem 0 3rem;
+}
+
 .why-tindill {
 	background-color: #f3fffc;
 	box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
@@ -868,7 +872,7 @@ header .hamburger {
 
 @media only screen and (min-width: 50rem) {
 	.contact .container {
-		max-width: 100rem;
+		max-width: 110rem;
 	}
 }
 

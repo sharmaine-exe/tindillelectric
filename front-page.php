@@ -38,8 +38,8 @@
                 We have worked on multiple projects for the past year. With almost 15 years of experience, Tindill Electric will meet your electrical needs and make your unique projects come to life. 
             </p>
             
-            <div>
-                <!-- TODO: custom post type -->
+            <div class="projects">
+                <?php the_content() ?>
             </div>
 
             <div class="text-center">
