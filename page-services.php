@@ -23,8 +23,10 @@ get_header();
         <div class="featured-images">
             <?php
                 $args = array(
-                    'post_type'      => 'tindill-elec-service',
+                    'post_type'      => 'tindill-elec-service', 
                     'posts_per_page' => 20,
+                    // 'category_name' => 'residential,commercial,power,home,evc,security,repairs'
+                    'order' => 'ASC'
                 );
                 $loop = new WP_Query($args);
                 while ( $loop->have_posts() ) {

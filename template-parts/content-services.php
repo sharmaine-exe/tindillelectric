@@ -1,5 +1,5 @@
 <div class="customs">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail('medium'); ?>
 
                 <h3><?php the_title(); ?></h3>
 
