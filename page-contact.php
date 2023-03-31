@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the custom about page.
+ * The template for displaying the custom contact page.
  *
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/

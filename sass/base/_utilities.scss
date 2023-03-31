@@ -16,3 +16,9 @@
 .text-uppercase {
     text-transform: uppercase;
 }
+
+.sr-only {
+    position: absolute;
+    top: -999rem;
+    left: -999rem;
+}

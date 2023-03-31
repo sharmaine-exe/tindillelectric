@@ -68,6 +68,10 @@ get_header();
 
 	</main><!-- #main -->
 
+<aside>
+    <?php get_template_part( 'template-parts/content', 'contact-cta' ); ?>
+</aside>
+
 <?php
 get_sidebar();
 get_footer();

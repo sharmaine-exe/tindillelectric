@@ -1,4 +1,4 @@
-.home .sr-only{
+.home .sr-only {
     display: none;
 }
 
@@ -17,6 +17,10 @@
         p {
             @include paraIntro;
         }
+    }
+
+    .projects {
+        margin: 6rem 0 3rem;
     }
 
 }

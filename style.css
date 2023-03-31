@@ -152,6 +152,12 @@ body {
 	text-transform: uppercase;
 }
 
+.sr-only {
+	position: absolute;
+	top: -999rem;
+	left: -999rem;
+}
+
 .banner {
 	background-size: cover !important;
 	background-position: center !important;
@@ -172,6 +178,22 @@ body {
 	min-height: 90vh;
 	flex-direction: column;
 	align-items: start;
+}
+
+.banner-single-service {
+	color: #fff;
+	min-height: 50vh;
+	flex-direction: column;
+	align-items: start;
+}
+
+@media only screen and (min-width: 50rem) {
+	.banner-single-service {
+		justify-content: flex-end;
+	}
+	.banner-single-service .container > div {
+		text-align: unset;
+	}
 }
 
 .banner-title {
@@ -200,6 +222,14 @@ body {
 
 .banner-title--contact {
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/contact-banner.jpg");
+}
+
+.banner-title--projects {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/projects-banner.jpg");
+}
+
+.banner-title--services {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/services-banner.jpg");
 }
 
 .btn, .btn:link, .btn:visited {
@@ -259,6 +289,16 @@ body {
 
 .btn-yellow--outline:hover {
 	border: 0.2rem solid #EB8F05;
+}
+
+.btn-underline {
+	color: #3C6677;
+	border-bottom: 0.1rem solid #3C6677;
+	padding: 0 !important;
+}
+
+.btn-underline:hover {
+	color: #022731;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -633,6 +673,10 @@ header .hamburger {
 	}
 }
 
+.featured-projects .projects {
+	margin: 6rem 0 3rem;
+}
+
 .why-tindill {
 	background-color: #f3fffc;
 	box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
@@ -835,6 +879,14 @@ header .hamburger {
 	background-color: unset;
 }
 
+.single-service .banner h3 {
+	color: #fff;
+}
+
+.single-service .btn-content {
+	margin-top: 1rem;
+}
+
 .about .intro {
 	background-color: #f3fffc;
 }
@@ -850,7 +902,7 @@ header .hamburger {
 	background-color: unset;
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 50rem) {
 	.contact .container {
 		max-width: 110rem;
 	}
@@ -893,10 +945,43 @@ header .hamburger {
 
 .contact .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 	grid-gap: 2.5rem;
 	align-items: stretch;
 	margin: 4rem 0;
+}
+
+.confirmation .container {
+	padding: 8rem 2rem;
+}
+
+@media only screen and (min-width: 50rem) {
+	.confirmation .container {
+		padding: 12rem 2rem;
+		max-width: 100rem;
+	}
+}
+
+.confirmation h3 span {
+	color: #568091;
+}
+
+.confirmation a.link {
+	color: #3C6677;
+}
+
+.confirmation a.link:hover {
+	color: #EB8F05;
+}
+
+.confirmation .btn-underline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-start;
+	width: fit-content;
+	gap: 0.5rem;
+	margin-top: 3rem;
 }
 
 .error-404 {

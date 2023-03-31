@@ -1,6 +1,14 @@
 <li class="slider-item">
     <div class="comment">
+<<<<<<< HEAD
+        <?php 
+            $summary = get_field('testimonial'); 
+            echo wp_trim_words($summary, 40, "...");
+        ?>
+        <!-- <a href="#" id="myLink">See more</a> -->
+=======
         <?php the_field('testimonial'); ?>
+>>>>>>> 64feebe638215078146eeb97c027eb9b953cb501
     </div>
     <div class="rating">
         <?php
