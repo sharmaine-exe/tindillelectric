@@ -1,6 +1,9 @@
 <li class="slider-item">
     <div class="comment">
-        <?php the_field('testimonial'); ?>
+        <?php 
+            $summary = get_field('testimonial'); 
+            echo wp_trim_words($summary, 40, "...");
+        ?>
         <!-- <a href="#" id="myLink">See more</a> -->
     </div>
     <div class="rating">
