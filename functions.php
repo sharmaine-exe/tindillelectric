@@ -152,6 +152,9 @@ add_action( 'widgets_init', 'tindillelectric_widgets_init' );
 function tindillelectric_scripts() {
     wp_enqueue_style( 'tindillelectric-style', get_template_directory_uri() . '/style.css' );
 
+	// Jquery 
+	// wp_enqueue_script( 'jquery' );
+
     // google fonts
     wp_enqueue_style( 'font-space-grotesk', 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap', false );
 

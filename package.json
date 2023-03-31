@@ -20,8 +20,10 @@
         "@wordpress/scripts": "^19.2.2",
         "dir-archiver": "^1.1.1",
         "node-sass": "^7.0.1",
+        "npm": "^9.6.3",
         "npm-watch": "^0.11.0",
-        "rtlcss": "^3.5.0"
+        "rtlcss": "^3.5.0",
+        "watch": "^1.0.2"
     },
     "rtlcssConfig": {
         "options": {

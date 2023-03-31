@@ -406,6 +406,219 @@ form .wpcf7-not-valid-tip {
 	color: red;
 }
 
+footer div {
+	background-color: #252525;
+}
+
+footer .site-info a img {
+	width: 20rem;
+	height: 9rem;
+	padding-top: 2rem;
+}
+
+footer .wp-block-columns {
+	padding: 1rem;
+	margin-bottom: 0rem;
+}
+
+footer .wp-block-column {
+	border-bottom: 2px solid #4b4a4c;
+}
+
+footer .wp-block-column h4 {
+	color: #FFBD59;
+	margin-bottom: 2rem;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+footer .wp-block-column p {
+	color: #fff;
+	font-family: "Space Grotesk", sans-serif;
+	margin-bottom: 2rem;
+}
+
+footer .wp-block-column .widget .menu .menu-item a {
+	color: #fff;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+footer .wp-block-column .widget .menu {
+	margin-bottom: 2rem;
+	padding-bottom: 0.8rem;
+}
+
+footer .wp-block-column .widget .menu {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+footer .wp-block-column .widget .menu li {
+	width: 50%;
+}
+
+footer .wp-block-social-links {
+	margin-bottom: 2rem;
+}
+
+footer p {
+	margin-bottom: 0rem;
+}
+
+footer h5 {
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+header .site-branding img {
+	width: 18rem;
+	height: 7rem;
+}
+
+header nav {
+	background-color: #252525;
+	position: absolute;
+	width: 100%;
+}
+
+header .menu .main-menu a {
+	font-size: 2.2rem;
+	color: #fff;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+header .menu .main-menu {
+	padding: 1.2rem 0;
+	padding-left: 1rem;
+	border-bottom: 2px solid #4b4a4c;
+}
+
+header .menu .main-menu:last-of-type {
+	text-align: center;
+	border: 2px solid #FFBD59;
+	margin: 0 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+header .menu .main-menu:last-of-type a {
+	color: #FFBD59;
+}
+
+header .main-menu:last-of-type::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/telephone-1.png");
+	/* replace with the URL of your image */
+	color: #FFBD59;
+	background-size: cover;
+	vertical-align: text-bottom;
+	margin-right: 2rem;
+	/* add a little space between icon and text */
+}
+
+header .hamburger {
+	cursor: pointer;
+	display: none;
+	padding: 15px 15px;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	header .main-menu {
+		display: none;
+	}
+	header .show {
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header .hamburger {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header nav {
+		background-color: transparent;
+		top: -1rem;
+		right: 0;
+	}
+	header ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	header .menu .main-menu {
+		border-bottom: 0px;
+		display: inline;
+	}
+	header .menu .main-menu a {
+		color: #000;
+		font-size: 1.5rem;
+	}
+	header .menu-primary-menu-container {
+		position: absolute;
+		right: 1rem;
+		top: 2.6rem;
+	}
+	header .menu .main-menu:last-of-type {
+		margin-top: 0rem;
+	}
+	header .menu .main-menu:last-of-type a {
+		color: #568091;
+		padding-right: 1rem;
+	}
+	header .menu .main-menu:last-of-type {
+		border: none;
+	}
+	header .main-menu:last-of-type::before {
+		content: "";
+		background-image: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/mobile.png");
+		/* replace with the URL of your image */
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	header .menu .main-menu a {
+		color: #000;
+		font-size: 1.8rem;
+		padding-right: 2rem;
+	}
+	header .menu-primary-menu-container {
+		right: 3rem;
+	}
+	header .site-branding img {
+		margin-left: 2rem;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	header .menu .main-menu a {
+		color: #000;
+		font-size: 2rem;
+		padding-right: 3rem;
+	}
+	header .menu-primary-menu-container {
+		right: 5rem;
+	}
+	header .site-branding img {
+		width: 22rem;
+		height: 8rem;
+		margin-left: 25rem;
+	}
+}
+
+.home .sr-only {
+	display: none;
+}
+
 @media only screen and (min-width: 75rem) {
 	.banner .container,
 	.contact-cta .container {
