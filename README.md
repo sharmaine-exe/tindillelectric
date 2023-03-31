@@ -37,7 +37,7 @@ Split between team members:
 11. single.php
 12. 404.php
 13. front-page.php (custom)
-14. page-about-us.php (custom)
+14. page-about.php (custom)
 15. style.css
 ## Sharmaine:
 16. search.php

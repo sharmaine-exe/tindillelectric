@@ -1,7 +1,16 @@
-<li>
-    <p><?php the_field('reviewer'); ?></p>
-    <p><?php the_field('testimonial'); ?></p>
-    <p class="rating mt-2 mb-0">
+<li class="slider-item">
+    <div class="comment">
+<<<<<<< HEAD
+        <?php 
+            $summary = get_field('testimonial'); 
+            echo wp_trim_words($summary, 40, "...");
+        ?>
+        <!-- <a href="#" id="myLink">See more</a> -->
+=======
+        <?php the_field('testimonial'); ?>
+>>>>>>> 64feebe638215078146eeb97c027eb9b953cb501
+    </div>
+    <div class="rating">
         <?php
             $rating = get_field('rating'); // Replace 'rating' with the name of your ACF field
             $stars = '';
@@ -27,6 +36,8 @@
         ?>
 
         <p><?php echo $stars; ?></p>
-    </p>
-    <p><?php the_field('date_reviewed'); ?></p>
+    </div>
+    <div class="reviewer"><?php the_field('reviewer'); ?></div>
 </li>
+
+   

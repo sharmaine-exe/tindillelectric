@@ -35,7 +35,7 @@
 		</a>	
 
 	</div><!-- .entry-content -->
-
+    
 	<header class="entry-header">
 		<a class="cut-sheet-grid-title" href="<?php the_permalink(); ?>">	
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

@@ -1,0 +1,62 @@
+form {
+
+    input,
+    textarea,
+    select {
+        color: $color-grey-2;
+        font-family: $font-body;
+        display: block;
+        width: 100%;
+        line-height: 1.5;
+        padding: 1.1rem;
+        font-size: $default-font-size;
+        background-color: $color-white;
+        background-clip: padding-box;
+        border: 1px solid $color-grey-4;
+        border-radius: $border-radius;
+
+        &:focus {
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+        }
+
+        @include respond(large) {
+            font-size: 1.8rem;
+        }
+    }
+
+    input[type="submit"] {
+        border: none;
+    }
+
+    .form-label {
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 0.75rem;
+
+        &.required::before {
+            color: $color-primary;
+            content: "*";
+            position: absolute;
+            margin-left: -15px;
+            font-weight: bold;
+        }
+    }
+
+    textarea {
+        height: 15rem;
+    }
+
+    .caption,
+    .wpcf7-not-valid-tip {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+        color: #7a838b;
+    }
+
+    .wpcf7-not-valid-tip {
+        color: red;
+    }
+}

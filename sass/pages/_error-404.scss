@@ -1,0 +1,64 @@
+.error-404 {
+    color: rgba($color: $color-white, $alpha: 0.95);
+
+    .page-header {
+        margin-top: -5rem;
+
+        .page-title {
+            color: $color-primary;
+            font-family: $font-heading;
+            font-size: clamp(15rem, 13vw, 22rem);
+            font-weight: bold;
+
+            &+p {
+                font-family: $font-heading;
+                font-size: clamp(3.5rem, 3vw, 5rem);
+                font-weight: bold;
+                margin-top: -3rem;
+            }
+        }
+    }
+
+    .page-content {
+        p {
+            margin: 0 0 2.5rem;
+        }
+
+        form.search-form {
+            @include respond(medium) {
+                @include alignCenter;
+                align-items: stretch;
+
+                label {
+                    flex: 2;
+
+                    input {
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                }
+            }
+
+            @include respond(large) {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            input[type="submit"] {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 0;
+
+                @include respond(medium) {
+                    display: inline-block;
+                    width: unset;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+    }
+
+
+}

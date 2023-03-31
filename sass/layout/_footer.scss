@@ -1,0 +1,55 @@
+footer {
+    div{
+        background-color: $color-grey-3;
+    }
+    .site-info a img{
+        width: 20rem;
+        height: 9rem;
+        padding-top: 2rem;
+    }
+    .wp-block-columns{
+        padding: 1rem;
+        margin-bottom: 0rem;
+    }
+    .wp-block-column{
+        border-bottom: 2px solid $color-grey-2;
+    }
+    .wp-block-column h4{
+        color: $color-primary-light;
+        margin-bottom: 2rem;
+        font-family: $font-heading;
+    }
+    .wp-block-column p{
+        color: $color-white;
+        font-family: $font-heading;
+        margin-bottom: 2rem;
+    }
+    .wp-block-column .widget .menu .menu-item a{
+        color:$color-white;
+        font-family: $font-heading;
+    }
+    .wp-block-column .widget .menu{
+        margin-bottom: 2rem;
+        padding-bottom: 0.8rem;
+    }
+    .wp-block-column .widget .menu{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .wp-block-column .widget .menu li{
+        width: 50%;
+    }
+    .wp-block-social-links{
+        margin-bottom: 2rem;
+    }
+    p{
+        margin-bottom: 0rem;
+    }
+    h5{
+        color: $color-white;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}

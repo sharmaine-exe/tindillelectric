@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; // 1 rem = 10px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    margin-bottom: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: $color-grey-2;
+}
+
+ul {
+    list-style-type: none;
+}

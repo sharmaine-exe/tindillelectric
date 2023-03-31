@@ -1,0 +1,15 @@
+.about {
+    .intro {
+        background-color: $color-secondary-light-bg;
+
+        @include respond(medium) {
+            p {
+                @include paraIntro;
+            }
+        }
+    }
+
+    .why-tindill {
+        background-color: unset;
+    }
+}

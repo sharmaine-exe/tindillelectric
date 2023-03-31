@@ -1,0 +1,31 @@
+.confirmation {
+
+    .container {
+        padding: 8rem 2rem;
+
+        @include respond(medium) {
+            padding: 12rem 2rem;
+            max-width: 100rem;
+        }
+    }
+
+    h3 span {
+        color: $color-secondary-light;
+    }
+
+    a.link {
+        color: $color-secondary;
+
+        &:hover {
+            color: $color-primary-dark;
+        }
+    }
+
+    .btn-underline {
+        @include alignCenter;
+        justify-content: flex-start;
+        width: fit-content;
+        gap: 0.5rem;
+        margin-top: 3rem;
+    }
+}

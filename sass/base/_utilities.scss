@@ -1,0 +1,24 @@
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+
+    @include respond(large) {
+        padding: 8rem 4rem;
+    }
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.sr-only {
+    position: absolute;
+    top: -999rem;
+    left: -999rem;
+}

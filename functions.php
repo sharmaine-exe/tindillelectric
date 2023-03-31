@@ -131,15 +131,6 @@ function tindillelectric_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-
-    register_sidebar( array(
-		'name'          => 'Contact CTA',
-		'id'            => 'contact_cta',
-		'before_widget' => '<div class="contact_cta">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
-	) );
     
 
 	register_sidebar( 
@@ -161,10 +152,11 @@ add_action( 'widgets_init', 'tindillelectric_widgets_init' );
 function tindillelectric_scripts() {
     wp_enqueue_style( 'tindillelectric-style', get_template_directory_uri() . '/style.css' );
 
+	// Jquery 
+	// wp_enqueue_script( 'jquery' );
+
     // google fonts
     wp_enqueue_style( 'font-space-grotesk', 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap', false );
-
-    wp_enqueue_style( 'font-questrial', 'https://fonts.googleapis.com/css2?family=Questrial&display=swap', false );
 
 
 	wp_enqueue_script( 'tindillelectric-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -177,6 +169,51 @@ function tindillelectric_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tindillelectric_scripts' );
 
+function search_template($template) {
+	global $wp_query;
+	$post_type = get_query_var('post_type');
+	
+	if( $wp_query->is_search && $post_type == 'cut-sheets' ){
+		return locate_template('cut-sheets-search.php'); // redirect to cut-sheets-search.php
+	}
+	
+	return $template;
+}
+add_filter('template_include', 'search_template');
+
+
+/**
+ * Allow SVG file upload.
+ */
+  
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+    $filetype = wp_check_filetype( $filename, $mimes );
+    return [
+        'ext'             => $filetype['ext'],
+        'type'            => $filetype['type'],
+        'proper_filename' => $data['proper_filename']
+    ];
+  
+  }, 10, 4 );
+  
+  function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+  }
+  
+  add_filter( 'upload_mimes', 'cc_mime_types' );
+  
+  function fix_svg() {
+    echo '<style type="text/css">
+          .attachment-266x266, .thumbnail img {
+               width: 100% !important;
+               height: auto !important;
+          }
+          </style>';
+  }
+  add_action( 'admin_head', 'fix_svg' );
+
+  
 
 /**
  * Implement the Custom Header feature.

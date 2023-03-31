@@ -1,6 +1,6 @@
 /* ----------------- Banner ----------------- */
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("https://mjayme1.dmitstudent.ca/dmit2032/powerhouse/wp-content/uploads/2023/03/banner-bg.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("https://mjayme1.dmitstudent.ca/dmit2032/powerhouse/wp-content/uploads/2023/03/banner-bg.png");
     min-height: 90vh;
     /* TODO: Adjust vh based on header height */
     background-size: cover;
