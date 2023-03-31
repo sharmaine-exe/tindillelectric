@@ -152,6 +152,12 @@ body {
 	text-transform: uppercase;
 }
 
+.sr-only {
+	position: absolute;
+	top: -999rem;
+	left: -999rem;
+}
+
 .banner {
 	background-size: cover !important;
 	background-position: center !important;
@@ -259,6 +265,16 @@ body {
 
 .btn-yellow--outline:hover {
 	border: 0.2rem solid #EB8F05;
+}
+
+.btn-underline {
+	color: #3C6677;
+	border-bottom: 0.1rem solid #3C6677;
+	padding: 0 !important;
+}
+
+.btn-underline:hover {
+	color: #022731;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -850,9 +866,9 @@ header .hamburger {
 	background-color: unset;
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 50rem) {
 	.contact .container {
-		max-width: 110rem;
+		max-width: 100rem;
 	}
 }
 
@@ -893,10 +909,43 @@ header .hamburger {
 
 .contact .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 	grid-gap: 2.5rem;
 	align-items: stretch;
 	margin: 4rem 0;
+}
+
+.confirmation .container {
+	padding: 8rem 2rem;
+}
+
+@media only screen and (min-width: 50rem) {
+	.confirmation .container {
+		padding: 12rem 2rem;
+		max-width: 100rem;
+	}
+}
+
+.confirmation h3 span {
+	color: #568091;
+}
+
+.confirmation a.link {
+	color: #3C6677;
+}
+
+.confirmation a.link:hover {
+	color: #EB8F05;
+}
+
+.confirmation .btn-underline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-start;
+	width: fit-content;
+	gap: 0.5rem;
+	margin-top: 3rem;
 }
 
 .error-404 {

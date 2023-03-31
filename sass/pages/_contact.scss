@@ -1,7 +1,7 @@
 .contact {
     .container {
-        @include respond(large) {
-            max-width: 110rem;
+        @include respond(medium) {
+            max-width: 100rem;
         }
     }
 
@@ -43,7 +43,7 @@
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
         grid-gap: 2.5rem;
         align-items: stretch;
         margin: 4rem 0;

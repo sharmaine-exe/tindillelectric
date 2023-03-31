@@ -14,8 +14,6 @@
         letter-spacing: 0.05rem;
         cursor: pointer;
         transition: all 200ms ease-in-out;
-
-
     }
 
     &:active,
@@ -61,6 +59,16 @@
 
         &:hover {
             border: 0.2rem solid $color-primary-dark;
+        }
+    }
+
+    &-underline {
+        color: $color-secondary;
+        border-bottom: 0.1rem solid $color-secondary;
+        padding: 0 !important;
+
+        &:hover {
+            color: $color-secondary-dark;
         }
     }
 }
