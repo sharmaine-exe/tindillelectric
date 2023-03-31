@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all single posts for cut sheets
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -10,13 +10,16 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main single-cut-sheet-view">
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content-single', get_post_type() );
+
+			get_template_part( 'template-parts/content-single-cut-sheet', get_post_type() );
+
+            the_terms( $post->ID, 'cut-sheet-category', 'Category: ', '/ ' );
 
 			the_post_navigation(
 				array(
@@ -25,11 +28,13 @@ get_header();
 				)
 			);
 
+            
+
 		endwhile; // End of the loop.
 		?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

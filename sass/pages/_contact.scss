@@ -1,0 +1,52 @@
+.contact {
+    .container {
+        @include respond(large) {
+            max-width: 110rem;
+        }
+    }
+
+    form {
+        margin-top: $gutter-horizontal;
+
+        p {
+            margin-bottom: 0;
+
+            &:nth-of-type(5) {
+                grid-column: 1 / -1;
+            }
+        }
+
+        input {
+            &.wpcf7-submit {
+                background-color: $color-primary;
+                color: $color-white;
+
+                &:focus {
+                    border-color: none;
+                }
+
+                &:hover {
+                    background-color: $color-primary-dark;
+                }
+
+                @include respond(large) {
+                    width: 25%;
+                }
+            }
+        }
+
+        select {
+            padding: 1.3rem 1.2rem;
+        }
+
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-gap: 2.5rem;
+        align-items: stretch;
+        margin: 4rem 0;
+    }
+
+}

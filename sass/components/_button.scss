@@ -1,0 +1,86 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.25rem 3.5rem;
+        display: inline-block;
+        border-radius: $border-radius;
+        font-size: $default-font-size;
+        font-family: $font-heading;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+
+
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &-banner {
+        background-color: $color-primary-light;
+        color: $color-grey-3;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+
+    &-content {
+        background-color: $color-primary;
+        color: $color-white;
+        margin-top: 3rem;
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+
+    &-white {
+        background-color: $color-white;
+        color: $color-grey-3;
+        border: 0.2rem solid $color-white;
+    }
+
+    &-white--outline {
+        background-color: transparent;
+        color: $color-white;
+        border: 0.2rem solid $color-white;
+    }
+
+    &-yellow--outline {
+        background-color: transparent;
+        color: $color-primary;
+        border: 0.2rem solid $color-primary;
+
+        &:hover {
+            border: 0.2rem solid $color-primary-dark;
+        }
+    }
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-secondary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 0.1px solid $color-secondary;
+        padding-bottom: 0.3rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-secondary-dark;
+        color: $color-white;
+        transform: translateY(-2px);
+    }
+}

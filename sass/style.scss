@@ -1,0 +1,41 @@
+/*
+Theme Name: tindillelectric
+Theme URI: http://tindill.web.dmitcapstone.ca/
+Author: Team Powerhouse
+Author URI: https://wordpress.org/
+Template: tindillelectric
+Description: Tindill Electric is a custom WordPress theme.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwenty
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/banner";
+@import "components/button";
+@import "components/contact-cta";
+@import "components/form";
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+
+@import "pages/home";
+@import "pages/about";
+@import "pages/services";
+@import "pages/projects";
+@import "pages/about";
+@import "pages/contact";
+@import "pages/confirmation";
+@import "pages/cutsheets";
+@import "pages/error-404";

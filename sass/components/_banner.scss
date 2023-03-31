@@ -1,0 +1,45 @@
+.banner {
+    background-size: cover !important;
+    background-position: center !important;
+    @include alignCenter;
+
+    &-home {
+        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
+        min-height: 90vh;
+        // TODO: Adjust vh based on header height 
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &-404 {
+        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg");
+        min-height: 90vh;
+        // TODO: Adjust vh based on header height 
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &-title {
+        height: 25vh;
+
+        @include respond(large) {
+            height: 32vh;
+        }
+
+        h3.heading-primary {
+            margin-bottom: 0;
+
+            @include respond(medium) {
+                font-size: 6rem;
+            }
+        }
+
+        &--about {
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-banner.jpg");
+        }
+
+        &--contact {
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/contact-banner.jpg");
+        }
+    }
+}

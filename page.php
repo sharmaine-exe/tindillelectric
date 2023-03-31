@@ -14,6 +14,20 @@
 
 get_header();
 ?>
+    <!-- the banner -->
+    <div class="banner-container">
+        <h1 class="banner-heading"><?php the_title(); ?></h1>
+        <!-- 
+            add bg as img for the bg overlay
+                
+        -->
+        
+        <!-- use which applies -->
+        <div class="banner-content">
+            <!-- <h3 class="banner-subheading"></h3> -->
+            <!-- <div class="banner-cta"></div> -->
+        </div>
+    </div>
 
 	<main id="primary" class="site-main">
 
@@ -22,11 +36,6 @@ get_header();
 			the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
 		endwhile; // End of the loop.
 		?>
