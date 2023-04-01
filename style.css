@@ -180,6 +180,22 @@ body {
 	align-items: start;
 }
 
+.banner-single-service {
+	color: #fff;
+	min-height: 50vh;
+	flex-direction: column;
+	align-items: start;
+}
+
+@media only screen and (min-width: 50rem) {
+	.banner-single-service {
+		justify-content: flex-end;
+	}
+	.banner-single-service .container > div {
+		text-align: unset;
+	}
+}
+
 .banner-title {
 	height: 25vh;
 }
@@ -861,6 +877,14 @@ header .hamburger {
 
 .about .why-tindill {
 	background-color: unset;
+}
+
+.single-service .banner h3 {
+	color: #fff;
+}
+
+.single-service .btn-content {
+	margin-top: 1rem;
 }
 
 .about .intro {
