@@ -20,22 +20,13 @@ get_header();
 
 get_header();
 ?>
-    <!-- the banner -->
-    <div class="banner-container">
-        <h1 class="banner-heading"><?php echo "Search"; ?></h1>
-        <!-- 
-            add bg as img for the bg overlay:
-                Commercial-2.jpg
-        -->
-        
-        <!-- use which applies -->
-        <div class="banner-content">
-            <!-- <h3 class="banner-subheading"></h3> -->
-            <!-- <div class="banner-cta"></div> -->
-        </div>
-    </div>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+    <!-- Banner -->
+    <section class="banner banner-title banner-title--cut-sheets text-center">
+        <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
+    </section>
+    <!-- End of Banner -->
 
         <div class="cut-sheet-functions">
             <!-- search form -->
@@ -45,7 +36,7 @@ get_header();
                     <input type="search" class="search-field" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
                     <input type="hidden" name="post_type" value="cut-sheets" />
                 </label>
-                <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+                <input type="submit" class="search-submit btn btn-content" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
             </form>
             <div class="wp-block-button" id="<?php echo get_site_url() . "/cut-sheets/"; ?>">
                 <a class="wp-block-button__link wp-element-button" href="<?php echo get_site_url() . "/cut-sheets/"; ?>" style="border-radius: 3px;">Back to Cut Sheets</a>

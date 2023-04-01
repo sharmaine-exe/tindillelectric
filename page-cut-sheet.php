@@ -15,35 +15,31 @@
 get_header();
 ?>
 
-    <!-- the banner -->
-    <div class="banner-container">
-        <h1 class="banner-heading"><?php the_title(); ?></h1>
-        <!-- 
-            add bg as img for the bg overlay:
-                Commercial-2.jpg
-        -->
-        
-        <!-- use which applies -->
-        <div class="banner-content">
-            <!-- <h3 class="banner-subheading"></h3> -->
-            <!-- <div class="banner-cta"></div> -->
-        </div>
-    </div>
+<main id="primary" class="site-main cut-sheets">
 
-	<main id="primary" class="site-main">
+    <!-- Banner -->
+    <section class="banner banner-title banner-title--cut-sheets text-center">
+        <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
+    </section>
+    <!-- End of Banner -->
+
+    <div class="container">
         <div class="cut-sheet-functions">
-            <!-- search form -->
+            <!-- Search Form -->
             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <label>
                     <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
                     <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search for ...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
                     <input type="hidden" name="post_type" value="cut-sheets" />
                 </label>
-                <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+                <input type="submit" class="search-submit btn btn-content" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
             </form>
         </div>
+        <!-- End of Search Form -->
         
-        <div class="cut-sheet-grid-container cut-sheet-flex">
+
+        <!-- Cut Sheets Grid -->
+        <div class="cut-sheets--grid-container cut-sheet-flex">
             <?php
                 // $paged for pagination
                 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
@@ -66,6 +62,7 @@ get_header();
                     get_template_part('template-parts/content', 'none');
                 }
             ?>
+            <!-- pagination -->
             <div class="pagination">
                 <?php 
                     $total_pages = $loop->max_num_pages;
@@ -84,10 +81,14 @@ get_header();
                     }
                 ?>    
 
-            </div> <!-- end of pagination -->
+            </div>
+            <!-- end of pagination -->
         </div>
+        <!-- End of Cut Sheets Grid -->
+    </div>
+    
 
-	</main><!-- #main -->
+</main><!-- #main -->
 
 
 <?php

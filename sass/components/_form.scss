@@ -8,7 +8,7 @@ form {
         display: block;
         width: 100%;
         line-height: 1.5;
-        padding: 1.1rem;
+        padding: 1rem;
         font-size: $default-font-size;
         background-color: $color-white;
         background-clip: padding-box;
@@ -19,10 +19,6 @@ form {
             border-color: #86b7fe;
             outline: 0;
             box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
-        }
-
-        @include respond(large) {
-            font-size: 1.8rem;
         }
     }
 
@@ -41,6 +37,10 @@ form {
             position: absolute;
             margin-left: -15px;
             font-weight: bold;
+        }
+
+        @include respond(medium) {
+            font-size: 1.6rem;
         }
     }
 
