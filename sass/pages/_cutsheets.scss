@@ -110,7 +110,8 @@
 
 }
 
-.cut-sheets {
+.cut-sheets,
+.cut-sheets-search {
 
     .container {
         @include respond(medium) {
@@ -129,12 +130,41 @@
         align-items: stretch;
         margin: 4rem 0;
 
-        .pagination {
-            grid-column: 1 / -1;
-        }
-
         @include respond(medium) {
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        }
+
+        .pagination {
+            grid-column: 1 / -1;
+            @include alignCenter;
+            justify-content: flex-end;
+            margin-top: 4rem;
+
+            .page-numbers {
+                padding: 0.8rem 1.6rem;
+                border: 0.1rem solid rgba($color: $color-secondary-light, $alpha: 0.35);
+                color: $color-secondary;
+
+                &:not(:last-of-type),
+                &.current {
+                    border-right: none;
+                }
+
+                &:nth-child(1) {
+                    border-top-left-radius: $border-radius;
+                    border-bottom-left-radius: $border-radius;
+                }
+
+                &:last-child {
+                    border-top-right-radius: $border-radius;
+                    border-bottom-right-radius: $border-radius;
+                }
+
+                &.current {
+                    color: $color-white;
+                    background-color: $color-secondary;
+                }
+            }
         }
     }
 
@@ -225,5 +255,13 @@
         }
     }
 
+    .btn-underline {
+        color: $color-primary-light;
+        border-bottom: 0.1rem solid $color-primary-light;
+        width: fit-content;
+        margin: 0 auto 1.6rem;
+        @include alignCenter;
+        gap: 0.5rem;
+    }
 
 }

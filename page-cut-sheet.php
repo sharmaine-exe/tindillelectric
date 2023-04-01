@@ -39,7 +39,7 @@ get_header();
         
 
         <!-- Cut Sheets Grid -->
-        <div class="cut-sheets--grid-container cut-sheet-flex">
+        <div class="cut-sheets--grid-container">
             <?php
                 // $paged for pagination
                 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
