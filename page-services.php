@@ -15,49 +15,33 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main projects">
+    <section>
+        <h2>Services</h2>
+        <h3>HERE AT TINDILL ELECTRIC, WE MEET YOUR ELECTRICAL NEEDS</h3>
+        <p>Whether you require residential electrical services or commercial, Tindill Electric is here to help you achieve your goal and provide peace of mind. Check out all the electrical services that Tindill Electric has to offer below.</p>
 
-    <!-- Banner -->
-    <section class="banner banner-title banner-title--services text-center">
-        <?php while ( have_posts() ) : the_post(); ?>
-            <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
-        <?php endwhile; ?>
-    </section>
-    <!-- End of Banner -->
-
-    <!-- Intro -->
-    <section class="intro">
-        <div class="container">
-            <h3 class="heading-tertiary">HERE AT TINDILL ELECTRIC, WE MEET YOUR ELECTRICAL NEEDS</h3>
-            <p>
-                Whether you require residential electrical services or commercial, Tindill Electric is here to help you achieve your goal and provide peace of mind. Check out all the electrical services that Tindill Electric has to offer below.
-            </p>
-        </div>
-    </section>
-    <!-- End of Intro -->
-
-    <!-- Featured Services -->
-    <section class="featured-services">
-        <?php
-            $args = array(
-                'post_type'      => 'tindill-elec-service',
-                'posts_per_page' => 20,
-            );
-            $loop = new WP_Query($args);
-            while ( $loop->have_posts() ) {
-                $loop->the_post();
-            
-                get_template_part('template-parts/content', 'services');
+        <div class="featured-images">
+            <?php
+                $args = array(
+                    'post_type'      => 'tindill-elec-service', 
+                    'posts_per_page' => 20,
+                    // 'category_name' => 'residential,commercial,power,home,evc,security,repairs'
+                    'order' => 'ASC'
+                );
+                $loop = new WP_Query($args);
+                while ( $loop->have_posts() ) {
+                    $loop->the_post();
                 
-            }
-        ?>
+                    get_template_part('template-parts/content', 'services');
+                    
+                }
+            ?>
+        </div>
+
     </section>
-    <!-- End of Featured Services -->
 
-</main>
 
-<aside>
-    <?php get_template_part( 'template-parts/content', 'contact-cta' ); ?>
-</aside>
+<?php
 
-<?php get_footer(); ?>
+get_footer();
+
