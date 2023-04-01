@@ -45,21 +45,46 @@ get_header();
         
         <div class="cut-sheet-grid-container cut-sheet-flex">
             <?php
+                // $paged for pagination
+                $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
                 // loop
                 $args = array(
                     'post_type'      => 'cut-sheets',
-                    'posts_per_page' => 25,
-                    'order' => 'ASC'
+                    'posts_per_page' => 10,
+                    'order' => 'ASC',
+                    'paged' => $paged,
                 );
                 $loop = new WP_Query($args);
-
-                while ( $loop->have_posts() ) {
-                    $loop->the_post();
-                
-                    get_template_part('template-parts/content', 'cut-sheets');
+                if(have_posts()){
+                    while ( $loop->have_posts() ) {
+                        $loop->the_post();
                     
+                        get_template_part('template-parts/content', 'cut-sheets');
+                        
+                    }
+                } else{
+                    get_template_part('template-parts/content', 'none');
                 }
             ?>
+            <div class="pagination">
+                <?php 
+                    $total_pages = $loop->max_num_pages;
+                    // echo "pages " . $total_pages . " <br>";
+                    $big = 999999999;
+                    if ($total_pages > 1){
+
+                        $current_page = max(1, get_query_var('paged'));
+                
+                        echo paginate_links( array(
+                            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                            'format' => '?paged=%#%',
+                            'current' => $current_page,
+                            'total' => $total_pages
+                        ) );
+                    }
+                ?>    
+
+            </div> <!-- end of pagination -->
         </div>
 
 	</main><!-- #main -->
