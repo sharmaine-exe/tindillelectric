@@ -9,6 +9,13 @@
     margin: 1.8rem auto;
 }
 
+@mixin grid($min, $gridGap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+    grid-gap: $gridGap;
+    align-items: stretch;
+}
+
 @mixin btnSubmit {
     font-size: $default-font-size;
     font-family: $font-heading;

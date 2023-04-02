@@ -11,6 +11,8 @@
         p {
             margin-bottom: 0;
 
+            &:nth-of-type(1),
+            &:nth-of-type(4),
             &:nth-of-type(5) {
                 grid-column: 1 / -1;
             }
@@ -30,18 +32,34 @@
             }
         }
 
-        select {
-            padding: 1.3rem 1.2rem;
+        .wpcf7-checkbox {
+            .wpcf7-list-item {
+                @include alignCenter;
+                justify-content: flex-start;
+                gap: 0.8rem;
+                margin: 0 0 1rem;
+
+                input[type="checkbox"] {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
+            }
+
+            .wpcf7-list-item-label {
+                font-size: $default-font-size;
+            }
         }
 
     }
 
     .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-        grid-gap: 2.5rem;
-        align-items: stretch;
+        @include grid(42rem, 2.5rem);
         margin: 4rem 0;
+    }
+
+    .wpcf7-form-control.wpcf7-checkbox {
+        @include grid(20rem, 0 2.5rem);
+        margin: 1rem 0 0;
     }
 
 }

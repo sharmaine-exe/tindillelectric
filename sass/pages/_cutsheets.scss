@@ -132,14 +132,11 @@
     }
 
     &--grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-        grid-gap: 3.5rem 2.5rem;
-        align-items: stretch;
+        @include grid(17rem, 3.5rem 2.5rem);
         margin: 4rem 0;
 
         @include respond(medium) {
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            @include grid(22rem, 3.5rem 2.5rem);
         }
 
         .pagination {

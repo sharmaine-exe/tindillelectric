@@ -921,7 +921,7 @@ header .hamburger {
 	margin-bottom: 0;
 }
 
-.contact form p:nth-of-type(5) {
+.contact form p:nth-of-type(1), .contact form p:nth-of-type(4), .contact form p:nth-of-type(5) {
 	grid-column: 1 / -1;
 }
 
@@ -955,16 +955,38 @@ header .hamburger {
 	}
 }
 
-.contact form select {
-	padding: 1.3rem 1.2rem;
+.contact form .wpcf7-checkbox .wpcf7-list-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.8rem;
+	margin: 0 0 1rem;
+}
+
+.contact form .wpcf7-checkbox .wpcf7-list-item input[type="checkbox"] {
+	width: 1.8rem;
+	height: 1.8rem;
+}
+
+.contact form .wpcf7-checkbox .wpcf7-list-item-label {
+	font-size: 1.6rem;
 }
 
 .contact .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(42rem, 1fr));
 	grid-gap: 2.5rem;
 	align-items: stretch;
 	margin: 4rem 0;
+}
+
+.contact .wpcf7-form-control.wpcf7-checkbox {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	grid-gap: 0 2.5rem;
+	align-items: stretch;
+	margin: 1rem 0 0;
 }
 
 .confirmation .container {
@@ -1162,7 +1184,7 @@ header .hamburger {
 .cut-sheets--grid-container,
 .cut-sheets-search--grid-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
 	grid-gap: 3.5rem 2.5rem;
 	align-items: stretch;
 	margin: 4rem 0;
@@ -1171,7 +1193,10 @@ header .hamburger {
 @media only screen and (min-width: 50rem) {
 	.cut-sheets--grid-container,
 	.cut-sheets-search--grid-container {
-		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+		grid-gap: 3.5rem 2.5rem;
+		align-items: stretch;
 	}
 }
 
