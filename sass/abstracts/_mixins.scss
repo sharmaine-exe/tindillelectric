@@ -4,10 +4,29 @@
     align-items: center;
 }
 
-
 @mixin paraIntro {
     max-width: 90ch;
     margin: 1.8rem auto;
+}
+
+@mixin btnSubmit {
+    font-size: $default-font-size;
+    font-family: $font-heading;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    background-color: $color-primary;
+    color: $color-white;
+    margin-top: 3rem;
+    display: block;
+    padding: 1.25rem 3.5rem;
+    border-radius: $border-radius;
+    height: 4.8rem;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
 }
 
 

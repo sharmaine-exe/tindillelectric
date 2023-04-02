@@ -18,15 +18,10 @@
 
         input {
             &.wpcf7-submit {
-                background-color: $color-primary;
-                color: $color-white;
+                @include btnSubmit;
 
                 &:focus {
                     border-color: none;
-                }
-
-                &:hover {
-                    background-color: $color-primary-dark;
                 }
 
                 @include respond(large) {

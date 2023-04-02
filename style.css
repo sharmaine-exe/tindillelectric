@@ -242,9 +242,9 @@ body {
 .btn, .btn:link, .btn:visited {
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 1.25rem 3.5rem;
+	padding: 1.25rem 3.5rem !important;
 	display: inline-block;
-	border-radius: 0.25rem;
+	border-radius: 0.25rem !important;
 	font-size: 1.6rem;
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 500;
@@ -926,16 +926,27 @@ header .hamburger {
 }
 
 .contact form input.wpcf7-submit {
+	font-size: 1.6rem;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+	text-transform: uppercase;
 	background-color: #F2A024;
 	color: #fff;
-}
-
-.contact form input.wpcf7-submit:focus {
-	border-color: none;
+	margin-top: 3rem;
+	display: block;
+	padding: 1.25rem 3.5rem;
+	border-radius: 0.25rem;
+	height: 4.8rem;
+	transition: all 200ms ease-in-out;
 }
 
 .contact form input.wpcf7-submit:hover {
 	background-color: #EB8F05;
+}
+
+.contact form input.wpcf7-submit:focus {
+	border-color: none;
 }
 
 @media only screen and (min-width: 75rem) {
@@ -1118,6 +1129,34 @@ header .hamburger {
 .cut-sheets .search-submit,
 .cut-sheets-search .search-submit {
 	margin-top: 0;
+	font-size: 1.6rem;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+	text-transform: uppercase;
+	background-color: #F2A024;
+	color: #fff;
+	margin-top: 3rem;
+	display: block;
+	padding: 1.25rem 3.5rem;
+	border-radius: 0.25rem;
+	height: 4.8rem;
+	transition: all 200ms ease-in-out;
+}
+
+.cut-sheets .search-submit:hover,
+.cut-sheets-search .search-submit:hover {
+	background-color: #EB8F05;
+}
+
+@media only screen and (min-width: 50rem) {
+	.cut-sheets .search-submit,
+	.cut-sheets-search .search-submit {
+		display: inline-block;
+		width: unset;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 }
 
 .cut-sheets--grid-container,
@@ -1299,6 +1338,42 @@ header .hamburger {
 	justify-content: center;
 	align-items: center;
 	gap: 0.5rem;
+}
+
+.cut-sheet-single .entry-content {
+	margin-top: -1.6rem;
+}
+
+.cut-sheet-single .entry-title {
+	padding: 0 3rem;
+}
+
+.cut-sheet-single h3.wp-block-heading {
+	font-weight: normal;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+	padding: 0 3rem;
+}
+
+@media only screen and (min-width: 75rem) {
+	.cut-sheet-single h3.wp-block-heading {
+		font-size: 1.8rem;
+	}
+}
+
+.cut-sheet-single .pdfemb-viewer,
+.cut-sheet-single .pdfemb-pagescontainer,
+.cut-sheet-single .pdfemb-inner-div,
+.cut-sheet-single canvas.pdfemb-the-canvas {
+	width: 100% !important;
+	height: auto !important;
+}
+
+@media only screen and (min-width: 75rem) {
+	.cut-sheet-single {
+		max-width: 140rem;
+		margin: 0 auto;
+	}
 }
 
 .error-404 {

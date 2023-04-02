@@ -121,6 +121,14 @@
 
     .search-submit {
         margin-top: 0;
+        @include btnSubmit;
+
+        @include respond(medium) {
+            display: inline-block;
+            width: unset;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
     }
 
     &--grid-container {
@@ -264,4 +272,40 @@
         gap: 0.5rem;
     }
 
+}
+
+
+.cut-sheet-single {
+
+    .entry-content {
+        margin-top: -1.6rem;
+    }
+
+    .entry-title {
+        padding: 0 3rem;
+    }
+
+    h3.wp-block-heading {
+        font-weight: normal;
+        font-size: $default-font-size;
+        margin-bottom: 2rem;
+        padding: 0 3rem;
+
+        @include respond(large) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .pdfemb-viewer,
+    .pdfemb-pagescontainer,
+    .pdfemb-inner-div,
+    canvas.pdfemb-the-canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    @include respond(large) {
+        max-width: 140rem;
+        margin: 0 auto;
+    }
 }

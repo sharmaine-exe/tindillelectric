@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main single-cut-sheet-view">
+	<main id="primary" class="site-main cut-sheet-single">
 
 		<?php
 		while ( have_posts() ) :
@@ -19,16 +19,16 @@ get_header();
 
 			get_template_part( 'template-parts/content-single-cut-sheet', get_post_type() );
 
-            the_terms( $post->ID, 'cut-sheet-category', 'Category: ', '/ ' );
+            // the_terms( $post->ID, 'cut-sheet-category', 'Category: ', '/ ' );
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'tindillelectric' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'tindillelectric' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+			// the_post_navigation(
+			// 	array(
+			// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'tindillelectric' ) . '</span> <span class="nav-title">%title</span>',
+			// 		'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'tindillelectric' ) . '</span> <span class="nav-title">%title</span>',
+			// 	)
+			// );
 
-            
+
 
 		endwhile; // End of the loop.
 		?>

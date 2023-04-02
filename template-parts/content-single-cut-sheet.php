@@ -8,7 +8,7 @@
  */
 
 ?>
-    <div class="container">
+    <div class="text-center">
         <article <?php post_class();?> id="post-<?php the_ID();?>" >
 
             <header>
