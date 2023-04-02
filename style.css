@@ -455,7 +455,7 @@ footer div {
 	background-color: #252525;
 }
 
-footer .site-info a img {
+footer .wp-block-image .wp-image-803 {
 	width: 20rem;
 	height: 9rem;
 	padding-top: 2rem;
@@ -464,6 +464,10 @@ footer .site-info a img {
 footer .wp-block-columns {
 	padding: 1rem;
 	margin-bottom: 0rem;
+}
+
+footer .footer-flex-row {
+	padding-left: 1rem;
 }
 
 footer .wp-block-column {
@@ -485,6 +489,10 @@ footer .wp-block-column p {
 footer .wp-block-column .widget .menu .menu-item a {
 	color: #fff;
 	font-family: "Space Grotesk", sans-serif;
+}
+
+footer .wp-block-column .widget .menu .menu-item a:hover {
+	color: #FFBD59;
 }
 
 footer .wp-block-column .widget .menu {
@@ -515,6 +523,62 @@ footer h5 {
 	padding: 1rem;
 	text-align: center;
 	font-size: 1.5rem;
+}
+
+footer .wp-container-9 .wp-block-column {
+	border-bottom: 0px;
+}
+
+footer .wp-container-9 .wp-block-column p {
+	text-align: center;
+}
+
+footer .wp-container-9 .policy {
+	margin-top: -4rem;
+}
+
+@media screen and (min-width: 782px) {
+	footer .wp-block-column {
+		border-bottom: 0px;
+	}
+	footer .wp-block-columns {
+		border-bottom: 2px solid #4b4a4c;
+	}
+	footer .footer-flex {
+		display: flex;
+	}
+	footer .footer-flex-row {
+		margin: 0 auto;
+		width: fit-content;
+	}
+	footer .sitemap {
+		margin-top: 4rem;
+	}
+	footer .wp-container-6 {
+		padding-bottom: 4rem;
+	}
+	footer .wp-container-9 {
+		padding: 3rem 0;
+		border-bottom: 0px;
+	}
+	footer .wp-container-9 .policy {
+		margin-top: 0rem;
+	}
+	footer .wp-container-9 .wp-block-column {
+		padding: 0 1rem;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	footer .footer-flex-row {
+		padding-left: 0rem;
+	}
+	footer .wp-container-9 .wp-block-column p {
+		text-align: unset;
+	}
+	footer .wp-container-9 .policy {
+		text-align: end;
+	}
 }
 
 header .site-branding img {
@@ -550,6 +614,11 @@ header .menu .main-menu:last-of-type {
 
 header .menu .main-menu:last-of-type a {
 	color: #FFBD59;
+}
+
+header .menu .main-menu a:hover {
+	color: #FFBD59;
+	font-weight: bold;
 }
 
 header .main-menu:last-of-type::before {
