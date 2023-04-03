@@ -201,6 +201,8 @@ body {
 
 .banner-title {
 	height: 25vh;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
 @media only screen and (min-width: 75rem) {
@@ -216,6 +218,7 @@ body {
 @media only screen and (min-width: 50rem) {
 	.banner-title h3.heading-primary {
 		font-size: 6rem;
+		letter-spacing: 0.15rem;
 	}
 }
 

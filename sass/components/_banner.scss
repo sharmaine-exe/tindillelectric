@@ -40,6 +40,8 @@
 
     &-title {
         height: 25vh;
+        text-transform: uppercase;
+        font-weight: 600;
 
         @include respond(large) {
             height: 32vh;
@@ -50,6 +52,7 @@
 
             @include respond(medium) {
                 font-size: 6rem;
+                letter-spacing: 0.15rem;
             }
         }
 

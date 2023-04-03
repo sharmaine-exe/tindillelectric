@@ -14,12 +14,20 @@
 
 get_header();
 ?>
+<main id="primary" class="site-main services">
+    
+    <!-- Banner -->
+    <section class="banner banner-title banner-title--services text-center">
+        <?php while ( have_posts() ) : the_post(); ?>
+            <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
+        <?php endwhile; ?>
+    </section>
+    <!-- End of Banner -->
 
     <section style="display:flex;">
         <div class="all-services">
             <div class="s-flex">
             <div class="services-content">
-                <h2>Services</h2>
                 <h3>Here at Tindill Electric, we meet your electrical needs!</h3>
                 <p>Whether you require residential electrical services or commercial, Tindill Electric is here to help you achieve your goal and provide peace of mind. Check out all the electrical services that Tindill Electric has to offer below.</p>
             </div>
@@ -49,6 +57,7 @@ get_header();
             </div>
         </div>
     </section>
+</main>
 
 
 <?php
