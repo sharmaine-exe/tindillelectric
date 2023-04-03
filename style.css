@@ -961,6 +961,115 @@ header .hamburger {
 	margin-top: 1rem;
 }
 
+.all-services {
+	margin: 0 1rem;
+}
+
+.all-services h3 {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 3rem;
+	color: #252525;
+	line-height: 1.4;
+	margin-top: 4rem;
+}
+
+.all-services p,
+.all-services .featured-images .customs p {
+	font-size: 1.6rem;
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	margin: 2rem 0;
+}
+
+.all-services a {
+	margin-bottom: 4rem;
+}
+
+.all-services .featured-images .customs img {
+	height: fit-content;
+}
+
+.all-services .featured-images .customs h3 {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 3rem;
+	color: #252525;
+	text-align: center;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+}
+
+.all-services .featured-images .customs p {
+	text-align: center;
+}
+
+.all-services .featured-images .customs .btn {
+	background-color: #fff;
+	color: #F2A024;
+	border: 2px solid #F2A024;
+}
+
+.all-services .featured-images .customs .btn:hover {
+	background-color: #F2A024;
+	color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+	.all-services {
+		margin: 0 auto;
+		width: 96%;
+	}
+	.all-services .featured-images .customs img {
+		height: 525px;
+	}
+	.all-services .all-featured-images {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	.all-services .featured-images .customs {
+		width: 49%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.all-services .s-flex {
+		display: flex;
+		margin-bottom: 5rem;
+	}
+	.all-services .services-content {
+		width: 60%;
+	}
+	.all-services .services-button {
+		width: 30%;
+		text-align: end;
+		padding-top: 7rem;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.all-services {
+		width: 86%;
+	}
+	.all-services .featured-images .customs:first-of-type,
+	.all-services .featured-images .customs:nth-of-type(2) {
+		width: 49%;
+	}
+	.all-services .featured-images .customs:nth-of-type(3),
+	.all-services .featured-images .customs:nth-of-type(4),
+	.all-services .featured-images .customs:nth-of-type(5) {
+		width: 32.3%;
+	}
+	.all-services .featured-images .customs:nth-of-type(6),
+	.all-services .featured-images .customs:last-of-type {
+		width: 49%;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.all-services {
+		width: 80%;
+	}
+}
+
 .about .intro {
 	background-color: #f3fffc;
 }
