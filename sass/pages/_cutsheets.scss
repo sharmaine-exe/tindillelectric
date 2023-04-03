@@ -306,3 +306,26 @@
         margin: 0 auto;
     }
 }
+
+
+.cut-sheet-category {
+    .heading-primary {
+        font-size: 2.4rem !important;
+        font-weight: lighter;
+        font-family: $font-body;
+        text-transform: capitalize;
+        width: 100%;
+
+        span {
+            display: block;
+            font-size: 6rem;
+            font-weight: 600;
+            font-family: $font-heading;
+            text-transform: uppercase;
+        }
+    }
+
+    .cut-sheets--grid-container {
+        margin: 0;
+    }
+}

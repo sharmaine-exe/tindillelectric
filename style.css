@@ -1582,6 +1582,26 @@ header .hamburger {
 	}
 }
 
+.cut-sheet-category .heading-primary {
+	font-size: 2.4rem !important;
+	font-weight: lighter;
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	text-transform: capitalize;
+	width: 100%;
+}
+
+.cut-sheet-category .heading-primary span {
+	display: block;
+	font-size: 6rem;
+	font-weight: 600;
+	font-family: "Space Grotesk", sans-serif;
+	text-transform: uppercase;
+}
+
+.cut-sheet-category .cut-sheets--grid-container {
+	margin: 0;
+}
+
 .error-404 {
 	color: rgba(255, 255, 255, 0.95);
 }
