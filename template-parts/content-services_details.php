@@ -24,44 +24,11 @@
         <!-- End of Banner -->
 
         <div class="entry-content">	
-
-        <div class="slider">
-            <?php 
-            $images = array(
-                get_field('featured_image'),
-                get_field('service_image_1'),
-                get_field('service_image_2'),
-                get_field('service_image_3')
-            );
-            foreach( $images as $image ) {
-                if( $image ) {
-                    echo '<div>' . wp_get_attachment_image( $image, 'large' ) . '</div>';
-                }
-            }
-            ?>
+            <?php the_field('image_slider');?>
+            <div class="p-services-flex">
+                <div class="paragraph-services-flex">
+                    <p><?php the_field('service_description');?></p>
+                </div>
+            </div>
         </div>
 
-        <script>
-            jQuery(document).ready(function($) {
-                $('.slider').slick({
-                    dots: true,
-                    responsive: [
-                        {
-                            breakpoint: 767,
-                            settings: {
-                                dots: false
-                            }
-                        }
-                    ]
-                });
-            });
-        </script>
-
-
-
-            <?php the_field('service_description');?>
-            
-        </div>
-
-    </article>
-</main>

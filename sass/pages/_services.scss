@@ -99,11 +99,100 @@
     .btn-content {
         margin-top: 1rem;
     }
-    .entry-content {
+    .entry-content{
         margin-top: 2rem;
     }
-    .entry-content img {
-        width: fit-content;
-        height: fit-content;
-    }  
+    .entry-content p{
+        font-family: $font-body;
+        font-size: $default-font-size;
+        margin: 0rem 2rem;
+    }
+    .entry-content p:first-of-type{
+        margin-top: 5rem;
+    }
+    .entry-content p:last-of-type{
+        margin-bottom: 4rem;
+    }
+    .random-services a .post-thumbnail{
+        text-align: center;
+    }
+    .random-services a .post-thumbnail .attachment-medium{
+        max-width: 35rem;
+        max-height: 24rem;
+    }
+    .random-services .post-title h3{
+        font-family: $font-heading;
+        font-size: 3rem;
+        color: $color-grey-3;
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    .random-services .post-title p{
+        font-size: $default-font-size;
+        font-family: $font-body;
+        margin: 2rem 1rem;
+        text-align: center;
+    }
+    .random-services .post-title .btn{
+        background-color: $color-white;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        margin-bottom: 4rem;
+    }
+    .random-services .post-title .btn:hover{
+        background-color: $color-primary;
+        color: $color-white;
+    }
+    h2{
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    @media screen and (min-width: 768px) {
+        .random-services a .post-thumbnail .attachment-medium{
+            max-height: 20rem;
+        }  
+        h2{
+            margin-bottom: 8rem;
+        }
+        .p-services-flex{
+            display: flex;
+        }
+        .paragraph-services-flex{
+            margin: 0 auto;
+            width: 75%;
+        }
+        .random-services{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flex-single-service{
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 1080px) {
+        .flex-single-service{
+            width: 33.3%;
+        }
+    }
+    @media screen and (min-width: 1394px) {
+        .random-services{
+            display: flex;
+            margin: 0 auto;
+            width: 80%;
+        }
+    }
+    @media screen and (min-width: 1500px) {
+        .paragraph-services-flex{
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 1800px) {
+        .random-services{
+            width: 70%;
+        }
+    }
 }

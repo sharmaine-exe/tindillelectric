@@ -1077,9 +1077,125 @@ header .hamburger {
 	margin-top: 2rem;
 }
 
-.single-service .entry-content img {
-	width: fit-content;
-	height: fit-content;
+.single-service .entry-content p {
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	font-size: 1.6rem;
+	margin: 0rem 2rem;
+}
+
+.single-service .entry-content p:first-of-type {
+	margin-top: 5rem;
+}
+
+.single-service .entry-content p:last-of-type {
+	margin-bottom: 4rem;
+}
+
+.single-service .random-services a .post-thumbnail {
+	text-align: center;
+}
+
+.single-service .random-services a .post-thumbnail .attachment-medium {
+	max-width: 35rem;
+	max-height: 24rem;
+}
+
+.single-service .random-services .post-title h3 {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 3rem;
+	color: #252525;
+	text-align: center;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+}
+
+.single-service .random-services .post-title p {
+	font-size: 1.6rem;
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	margin: 2rem 1rem;
+	text-align: center;
+}
+
+.single-service .random-services .post-title .btn {
+	background-color: #fff;
+	color: #F2A024;
+	border: 2px solid #F2A024;
+	margin-bottom: 4rem;
+}
+
+.single-service .random-services .post-title .btn:hover {
+	background-color: #F2A024;
+	color: #fff;
+}
+
+.single-service h2 {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+	.single-service .random-services a .post-thumbnail .attachment-medium {
+		max-height: 20rem;
+	}
+	.single-service h2 {
+		margin-bottom: 8rem;
+	}
+	.single-service .p-services-flex {
+		display: flex;
+	}
+	.single-service .paragraph-services-flex {
+		margin: 0 auto;
+		width: 75%;
+	}
+	.single-service .random-services {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.single-service .flex-single-service {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1080px) {
+	.single-service .flex-single-service {
+		width: 33.3%;
+	}
+}
+
+@media screen and (min-width: 1394px) {
+	.single-service .random-services {
+		display: flex;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.single-service .paragraph-services-flex {
+		margin: 0 auto;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1800px) {
+	.single-service .random-services {
+		width: 70%;
+	}
+}
+
+.projects .vp-filter__style-minimal .vp-filter__item.vp-filter__item-active {
+	--vp-filter-minimal--items__color: #EB8F05;
+	--vp-filter-minimal--items-hover__color: #568091;
+}
+
+.projects .vp-filter__style-minimal .vp-filter__item > a:hover, .projects .vp-filter__style-minimal .vp-filter__item > a:focus {
+	color: #EB8F05;
+}
+
+.projects .vp-pagination__style-default .vp-pagination__item.vp-pagination__item-active {
+	--vp-pagination-default--items__background-color:#EB8F05;
 }
 
 .about .intro {
