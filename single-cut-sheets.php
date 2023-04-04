@@ -21,14 +21,13 @@ get_header();
 
             // the_terms( $post->ID, 'cut-sheet-category', 'Category: ', '/ ' );
 
+
 			// the_post_navigation(
 			// 	array(
 			// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'tindillelectric' ) . '</span> <span class="nav-title">%title</span>',
 			// 		'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'tindillelectric' ) . '</span> <span class="nav-title">%title</span>',
 			// 	)
 			// );
-
-
 
 		endwhile; // End of the loop.
 		?>

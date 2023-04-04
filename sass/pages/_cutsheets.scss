@@ -267,6 +267,7 @@
         margin: 0 auto 1.6rem;
         @include alignCenter;
         gap: 0.5rem;
+        padding: 0 !important;
     }
 
 }
@@ -280,6 +281,12 @@
 
     .entry-title {
         padding: 0 3rem;
+        font-family: $font-heading;
+        margin-top: 2rem;
+
+        @include respond(medium) {
+            margin-top: 4rem;
+        }
     }
 
     h3.wp-block-heading {
@@ -288,8 +295,9 @@
         margin-bottom: 2rem;
         padding: 0 3rem;
 
-        @include respond(large) {
+        @include respond(medium) {
             font-size: 1.8rem;
+            margin-bottom: 4rem;
         }
     }
 
@@ -304,5 +312,28 @@
     @include respond(large) {
         max-width: 140rem;
         margin: 0 auto;
+    }
+}
+
+
+.cut-sheet-category {
+    .heading-primary {
+        font-size: 2.4rem !important;
+        font-weight: lighter;
+        font-family: $font-body;
+        text-transform: capitalize;
+        width: 100%;
+
+        span {
+            display: block;
+            font-size: 6rem;
+            font-weight: 600;
+            font-family: $font-heading;
+            text-transform: uppercase;
+        }
+    }
+
+    .cut-sheets--grid-container {
+        margin: 0;
     }
 }
