@@ -953,14 +953,6 @@ header .hamburger {
 	background-color: unset;
 }
 
-.single-service .banner h3 {
-	color: #fff;
-}
-
-.single-service .btn-content {
-	margin-top: 1rem;
-}
-
 .all-services {
 	margin: 0 1rem;
 }
@@ -1068,6 +1060,23 @@ header .hamburger {
 	.all-services {
 		width: 80%;
 	}
+}
+
+.single-service .banner h3 {
+	color: #fff;
+}
+
+.single-service .btn-content {
+	margin-top: 1rem;
+}
+
+.single-service .entry-content {
+	margin-top: 2rem;
+}
+
+.single-service .entry-content img {
+	width: fit-content;
+	height: fit-content;
 }
 
 .about .intro {

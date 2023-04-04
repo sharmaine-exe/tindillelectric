@@ -1,13 +1,3 @@
-.single-service {
-    .banner h3 {
-        color: $color-white;
-    }
-
-    .btn-content {
-        margin-top: 1rem;
-    }
-}
-
 // Services
 
 .all-services{
@@ -98,7 +88,22 @@
     }
     @media screen and (min-width: 1400px) {
         width: 80%;
-
     }
-    
+}
+
+.single-service {
+    .banner h3 {
+        color: $color-white;
+    }
+
+    .btn-content {
+        margin-top: 1rem;
+    }
+    .entry-content {
+        margin-top: 2rem;
+    }
+    .entry-content img {
+        width: fit-content;
+        height: fit-content;
+    }  
 }
