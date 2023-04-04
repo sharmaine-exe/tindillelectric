@@ -267,6 +267,7 @@
         margin: 0 auto 1.6rem;
         @include alignCenter;
         gap: 0.5rem;
+        padding: 0 !important;
     }
 
 }
