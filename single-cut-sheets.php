@@ -29,8 +29,6 @@ get_header();
 			// 	)
 			// );
 
-
-
 		endwhile; // End of the loop.
 		?>
 

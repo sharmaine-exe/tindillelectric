@@ -1552,6 +1552,14 @@ header .hamburger {
 
 .cut-sheet-single .entry-title {
 	padding: 0 3rem;
+	font-family: "Space Grotesk", sans-serif;
+	margin-top: 2rem;
+}
+
+@media only screen and (min-width: 50rem) {
+	.cut-sheet-single .entry-title {
+		margin-top: 4rem;
+	}
 }
 
 .cut-sheet-single h3.wp-block-heading {
@@ -1561,9 +1569,10 @@ header .hamburger {
 	padding: 0 3rem;
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 50rem) {
 	.cut-sheet-single h3.wp-block-heading {
 		font-size: 1.8rem;
+		margin-bottom: 4rem;
 	}
 }
 
