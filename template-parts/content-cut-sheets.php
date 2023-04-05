@@ -32,7 +32,7 @@ echo '<header class="entry-header">';
 	echo	the_title( '<h1 class="entry-title">', '</h1>' ); 
 	echo '	</a>';
 echo '</header><!-- .entry-header -->';
-	
+			}
 		?>
 
 
