@@ -4,8 +4,7 @@ jQuery(document).ready(function ($) {
         $('.main-menu').toggleClass('show');
     });
 });
-
-
+  
 
 /* ------------- Testimonial Slider ------------- */
 const slider = document.querySelector(".slider");

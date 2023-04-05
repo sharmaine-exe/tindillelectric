@@ -49,6 +49,7 @@
                 width: 100%;
                 text-align: center;
                 margin-top: 0;
+                padding: 1rem 3.5rem !important;
 
                 @include respond(medium) {
                     display: inline-block;

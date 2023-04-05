@@ -1,0 +1,15 @@
+.projects{
+    // .projects-gallery .vp-portfolio__layout-elements .vp-filter__item-active{
+    //     color: $color-primary-dark;
+    // }
+    .vp-filter__style-minimal .vp-filter__item.vp-filter__item-active {
+        --vp-filter-minimal--items__color: #EB8F05;
+        --vp-filter-minimal--items-hover__color: #568091;
+    }
+    .vp-filter__style-minimal .vp-filter__item > a:hover, .vp-filter__style-minimal .vp-filter__item > a:focus {
+        color: #EB8F05;
+      }
+      .vp-pagination__style-default .vp-pagination__item.vp-pagination__item-active {
+        --vp-pagination-default--items__background-color:#EB8F05; 
+    }
+}

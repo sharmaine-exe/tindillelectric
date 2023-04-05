@@ -9,6 +9,10 @@
         // TODO: Adjust vh based on header height 
         flex-direction: column;
         align-items: start;
+
+        .heading-primary--main {
+            font-weight: bold;
+        }
     }
 
     &-404 {
@@ -36,6 +40,8 @@
 
     &-title {
         height: 25vh;
+        text-transform: uppercase;
+        font-weight: 600;
 
         @include respond(large) {
             height: 32vh;
@@ -46,6 +52,7 @@
 
             @include respond(medium) {
                 font-size: 6rem;
+                letter-spacing: 0.15rem;
             }
         }
 
@@ -63,6 +70,10 @@
 
         &--services {
             background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/services-banner.jpg");
+        }
+
+        &--cut-sheets {
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/Commercial-10.jpg");
         }
     }
 }

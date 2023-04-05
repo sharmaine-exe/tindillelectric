@@ -20,49 +20,48 @@ get_header();
 
 get_header();
 ?>
-    <!-- the banner -->
-    <div class="banner-container">
-        <h1 class="banner-heading"><?php echo "Search"; ?></h1>
-        <!-- 
-            add bg as img for the bg overlay:
-                Commercial-2.jpg
-        -->
-        
-        <!-- use which applies -->
-        <div class="banner-content">
-            <!-- <h3 class="banner-subheading"></h3> -->
-            <!-- <div class="banner-cta"></div> -->
+
+<main id="primary" class="site-main cut-sheets-search">
+    <!-- Banner -->
+    <section class="banner banner-title banner-title--cut-sheets text-center">
+        <div>
+            <a class="btn btn-underline" href="<?php echo get_site_url() . "/cut-sheet/"; ?>" style="border-radius: 3px;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l14 0"></path>
+                    <path d="M5 12l6 6"></path>
+                    <path d="M5 12l6 -6"></path>
+                </svg>
+                <span>Back to Cut Sheets</span>
+            </a>
+
+            <h3 class="heading-primary heading-primary--main">
+                <?php
+					/* translators: %s: search query. */
+					printf( esc_html__( 'Results for "%s"', 'tindillelectric' ), '<span>' . get_search_query() . '</span>' );
+					?>
+            </h3>
         </div>
-    </div>
+    </section>
+    <!-- End of Banner -->
 
-	<main id="primary" class="site-main">
-
+    <div class="container">
         <div class="cut-sheet-functions">
-            <!-- search form -->
+            <!-- Search Form -->
             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <label>
                     <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
                     <input type="search" class="search-field" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
                     <input type="hidden" name="post_type" value="cut-sheets" />
                 </label>
-                <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+                <input type="submit" class="btn btn-content search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
             </form>
-            <div class="wp-block-button" id="<?php echo get_site_url() . "/cut-sheets/"; ?>">
-                <a class="wp-block-button__link wp-element-button" href="<?php echo get_site_url() . "/cut-sheets/"; ?>" style="border-radius: 3px;">Back to Cut Sheets</a>
-            </div>
         </div>
+        <!-- End of Search Form -->
+
 
 		<?php if ( have_posts() ) : ?>
-        <div class="cut-sheet-grid-container cut-sheet-flex">
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'tindillelectric' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+        <div class="cut-sheets--grid-container">
 
 			<?php
 			/* Start the Loop */
@@ -81,8 +80,9 @@ get_header();
             endif;
 		?>
         </div>
+    </div>
 
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_sidebar();
