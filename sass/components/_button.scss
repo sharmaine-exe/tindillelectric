@@ -5,9 +5,9 @@
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.25rem 3.5rem;
+        padding: 1.25rem 3.5rem !important;
         display: inline-block;
-        border-radius: $border-radius;
+        border-radius: $border-radius !important;
         font-size: $default-font-size;
         font-family: $font-heading;
         font-weight: 500;

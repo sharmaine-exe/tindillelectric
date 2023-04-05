@@ -24,40 +24,11 @@
         <!-- End of Banner -->
 
         <div class="entry-content">	
-
-        <?php 
-            $image = get_field('featured_image');
-            $size = 'large'; // (thumbnail, medium, large, full or custom size)
-            if( $image ) {
-                echo wp_get_attachment_image( $image, $size );
-            }
-        ?>
-        <?php 
-            $image = get_field('service_image_1');
-            $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-            if( $image ) {
-                echo wp_get_attachment_image( $image, $size );
-            }
-        ?>
-        <?php 
-            $image = get_field('service_image_2');
-            $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-            if( $image ) {
-                echo wp_get_attachment_image( $image, $size );
-            }
-        ?>
-        <?php 
-            $image = get_field('service_image_3');
-            $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-            if( $image ) {
-                echo wp_get_attachment_image( $image, $size );
-            }
-        ?>
-
-
-            <?php the_field('service_description');?>
-            
+            <?php the_field('image_slider');?>
+            <div class="p-services-flex">
+                <div class="paragraph-services-flex">
+                    <p><?php the_field('service_description');?></p>
+                </div>
+            </div>
         </div>
 
-    </article>
-</main>

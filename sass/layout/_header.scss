@@ -28,6 +28,10 @@ header{
         .menu .main-menu:last-of-type a{
             color: $color-primary-light;
         }     
+        .menu .main-menu a:hover{
+            color: $color-primary-light;
+            font-weight: bold;
+        }
         .main-menu:last-of-type::before {
             content: "";
             display: inline-block;
