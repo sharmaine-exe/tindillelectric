@@ -50,7 +50,7 @@ get_header();
                 // loop
                 $args = array(
                     'post_type'      => 'cut-sheets',
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 20,
                     'order' => 'ASC',
                     'paged' => $paged,
                 );
