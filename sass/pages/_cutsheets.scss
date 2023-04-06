@@ -173,11 +173,13 @@
         }
     }
 
-    &--grid-title h3 {
+    &--grid-title a h3 {
         font-size: $default-font-size;
+        font-family: $font-heading;
         color: $color-grey-2;
         font-weight: 500;
         margin: 1rem 0;
+        width: 100%;
 
         @include respond(large) {
             font-size: 1.8rem;
@@ -221,6 +223,14 @@
 
         svg {
             color: $color-secondary-light;
+        }
+    }
+
+    &--keyword .heading-primary {
+        width: 100%;
+
+        @include respond(medium) {
+            font-size: 5rem !important;
         }
     }
 

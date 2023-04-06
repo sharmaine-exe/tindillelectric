@@ -24,7 +24,7 @@ get_header();
 <main id="primary" class="site-main cut-sheets-search">
     <!-- Banner -->
     <section class="banner banner-title banner-title--cut-sheets text-center">
-        <div>
+        <div class="cut-sheets-search--keyword">
             <a class="btn btn-underline" href="<?php echo get_site_url() . "/cut-sheet/"; ?>" style="border-radius: 3px;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
