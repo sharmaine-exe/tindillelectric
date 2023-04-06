@@ -74,7 +74,7 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.heading-primary--main {
 		font-size: 7rem;
 		width: 15ch;
@@ -94,7 +94,7 @@ body {
 	font-weight: 400;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.heading-primary--sub {
 		font-size: 2.4rem;
 	}
@@ -107,7 +107,7 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.heading-secondary {
 		font-size: 4rem;
 	}
@@ -167,7 +167,7 @@ body {
 
 .banner-home {
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
-	min-height: 90vh;
+	min-height: calc(100vh - 7.85rem);
 	flex-direction: column;
 	align-items: start;
 }
@@ -176,11 +176,23 @@ body {
 	font-weight: bold;
 }
 
+@media only screen and (min-width: 75rem) {
+	.banner-home {
+		min-height: calc(100vh - 9.9rem);
+	}
+}
+
 .banner-404 {
 	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg");
-	min-height: 90vh;
+	min-height: calc(100vh - 7.85rem);
 	flex-direction: column;
 	align-items: start;
+}
+
+@media only screen and (min-width: 75rem) {
+	.banner-404 {
+		min-height: calc(100vh - 9.9rem);
+	}
 }
 
 .banner-single-service {
@@ -190,7 +202,7 @@ body {
 	align-items: start;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.banner-single-service {
 		justify-content: flex-end;
 	}
@@ -215,7 +227,7 @@ body {
 	margin-bottom: 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.banner-title h3.heading-primary {
 		font-size: 6rem;
 		letter-spacing: 0.15rem;
@@ -293,11 +305,12 @@ body {
 
 .btn-yellow--outline {
 	background-color: transparent;
-	color: #F2A024;
-	border: 0.2rem solid #F2A024;
+	color: #FFBD59;
+	border: 0.2rem solid #FFBD59;
 }
 
 .btn-yellow--outline:hover {
+	color: #EB8F05;
 	border: 0.2rem solid #EB8F05;
 }
 
@@ -354,7 +367,7 @@ body {
 	margin-top: 4rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.contact-cta .container div:nth-of-type(2) {
 		flex-direction: row;
 		justify-content: flex-end;
@@ -432,7 +445,7 @@ form .form-label.required::before {
 	font-weight: bold;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	form .form-label {
 		font-size: 1.6rem;
 	}
@@ -584,151 +597,149 @@ footer .wp-container-9 .policy {
 	}
 }
 
+header .header-class {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media only screen and (min-width: 75rem) {
+	header .header-class {
+		justify-content: center;
+	}
+}
+
 header .site-branding img {
 	width: 18rem;
-	height: 7rem;
+	height: auto !important;
+}
+
+@media only screen and (min-width: 75rem) {
+	header .site-branding img {
+		width: 23rem;
+	}
 }
 
 header nav {
 	background-color: #252525;
 	position: absolute;
+	top: 7.9rem;
 	width: 100%;
+	display: none;
 }
 
-header .menu .main-menu a {
-	font-size: 2.2rem;
-	color: #fff;
-	font-family: "Space Grotesk", sans-serif;
+header nav.show {
+	display: block !important;
 }
 
-header .menu .main-menu {
-	padding: 1.2rem 0;
-	padding-left: 1rem;
+@media only screen and (min-width: 75rem) {
+	header nav {
+		display: block;
+		background-color: transparent;
+		position: unset;
+		width: unset;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
+	header nav .menu-primary-menu-container {
+		width: 60vw;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
+	header nav .menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5rem;
+		margin: 2rem 0;
+	}
+}
+
+header nav .menu .main-menu {
+	padding: 1.6rem;
 	border-bottom: 2px solid #4b4a4c;
 }
 
-header .menu .main-menu:last-of-type {
-	text-align: center;
-	border: 2px solid #FFBD59;
-	margin: 0 2rem;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+@media only screen and (min-width: 75rem) {
+	header nav .menu .main-menu {
+		padding: unset;
+		border-bottom: unset;
+	}
 }
 
-header .menu .main-menu:last-of-type a {
-	color: #FFBD59;
+header nav .menu .main-menu a {
+	color: #fff;
+	font-size: 1.8rem;
+	font-family: "Space Grotesk", sans-serif;
+	text-transform: uppercase;
 }
 
-header .menu .main-menu a:hover {
-	color: #FFBD59;
-	font-weight: bold;
+@media only screen and (min-width: 75rem) {
+	header nav .menu .main-menu a {
+		color: unset;
+		font-weight: 500;
+	}
 }
 
-header .main-menu:last-of-type::before {
-	content: "";
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background-image: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/telephone-1.png");
-	/* replace with the URL of your image */
-	color: #FFBD59;
-	background-size: cover;
-	vertical-align: text-bottom;
-	margin-right: 2rem;
-	/* add a little space between icon and text */
+header nav a.btn.btn-yellow--outline {
+	font-size: 1.8rem;
+	display: block;
+	margin: 1.6rem;
 }
 
-header .hamburger {
+header nav a.btn.btn-yellow--outline > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+@media only screen and (min-width: 75rem) {
+	header nav a.btn.btn-yellow--outline svg path {
+		fill: #3C6677;
+	}
+}
+
+header nav a.btn.btn-yellow--outline svg path:hover {
+	fill: #EB8F05;
+	transition: all 200ms ease-in-out;
+}
+
+@media only screen and (min-width: 75rem) {
+	header nav a.btn.btn-yellow--outline {
+		font-size: 2rem;
+		color: #3C6677;
+		border: none;
+		margin: 0;
+		padding: 0 2rem !important;
+	}
+}
+
+header .menu-icon {
 	cursor: pointer;
-	display: none;
-	padding: 15px 15px;
-	position: absolute;
-	right: 1rem;
-	top: 1rem;
+	display: block;
+	padding-right: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-	header .main-menu {
+@media only screen and (min-width: 75rem) {
+	header .menu-icon {
 		display: none;
 	}
-	header .show {
-		display: block !important;
-	}
 }
 
-@media screen and (max-width: 768px) {
-	header .hamburger {
-		display: block;
-	}
+.logged-in header nav {
+	top: 12.5rem;
 }
 
-@media screen and (min-width: 768px) {
-	header nav {
-		background-color: transparent;
-		top: -1rem;
-		right: 0;
-	}
-	header ul {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	header .menu .main-menu {
-		border-bottom: 0px;
-		display: inline;
-	}
-	header .menu .main-menu a {
-		color: #000;
-		font-size: 1.5rem;
-	}
-	header .menu-primary-menu-container {
-		position: absolute;
-		right: 1rem;
-		top: 2.6rem;
-	}
-	header .menu .main-menu:last-of-type {
-		margin-top: 0rem;
-	}
-	header .menu .main-menu:last-of-type a {
-		color: #568091;
-		padding-right: 1rem;
-	}
-	header .menu .main-menu:last-of-type {
-		border: none;
-	}
-	header .main-menu:last-of-type::before {
-		content: "";
-		background-image: url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/mobile.png");
-		/* replace with the URL of your image */
-	}
-}
-
-@media screen and (min-width: 1100px) {
-	header .menu .main-menu a {
-		color: #000;
-		font-size: 1.8rem;
-		padding-right: 2rem;
-	}
-	header .menu-primary-menu-container {
-		right: 3rem;
-	}
-	header .site-branding img {
-		margin-left: 2rem;
-	}
-}
-
-@media screen and (min-width: 1500px) {
-	header .menu .main-menu a {
-		color: #000;
-		font-size: 2rem;
-		padding-right: 3rem;
-	}
-	header .menu-primary-menu-container {
-		right: 5rem;
-	}
-	header .site-branding img {
-		width: 22rem;
-		height: 8rem;
-		margin-left: 25rem;
+@media only screen and (min-width: 48rem) {
+	.logged-in header nav {
+		top: 11rem;
 	}
 }
 
@@ -743,7 +754,7 @@ header .hamburger {
 	}
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.featured-projects p {
 		max-width: 90ch;
 		margin: 1.8rem auto;
@@ -807,7 +818,7 @@ header .hamburger {
 	margin: 1rem 0 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.wt-item {
 		justify-content: start;
 	}
@@ -901,7 +912,7 @@ header .hamburger {
 	font-size: 1.4rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.slider .slider-slides .slider-item .comment {
 		font-size: 1.6rem;
 	}
@@ -945,7 +956,7 @@ header .hamburger {
 	background-color: #f3fffc;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.about .intro p {
 		max-width: 90ch;
 		margin: 1.8rem auto;
@@ -1202,7 +1213,7 @@ header .hamburger {
 	background-color: #f3fffc;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.about .intro p {
 		max-width: 90ch;
 		margin: 1.8rem auto;
@@ -1213,7 +1224,7 @@ header .hamburger {
 	background-color: unset;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.contact .container {
 		max-width: 110rem;
 	}
@@ -1299,7 +1310,7 @@ header .hamburger {
 	padding: 8rem 2rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.confirmation .container {
 		padding: 12rem 2rem;
 		max-width: 100rem;
@@ -1351,7 +1362,7 @@ header .hamburger {
 	font-weight: 600;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	#post-622 .entry-title {
 		font-size: 6rem;
 	}
@@ -1361,7 +1372,7 @@ header .hamburger {
 	display: none;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	#post-622 .wp-container-4 .wp-block-column:nth-of-type(2) {
 		display: block;
 	}
@@ -1447,7 +1458,7 @@ header .hamburger {
 	}
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets .container,
 	.cut-sheets-search .container {
 		padding: 6rem 2rem;
@@ -1477,7 +1488,7 @@ header .hamburger {
 	background-color: #EB8F05;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets .search-submit,
 	.cut-sheets-search .search-submit {
 		display: inline-block;
@@ -1496,7 +1507,7 @@ header .hamburger {
 	margin: 4rem 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets--grid-container,
 	.cut-sheets-search--grid-container {
 		display: grid;
@@ -1547,17 +1558,19 @@ header .hamburger {
 	background-color: #3C6677;
 }
 
-.cut-sheets--grid-title h3,
-.cut-sheets-search--grid-title h3 {
+.cut-sheets--grid-title a h3,
+.cut-sheets-search--grid-title a h3 {
 	font-size: 1.6rem;
+	font-family: "Space Grotesk", sans-serif;
 	color: #4b4a4c;
 	font-weight: 500;
 	margin: 1rem 0;
+	width: 100%;
 }
 
 @media only screen and (min-width: 75rem) {
-	.cut-sheets--grid-title h3,
-	.cut-sheets-search--grid-title h3 {
+	.cut-sheets--grid-title a h3,
+	.cut-sheets-search--grid-title a h3 {
 		font-size: 1.8rem;
 	}
 }
@@ -1586,7 +1599,7 @@ header .hamburger {
 	width: 100%;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets--grid-pdf,
 	.cut-sheets-search--grid-pdf {
 		height: 25rem;
@@ -1613,7 +1626,19 @@ header .hamburger {
 	color: #568091;
 }
 
-@media only screen and (min-width: 50rem) {
+.cut-sheets--keyword .heading-primary,
+.cut-sheets-search--keyword .heading-primary {
+	width: 100%;
+}
+
+@media only screen and (min-width: 48rem) {
+	.cut-sheets--keyword .heading-primary,
+	.cut-sheets-search--keyword .heading-primary {
+		font-size: 5rem !important;
+	}
+}
+
+@media only screen and (min-width: 48rem) {
 	.cut-sheets form.search-form,
 	.cut-sheets-search form.search-form {
 		display: flex;
@@ -1648,7 +1673,7 @@ header .hamburger {
 	margin-top: 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets form.search-form input[type="submit"],
 	.cut-sheets-search form.search-form input[type="submit"] {
 		display: inline-block;
@@ -1682,7 +1707,7 @@ header .hamburger {
 	margin-top: 2rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheet-single .entry-title {
 		margin-top: 4rem;
 	}
@@ -1695,7 +1720,7 @@ header .hamburger {
 	padding: 0 3rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheet-single h3.wp-block-heading {
 		font-size: 1.8rem;
 		margin-bottom: 4rem;
@@ -1763,7 +1788,7 @@ header .hamburger {
 	margin: 0 0 2.5rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.error-404 .page-content form.search-form {
 		display: flex;
 		justify-content: center;
@@ -1794,7 +1819,7 @@ header .hamburger {
 	padding: 1rem 3.5rem !important;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.error-404 .page-content form.search-form input[type="submit"] {
 		display: inline-block;
 		width: unset;

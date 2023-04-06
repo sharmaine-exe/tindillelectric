@@ -1,10 +1,10 @@
 jQuery(document).ready(function ($) {
-    $('.hamburger').click(function () {
+    $('.menu-icon').click(function () {
         $(this).toggleClass('open');
-        $('.main-menu').toggleClass('show');
+        $('nav').toggleClass('show');
     });
 });
-  
+
 
 /* ------------- Testimonial Slider ------------- */
 const slider = document.querySelector(".slider");

@@ -13,7 +13,7 @@
 <?php get_header(); ?>
 
 <main id="primary" class="site-main home">
-    <!-- <h1 class="sr-only">Tindill Electric</h1> -->
+    <h1 class="sr-only">Tindill Electric</h1>
 
     <!-- Banner -->
     <section class="banner banner-home">
