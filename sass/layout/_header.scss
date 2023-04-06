@@ -118,5 +118,9 @@ header {
 }
 
 .logged-in header nav {
-    top: 11rem;
+    top: 12.5rem;
+
+    @include respond(medium) {
+        top: 11rem;
+    }
 }

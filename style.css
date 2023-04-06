@@ -74,7 +74,7 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.heading-primary--main {
 		font-size: 7rem;
 		width: 15ch;
@@ -94,7 +94,7 @@ body {
 	font-weight: 400;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.heading-primary--sub {
 		font-size: 2.4rem;
 	}
@@ -107,7 +107,7 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.heading-secondary {
 		font-size: 4rem;
 	}
@@ -202,7 +202,7 @@ body {
 	align-items: start;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.banner-single-service {
 		justify-content: flex-end;
 	}
@@ -227,7 +227,7 @@ body {
 	margin-bottom: 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.banner-title h3.heading-primary {
 		font-size: 6rem;
 		letter-spacing: 0.15rem;
@@ -367,7 +367,7 @@ body {
 	margin-top: 4rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.contact-cta .container div:nth-of-type(2) {
 		flex-direction: row;
 		justify-content: flex-end;
@@ -445,7 +445,7 @@ form .form-label.required::before {
 	font-weight: bold;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	form .form-label {
 		font-size: 1.6rem;
 	}
@@ -734,7 +734,13 @@ header .menu-icon {
 }
 
 .logged-in header nav {
-	top: 11rem;
+	top: 12.5rem;
+}
+
+@media only screen and (min-width: 48rem) {
+	.logged-in header nav {
+		top: 11rem;
+	}
 }
 
 .home .sr-only {
@@ -748,7 +754,7 @@ header .menu-icon {
 	}
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.featured-projects p {
 		max-width: 90ch;
 		margin: 1.8rem auto;
@@ -812,7 +818,7 @@ header .menu-icon {
 	margin: 1rem 0 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.wt-item {
 		justify-content: start;
 	}
@@ -906,7 +912,7 @@ header .menu-icon {
 	font-size: 1.4rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.slider .slider-slides .slider-item .comment {
 		font-size: 1.6rem;
 	}
@@ -950,7 +956,7 @@ header .menu-icon {
 	background-color: #f3fffc;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.about .intro p {
 		max-width: 90ch;
 		margin: 1.8rem auto;
@@ -1207,7 +1213,7 @@ header .menu-icon {
 	background-color: #f3fffc;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.about .intro p {
 		max-width: 90ch;
 		margin: 1.8rem auto;
@@ -1218,7 +1224,7 @@ header .menu-icon {
 	background-color: unset;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.contact .container {
 		max-width: 110rem;
 	}
@@ -1304,7 +1310,7 @@ header .menu-icon {
 	padding: 8rem 2rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.confirmation .container {
 		padding: 12rem 2rem;
 		max-width: 100rem;
@@ -1356,7 +1362,7 @@ header .menu-icon {
 	font-weight: 600;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	#post-622 .entry-title {
 		font-size: 6rem;
 	}
@@ -1366,7 +1372,7 @@ header .menu-icon {
 	display: none;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	#post-622 .wp-container-4 .wp-block-column:nth-of-type(2) {
 		display: block;
 	}
@@ -1452,7 +1458,7 @@ header .menu-icon {
 	}
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets .container,
 	.cut-sheets-search .container {
 		padding: 6rem 2rem;
@@ -1482,7 +1488,7 @@ header .menu-icon {
 	background-color: #EB8F05;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets .search-submit,
 	.cut-sheets-search .search-submit {
 		display: inline-block;
@@ -1501,7 +1507,7 @@ header .menu-icon {
 	margin: 4rem 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets--grid-container,
 	.cut-sheets-search--grid-container {
 		display: grid;
@@ -1593,7 +1599,7 @@ header .menu-icon {
 	width: 100%;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets--grid-pdf,
 	.cut-sheets-search--grid-pdf {
 		height: 25rem;
@@ -1625,14 +1631,14 @@ header .menu-icon {
 	width: 100%;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets--keyword .heading-primary,
 	.cut-sheets-search--keyword .heading-primary {
 		font-size: 5rem !important;
 	}
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets form.search-form,
 	.cut-sheets-search form.search-form {
 		display: flex;
@@ -1667,7 +1673,7 @@ header .menu-icon {
 	margin-top: 0;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheets form.search-form input[type="submit"],
 	.cut-sheets-search form.search-form input[type="submit"] {
 		display: inline-block;
@@ -1701,7 +1707,7 @@ header .menu-icon {
 	margin-top: 2rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheet-single .entry-title {
 		margin-top: 4rem;
 	}
@@ -1714,7 +1720,7 @@ header .menu-icon {
 	padding: 0 3rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.cut-sheet-single h3.wp-block-heading {
 		font-size: 1.8rem;
 		margin-bottom: 4rem;
@@ -1782,7 +1788,7 @@ header .menu-icon {
 	margin: 0 0 2.5rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.error-404 .page-content form.search-form {
 		display: flex;
 		justify-content: center;
@@ -1813,7 +1819,7 @@ header .menu-icon {
 	padding: 1rem 3.5rem !important;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 48rem) {
 	.error-404 .page-content form.search-form input[type="submit"] {
 		display: inline-block;
 		width: unset;
