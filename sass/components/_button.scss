@@ -54,10 +54,11 @@
 
     &-yellow--outline {
         background-color: transparent;
-        color: $color-primary;
-        border: 0.2rem solid $color-primary;
+        color: $color-primary-light;
+        border: 0.2rem solid $color-primary-light;
 
         &:hover {
+            color: $color-primary-dark;
             border: 0.2rem solid $color-primary-dark;
         }
     }
