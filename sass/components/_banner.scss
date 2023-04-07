@@ -53,7 +53,7 @@
             height: 32vh;
         }
 
-        h3.heading-primary {
+        .heading-primary {
             margin-bottom: 0;
 
             @include respond(medium) {

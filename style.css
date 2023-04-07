@@ -223,12 +223,12 @@ body {
 	}
 }
 
-.banner-title h3.heading-primary {
+.banner-title .heading-primary {
 	margin-bottom: 0;
 }
 
 @media only screen and (min-width: 48rem) {
-	.banner-title h3.heading-primary {
+	.banner-title .heading-primary {
 		font-size: 6rem;
 		letter-spacing: 0.15rem;
 	}
@@ -856,7 +856,7 @@ header .menu-icon {
 }
 
 .wt-right img {
-	height: 20rem;
+	height: 25rem;
 	object-fit: cover;
 	object-position: center;
 	margin-bottom: 2rem;
