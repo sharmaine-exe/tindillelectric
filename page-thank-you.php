@@ -16,18 +16,19 @@
     <!-- Banner -->
     <section class="banner banner-title banner-title--contact text-center">
         <?php while ( have_posts() ) : the_post(); ?>
-            <h3 class="heading-primary heading-primary--main">Contact Us</h3>
+            <h2 class="heading-primary heading-primary--main">Contact Us</h2>
         <?php endwhile; ?>
     </section>
     <!-- End of Banner -->
 
+
     <!-- Intro -->
     <section class="intro">
         <div class="container">
-            <h3 class="heading-secondary">
+            <h2 class="heading-secondary">
                 <span>Thank You for Getting In Touch!</span><br>
                 We'll speak soon.
-            </h3>
+            </h2>
             <p>
                 Your request has been received. We will reach out to you within 1 to 2 business days.  In the meantime, why not find out more <a href="<?php echo home_url( '/about' ); ?>" class="link">about us</a>.
             </p>
@@ -45,13 +46,10 @@
                     </svg>
                 </a>
             </p>
-
-            <?php the_content() ?>
         </div>
     </section>
     <!-- End of Intro -->
 
-    
 </main>
 
 <?php get_footer(); ?>

@@ -24,6 +24,7 @@ header {
         top: 7.9rem;
         width: 100%;
         display: none;
+        z-index: 999;
 
         &.show {
             display: block !important;

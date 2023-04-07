@@ -681,6 +681,7 @@ header nav {
 	top: 7.9rem;
 	width: 100%;
 	display: none;
+	z-index: 999;
 }
 
 header nav.show {
@@ -1264,17 +1265,36 @@ header .menu-icon {
 	}
 }
 
-.projects .vp-filter__style-minimal .vp-filter__item.vp-filter__item-active {
-	--vp-filter-minimal--items__color: #EB8F05;
-	--vp-filter-minimal--items-hover__color: #568091;
+.projects .vp-id-1FfFFp .vp-portfolio__items {
+	--vp-items__gap: 1.6rem;
 }
 
-.projects .vp-filter__style-minimal .vp-filter__item > a:hover, .projects .vp-filter__style-minimal .vp-filter__item > a:focus {
-	color: #EB8F05;
+.projects .vp-portfolio__layout-elements {
+	margin-bottom: 5rem;
+}
+
+.projects .vp-portfolio__layout-elements-align-center .vp-filter__style-minimal {
+	gap: 5rem;
+}
+
+.projects .vp-filter__style-minimal .vp-filter__item > * {
+	font-weight: normal;
+	font-family: "Space Grotesk", sans-serif;
+	padding: 0 0 0.75rem;
+}
+
+.projects .vp-filter__style-minimal .vp-filter__item > a:hover,
+.projects .vp-filter__style-minimal .vp-filter__item > a:focus {
+	color: #F2A024;
+}
+
+.projects .vp-filter__style-minimal .vp-filter__item-active a {
+	color: #F2A024;
+	border-bottom: 0.15rem solid #F2A024;
 }
 
 .projects .vp-pagination__style-default .vp-pagination__item.vp-pagination__item-active {
-	--vp-pagination-default--items__background-color:#EB8F05;
+	--vp-pagination-default--items__background-color: #EB8F05;
 }
 
 .about .intro {
@@ -1394,16 +1414,16 @@ header .menu-icon {
 	}
 }
 
-.confirmation h3 span {
+.confirmation .heading-secondary span {
 	color: #568091;
 }
 
 .confirmation a.link {
-	color: #3C6677;
+	color: #568091;
 }
 
 .confirmation a.link:hover {
-	color: #EB8F05;
+	color: #3C6677;
 }
 
 .confirmation .btn-underline {
@@ -1413,7 +1433,8 @@ header .menu-icon {
 	justify-content: flex-start;
 	width: fit-content;
 	gap: 0.5rem;
-	margin-top: 3rem;
+	margin-top: 4rem;
+	padding: 0 !important;
 }
 
 #post-622 .entry-header {

@@ -16,14 +16,16 @@
     <!-- Banner -->
     <section class="banner banner-title banner-title--projects text-center">
         <?php while ( have_posts() ) : the_post(); ?>
-            <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
+            <h2 class="heading-primary heading-primary--main"><?php the_title(); ?></h2>
         <?php endwhile; ?>
     </section>
     <!-- End of Banner -->
 
+
     <!-- Gallery -->
     <section class="projects-gallery">
         <div class="container">
+            <h2 class="sr-only">Project Gallery</h2>
             <?php the_content() ?>
         </div>
     </section>

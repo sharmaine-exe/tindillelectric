@@ -9,15 +9,15 @@
         }
     }
 
-    h3 span {
+    .heading-secondary span {
         color: $color-secondary-light;
     }
 
     a.link {
-        color: $color-secondary;
+        color: $color-secondary-light;
 
         &:hover {
-            color: $color-primary-dark;
+            color: $color-secondary;
         }
     }
 
@@ -26,6 +26,7 @@
         justify-content: flex-start;
         width: fit-content;
         gap: 0.5rem;
-        margin-top: 3rem;
+        margin-top: 4rem;
+        padding: 0 !important;
     }
 }
