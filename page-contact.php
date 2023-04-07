@@ -16,15 +16,16 @@
     <!-- Banner -->
     <section class="banner banner-title banner-title--contact text-center">
         <?php while ( have_posts() ) : the_post(); ?>
-            <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
+            <h2 class="heading-primary heading-primary--main"><?php the_title(); ?></h2>
         <?php endwhile; ?>
     </section>
     <!-- End of Banner -->
 
+
     <!-- Intro -->
     <section class="intro">
         <div class="container">
-            <h3 class="heading-secondary">Tell Us About Your Project</h3>
+            <h2 class="heading-secondary">Tell Us About Your Project</h2>
             <p>
                 With almost 15 years of experience, Tindill Electric will meet your electrical needs and make your unique projects come to life.
             </p>
@@ -37,7 +38,6 @@
     </section>
     <!-- End of Intro -->
 
-    
 </main>
 
 <?php get_footer(); ?>

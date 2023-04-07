@@ -1302,12 +1302,29 @@ header .menu-icon {
 	margin-top: 6rem;
 }
 
+.contact form .grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(42rem, 1fr));
+	grid-gap: 3rem 2.5rem;
+	align-items: stretch;
+	margin: 4rem 0;
+}
+
 .contact form p {
 	margin-bottom: 0;
 }
 
 .contact form p:nth-of-type(1), .contact form p:nth-of-type(4), .contact form p:nth-of-type(5) {
 	grid-column: 1 / -1;
+}
+
+.contact form p:nth-of-type(4) .form-label, .contact form p:nth-of-type(5) .form-label {
+	margin-bottom: 0;
+}
+
+.contact form p:nth-of-type(4) .caption, .contact form p:nth-of-type(5) .caption {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
 }
 
 .contact form input.wpcf7-submit {
@@ -1340,6 +1357,14 @@ header .menu-icon {
 	}
 }
 
+.contact form .wpcf7-checkbox {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	grid-gap: 0 2.5rem;
+	align-items: stretch;
+	margin: 1rem 0 0;
+}
+
 .contact form .wpcf7-checkbox .wpcf7-list-item {
 	display: flex;
 	justify-content: center;
@@ -1356,22 +1381,6 @@ header .menu-icon {
 
 .contact form .wpcf7-checkbox .wpcf7-list-item-label {
 	font-size: 1.6rem;
-}
-
-.contact .grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(42rem, 1fr));
-	grid-gap: 2.5rem;
-	align-items: stretch;
-	margin: 4rem 0;
-}
-
-.contact .wpcf7-form-control.wpcf7-checkbox {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-	grid-gap: 0 2.5rem;
-	align-items: stretch;
-	margin: 1rem 0 0;
 }
 
 .confirmation .container {
