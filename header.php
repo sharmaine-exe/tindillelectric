@@ -28,6 +28,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tindillelectric' ); ?></a>
 
 	<header id="masthead" class="site-header">
+        <h1 class="sr-only">Tindill Electric</h1>
 		<div class="header-class">
             <div class="site-branding">
                 <?php if ( ! has_custom_logo() ) { ?>
@@ -64,6 +65,7 @@
             </div><!-- .menu-icon -->
 
             <nav>
+                <h3 class="sr-only">Navigation</h3>
                 <?php
                 wp_nav_menu(
                     array(

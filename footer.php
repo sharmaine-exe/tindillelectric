@@ -12,6 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+        <h2 class="sr-only">Footer</h2>
 		<div class="footer-flex">
 			<div class="footer-flex-row">
 				<?php

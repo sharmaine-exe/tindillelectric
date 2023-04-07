@@ -590,6 +590,7 @@ footer .wp-block-heading {
 	color: #FFBD59;
 	font-size: 1.6rem;
 	margin-bottom: 1rem;
+	text-transform: uppercase;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -796,10 +797,6 @@ header .menu-icon {
 	}
 }
 
-.home .sr-only {
-	display: none;
-}
-
 @media only screen and (min-width: 75rem) {
 	.banner .container,
 	.contact-cta .container {
@@ -807,15 +804,24 @@ header .menu-icon {
 	}
 }
 
+.banner .btn.btn-content,
+.contact-cta .btn.btn-content {
+	margin-top: 0;
+}
+
 @media only screen and (min-width: 48rem) {
 	.featured-projects p {
-		max-width: 90ch;
+		max-width: 85ch;
 		margin: 1.8rem auto;
 	}
 }
 
 .featured-projects .projects {
 	margin: 6rem 0 3rem;
+}
+
+.featured-projects .vp-id-1FfFFp .vp-portfolio__items {
+	--vp-items__gap: 1.6rem;
 }
 
 .why-tindill {
@@ -931,9 +937,21 @@ header .menu-icon {
 
 .slider .slider-slides {
 	position: relative;
-	height: 45rem;
+	height: 50rem;
 	width: 100%;
 	transition: transform 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 48rem) {
+	.slider .slider-slides {
+		height: 45rem;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
+	.slider .slider-slides {
+		height: 40rem;
+	}
 }
 
 .slider .slider-slides .slider-item {
@@ -941,11 +959,6 @@ header .menu-icon {
 	margin-right: 30px;
 	position: absolute;
 	text-align: center;
-}
-
-.slider .slider-slides .slider-item p {
-	color: #D3D3D5;
-	font-style: italic;
 }
 
 .slider .slider-slides .slider-item .rating p {
@@ -961,8 +974,10 @@ header .menu-icon {
 }
 
 .slider .slider-slides .slider-item .comment {
+	color: #D3D3D5;
+	font-style: italic;
+	line-height: 1.75;
 	margin: 4rem 0;
-	font-size: 1.4rem;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -1011,7 +1026,7 @@ header .menu-icon {
 
 @media only screen and (min-width: 48rem) {
 	.about .intro p {
-		max-width: 90ch;
+		max-width: 85ch;
 		margin: 1.8rem auto;
 	}
 }
@@ -1268,7 +1283,7 @@ header .menu-icon {
 
 @media only screen and (min-width: 48rem) {
 	.about .intro p {
-		max-width: 90ch;
+		max-width: 85ch;
 		margin: 1.8rem auto;
 	}
 }

@@ -110,6 +110,7 @@ footer {
         color: $color-primary-light;
         font-size: $default-font-size;
         margin-bottom: 1rem;
+        text-transform: uppercase;
 
         @include respond(medium) {
             font-size: 1.8rem;
