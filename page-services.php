@@ -24,39 +24,47 @@ get_header();
     </section>
     <!-- End of Banner -->
 
-    <section style="display:flex;">
-        <div class="all-services">
-            <div class="s-flex">
-            <div class="services-content">
-                <h3>Here at Tindill Electric, we meet your electrical needs!</h3>
+    
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div>
+                <h2 class="heading-secondary">Here at Tindill Electric, we meet your electrical needs!</h2>
                 <p>Whether you require residential electrical services or commercial, Tindill Electric is here to help you achieve your goal and provide peace of mind. Check out all the electrical services that Tindill Electric has to offer below.</p>
             </div>
-            <div class="services-button">
+    
+            <div>
                 <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-content">REQUEST A QUOTE</a>
-            </div>
-            </div>
-
-            <div class="featured-images">
-                <div class="all-featured-images">
-                    <?php
-                        $args = array(
-                            'post_type'      => 'tindill-elec-service', 
-                            'posts_per_page' => 20,
-                            // 'category_name' => 'residential,commercial,power,home,evc,security,repairs'
-                            'order' => 'ASC'
-                        );
-                        $loop = new WP_Query($args);
-                        while ( $loop->have_posts() ) {
-                            $loop->the_post();
-                        
-                            get_template_part('template-parts/content', 'services');
-                            
-                        }
-                    ?>
-                </div>
             </div>
         </div>
     </section>
+    <!-- End of Intro -->
+
+
+    <!-- Services -->
+    <section>
+        <h2 class="sr-only">Tindill Electric Services</h2>
+        <div class="services-grid">
+            <div class="container">
+                <?php
+                    $args = array(
+                        'post_type'      => 'tindill-elec-service', 
+                        'posts_per_page' => 20,
+                        // 'category_name' => 'residential,commercial,power,home,evc,security,repairs'
+                        'order' => 'ASC'
+                    );
+                    $loop = new WP_Query($args);
+                    while ( $loop->have_posts() ) {
+                        $loop->the_post();
+                    
+                        get_template_part('template-parts/content', 'services');
+                        
+                    }
+                ?>
+            </div>
+        </div>
+    </section>
+    <!-- End of Services -->
 </main>
 
 

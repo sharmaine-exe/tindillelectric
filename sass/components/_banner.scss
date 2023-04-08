@@ -31,11 +31,11 @@
 
     &-single-service {
         color: $color-white;
-        min-height: 50vh;
+        min-height: 40vh;
         flex-direction: column;
         align-items: start;
 
-        @include respond(medium) {
+        @include respond(large) {
             .container>div {
                 text-align: unset;
             }
