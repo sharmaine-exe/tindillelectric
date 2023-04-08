@@ -1834,46 +1834,52 @@ header .menu-icon {
 }
 
 .error-404 .page-content p {
-	margin: 0 0 2.5rem;
+	margin: 0 0 3.5rem;
+}
+
+.error-404 .page-content .error-404--nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 @media only screen and (min-width: 48rem) {
-	.error-404 .page-content form.search-form {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		align-items: stretch;
-	}
-	.error-404 .page-content form.search-form label {
-		flex: 2;
-	}
-	.error-404 .page-content form.search-form label input {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
+	.error-404 .page-content .error-404--nav {
+		flex-direction: row;
 	}
 }
 
-@media only screen and (min-width: 75rem) {
-	.error-404 .page-content form.search-form {
-		width: 50%;
-		margin: 0 auto;
-	}
-}
-
-.error-404 .page-content form.search-form input[type="submit"] {
-	display: block;
+.error-404 .page-content a.btn-content {
+	border: 0.2rem solid #F2A024;
 	width: 100%;
-	text-align: center;
-	margin-top: 0;
-	padding: 1rem 3.5rem !important;
 }
 
 @media only screen and (min-width: 48rem) {
-	.error-404 .page-content form.search-form input[type="submit"] {
-		display: inline-block;
-		width: unset;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
+	.error-404 .page-content a.btn-content {
+		width: fit-content;
+	}
+}
+
+.error-404 .page-content a.btn-white--outline {
+	width: 100%;
+}
+
+.error-404 .page-content a.btn-white--outline div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.error-404 .page-content a.btn-white--outline svg path {
+	fill: #fff;
+}
+
+@media only screen and (min-width: 48rem) {
+	.error-404 .page-content a.btn-white--outline {
+		width: fit-content;
 	}
 }
 
