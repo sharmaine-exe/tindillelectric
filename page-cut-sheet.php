@@ -39,7 +39,8 @@ get_header();
         
 
         <!-- Cut Sheets Grid -->
-        <div class="cut-sheets--grid-container">
+        <section class="cut-sheets--grid-container">
+            <h2 class="sr-only">Cut Sheets List</h2>
             <?php
                 // $paged for pagination
                 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
@@ -83,7 +84,7 @@ get_header();
 
             </div>
             <!-- end of pagination -->
-        </div>
+        </section>
         <!-- End of Cut Sheets Grid -->
     </div>
     

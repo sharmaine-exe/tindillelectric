@@ -1746,51 +1746,6 @@ header .menu-icon {
 	padding: 0 !important;
 }
 
-.cut-sheet-single .entry-content {
-	margin-top: -1.6rem;
-}
-
-.cut-sheet-single .entry-title {
-	padding: 0 3rem;
-	font-family: "Space Grotesk", sans-serif;
-	margin-top: 2rem;
-}
-
-@media only screen and (min-width: 48rem) {
-	.cut-sheet-single .entry-title {
-		margin-top: 4rem;
-	}
-}
-
-.cut-sheet-single h3.wp-block-heading {
-	font-weight: normal;
-	font-size: 1.6rem;
-	margin-bottom: 2rem;
-	padding: 0 3rem;
-}
-
-@media only screen and (min-width: 48rem) {
-	.cut-sheet-single h3.wp-block-heading {
-		font-size: 1.8rem;
-		margin-bottom: 4rem;
-	}
-}
-
-.cut-sheet-single .pdfemb-viewer,
-.cut-sheet-single .pdfemb-pagescontainer,
-.cut-sheet-single .pdfemb-inner-div,
-.cut-sheet-single canvas.pdfemb-the-canvas {
-	width: 100% !important;
-	height: auto !important;
-}
-
-@media only screen and (min-width: 75rem) {
-	.cut-sheet-single {
-		max-width: 140rem;
-		margin: 0 auto;
-	}
-}
-
 .cut-sheet-category .heading-primary {
 	font-size: 2.4rem !important;
 	font-weight: lighter;
