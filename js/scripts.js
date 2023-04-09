@@ -80,3 +80,5 @@ updateSlideNo(1);
 
 // Start automatic sliding
 startAutoSlide();
+
+// 
