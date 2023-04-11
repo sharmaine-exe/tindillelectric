@@ -63,7 +63,8 @@ slides.forEach((slide) =>
 
 // Event listener buttons
 document.querySelectorAll(".slider-control").forEach((button) =>
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
         if (button.classList.contains("slider-prev")) {
             stopAutoSlide();
             initMoveSlide(false);

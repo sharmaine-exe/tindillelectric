@@ -85,19 +85,20 @@ header {
             display: block;
             margin: 1.6rem;
 
+            &:hover svg {
+                fill: $color-primary-dark;
+            }
+
             &>div {
                 @include alignCenter;
                 gap: 1.6rem;
             }
 
             svg path {
+                fill: $color-primary;
+
                 @include respond(large) {
                     fill: $color-secondary;
-                }
-
-                &:hover {
-                    fill: $color-primary-dark;
-                    transition: all 200ms ease-in-out;
                 }
             }
 
@@ -107,7 +108,13 @@ header {
                 border: none;
                 margin: 0;
                 padding: 0 2rem !important;
-                background-color: unset;
+
+                &:hover {
+                    background-color: unset;
+                    border: unset;
+                    color: unset;
+                }
+
             }
         }
     }

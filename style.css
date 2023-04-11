@@ -754,6 +754,10 @@ header nav a.btn.btn-yellow--outline {
 	margin: 1.6rem;
 }
 
+header nav a.btn.btn-yellow--outline:hover svg {
+	fill: #EB8F05;
+}
+
 header nav a.btn.btn-yellow--outline > div {
 	display: flex;
 	justify-content: center;
@@ -761,15 +765,14 @@ header nav a.btn.btn-yellow--outline > div {
 	gap: 1.6rem;
 }
 
+header nav a.btn.btn-yellow--outline svg path {
+	fill: #F2A024;
+}
+
 @media only screen and (min-width: 75rem) {
 	header nav a.btn.btn-yellow--outline svg path {
 		fill: #3C6677;
 	}
-}
-
-header nav a.btn.btn-yellow--outline svg path:hover {
-	fill: #EB8F05;
-	transition: all 200ms ease-in-out;
 }
 
 @media only screen and (min-width: 75rem) {
@@ -779,7 +782,11 @@ header nav a.btn.btn-yellow--outline svg path:hover {
 		border: none;
 		margin: 0;
 		padding: 0 2rem !important;
+	}
+	header nav a.btn.btn-yellow--outline:hover {
 		background-color: unset;
+		border: unset;
+		color: unset;
 	}
 }
 

@@ -122,7 +122,7 @@
                         </div>
                     </div>
 
-                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="btn btn-content">Learn More</a>
+                    <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="btn btn-content">More About Us</a>
                 </div>
 
                 <div class="wt-right">
@@ -165,7 +165,7 @@
                     </ul>
 
                     <div class="slider-controls">
-                        <a href="javascript:void(0)" class="slider-control slider-prev">
+                        <a href="#" class="slider-control slider-prev">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M15 6l-6 6l6 6"></path>
@@ -176,7 +176,7 @@
                             <span id="slideNo"></span>
                         </div>
 
-                        <a href="javascript:void(0)" class="slider-control slider-next">
+                        <a href="#" class="slider-control slider-next">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M9 6l6 6l-6 6"></path>
