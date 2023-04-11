@@ -1,0 +1,95 @@
+.login {
+    .form {
+        &>div:last-child {
+            display: none;
+
+            @include respond(large) {
+                display: inline-block;
+
+                img {
+                    height: 60rem;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        @include respond(large) {
+            @include alignCenter;
+            gap: 8rem;
+
+            &>div {
+                flex: 1
+            }
+        }
+    }
+
+    // LoginWP custom styling
+    .pp-form-container {
+
+        form {
+            margin: 3rem 0;
+        }
+
+        .pp-form-wrapper.ppBuildScratch .pp-form-field-wrap,
+        .pp-form-wrapper.ppBuildScratch,
+        .pp-form-wrapper.ppBuildScratch .pp-form-submit-button-wrap {
+            padding: 0;
+        }
+
+        .pp-form-wrapper.ppBuildScratch.ppsbw-full-width .pp-form-submit-button-wrap {
+            margin: 0 !important;
+
+            input[type=submit] {
+                position: unset !important;
+                @include btnSubmit;
+                margin-top: 0;
+                font-family: $font-heading !important;
+            }
+        }
+
+        #pp-login-1.ppBuildScratch .pp-form-field-wrap input,
+        #pp-login-1.ppBuildScratch .pp-form-field-wrap select,
+        #pp-login-1.ppBuildScratch .pp-form-field-wrap textarea {
+            background: $color-white;
+            color: $color-grey-2;
+            display: block;
+            width: 100%;
+            line-height: 1.5;
+            padding: 1rem;
+            font-size: $default-font-size;
+            background-clip: padding-box;
+            border: 1px solid $color-grey-4;
+            border-radius: $border-radius;
+            margin-bottom: 2rem;
+
+            &:focus {
+                border-color: #86b7fe !important;
+                outline: 0 !important;
+                box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25) !important;
+            }
+        }
+
+        .pp-form-field-wrap .pp-form-material-icons {
+            top: 0.3rem;
+        }
+    }
+
+}
+
+.logged-in {
+
+    .form>div:first-child p:last-child {
+        display: none;
+    }
+
+    .btn-content {
+        margin-top: 2rem;
+        border: 0.2rem solid #f2a024;
+    }
+
+    .btn-yellow--outline:hover {
+        background-color: unset;
+        color: $color-primary-dark;
+        border: 0.2rem solid $color-primary-dark;
+    }
+}

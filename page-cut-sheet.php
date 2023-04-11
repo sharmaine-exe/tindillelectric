@@ -19,7 +19,7 @@ get_header();
 
     <!-- Banner -->
     <section class="banner banner-title banner-title--cut-sheets text-center">
-        <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
+        <h3 class="heading-primary heading-primary--main">Cut Sheets</h3>
     </section>
     <!-- End of Banner -->
 
