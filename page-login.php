@@ -31,11 +31,11 @@
                 <div>
                     <?php
                         if ( !is_user_logged_in() || !current_user_can( 'administrator' ) ) {  ?>
-                                <h2 class="heading-secondary">Welcome Back!</h2>
+                                <h3 class="heading-secondary">Welcome Back!</h3>
                                 <p>Hello there! Please log in to view the cut sheets.</p>
                             <?php
                         } else { ?>
-                            <h2 class="heading-secondary">Hi, Admin! <br> You are already logged in.</h2>
+                            <h3 class="heading-secondary">Hi, Admin! <br> You are already logged in.</h3>
                             <div>
                                 <a href="/cut-sheet" class="btn btn-content">View Cut Sheets</a>
                                 <a href="/wp-admin" class="btn btn-yellow--outline">Dashboard</a>
