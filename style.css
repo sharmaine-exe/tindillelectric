@@ -717,19 +717,23 @@ header nav.show {
 	}
 }
 
-header nav .menu .main-menu {
+header nav .menu #menu-item-961 {
+	display: none;
+}
+
+header nav .menu .menu-item {
 	padding: 1.6rem;
 	border-bottom: 2px solid #4b4a4c;
 }
 
 @media only screen and (min-width: 75rem) {
-	header nav .menu .main-menu {
+	header nav .menu .menu-item {
 		padding: unset;
 		border-bottom: unset;
 	}
 }
 
-header nav .menu .main-menu a {
+header nav .menu .menu-item a {
 	color: #fff;
 	font-size: 1.8rem;
 	font-family: "Space Grotesk", sans-serif;
@@ -737,7 +741,7 @@ header nav .menu .main-menu a {
 }
 
 @media only screen and (min-width: 75rem) {
-	header nav .menu .main-menu a {
+	header nav .menu .menu-item a {
 		color: unset;
 		font-weight: 500;
 	}
@@ -774,6 +778,7 @@ header nav a.btn.btn-yellow--outline svg path:hover {
 		border: none;
 		margin: 0;
 		padding: 0 2rem !important;
+		background-color: unset;
 	}
 }
 
