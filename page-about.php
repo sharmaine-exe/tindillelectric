@@ -16,15 +16,16 @@
     <!-- Banner -->
     <section class="banner banner-title banner-title--about text-center">
         <?php while ( have_posts() ) : the_post(); ?>
-            <h3 class="heading-primary heading-primary--main"><?php the_title(); ?></h3>
+            <h2 class="heading-primary heading-primary--main"><?php the_title(); ?></h2>
         <?php endwhile; ?>
     </section>
     <!-- End of Banner -->
 
+    
     <!-- Intro -->
     <section class="intro text-center">
         <div class="container">
-            <h3 class="heading-secondary">Tindill Electric for Albertans</h3>
+            <h2 class="heading-secondary">Tindill Electric for Albertans</h2>
             <p>
                 Here at Tindill Electric, we prioritize the client's safety and everyone else's. By being Edmonton's local electrician, we guarantee that excellent job results from careful planning with safety always in mind.
             </p>
@@ -41,13 +42,15 @@
         <div class="container">
             <div class="why-tindill--inner">
                 <div class="wt-left">
-                    <h3 class="heading-secondary">About Tindill Electric</h3>
+                    <h2 class="heading-secondary">About Tindill Electric</h2>
                     <p>
                         Founded on February 2022, Tindill Electric is an electrical solutions company in Edmonton, Alberta, that focuses on delivering high-quality work to meet our client’s residential or commercial needs. We take pride in providing personalized treatment for each client to ensure we breathe their visions into life. 
                     </p>
                     <p>
                         We support Edmonton and surrounding areas. Tindill Electric primarily supports Edmonton but is also available to help you throughout Western Canada. 
                     </p>
+
+                    <a href="<?php echo esc_url( home_url( '/projects' ) ); ?>" class="btn btn-content">View Projects</a>
                 </div>
 
                 <div class="wt-right">
@@ -63,7 +66,7 @@
     <section class="testimonials text-center">
         <div class="testimonials-inner">
             <div class="container">
-                <h3 class="heading-secondary heading-secondary--white">What Our Clients Say</h3>
+                <h2 class="heading-secondary heading-secondary--white">What Our Clients Say</h2>
                 <div class="quote-icon">
                     <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/quote-left.svg" alt="Quote SVG">
                 </div>

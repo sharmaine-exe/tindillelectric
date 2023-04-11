@@ -58,7 +58,9 @@
         border: 0.2rem solid $color-primary;
 
         &:hover {
-            border: 0.2rem solid $color-primary-dark;
+            background-color: $color-primary;
+            color: $color-white;
+            border: 0.2rem solid $color-primary;
         }
     }
 

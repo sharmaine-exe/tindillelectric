@@ -173,11 +173,13 @@
         }
     }
 
-    &--grid-title h3 {
+    &--grid-title a h3 {
         font-size: $default-font-size;
+        font-family: $font-heading;
         color: $color-grey-2;
         font-weight: 500;
         margin: 1rem 0;
+        width: 100%;
 
         @include respond(large) {
             font-size: 1.8rem;
@@ -221,6 +223,14 @@
 
         svg {
             color: $color-secondary-light;
+        }
+    }
+
+    &--keyword .heading-primary {
+        width: 100%;
+
+        @include respond(medium) {
+            font-size: 5rem !important;
         }
     }
 
@@ -271,50 +281,6 @@
     }
 
 }
-
-
-.cut-sheet-single {
-
-    .entry-content {
-        margin-top: -1.6rem;
-    }
-
-    .entry-title {
-        padding: 0 3rem;
-        font-family: $font-heading;
-        margin-top: 2rem;
-
-        @include respond(medium) {
-            margin-top: 4rem;
-        }
-    }
-
-    h3.wp-block-heading {
-        font-weight: normal;
-        font-size: $default-font-size;
-        margin-bottom: 2rem;
-        padding: 0 3rem;
-
-        @include respond(medium) {
-            font-size: 1.8rem;
-            margin-bottom: 4rem;
-        }
-    }
-
-    .pdfemb-viewer,
-    .pdfemb-pagescontainer,
-    .pdfemb-inner-div,
-    canvas.pdfemb-the-canvas {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    @include respond(large) {
-        max-width: 140rem;
-        margin: 0 auto;
-    }
-}
-
 
 .cut-sheet-category {
     .heading-primary {

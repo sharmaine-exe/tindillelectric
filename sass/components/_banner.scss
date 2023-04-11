@@ -5,31 +5,37 @@
 
     &-home {
         background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
-        min-height: 90vh;
-        // TODO: Adjust vh based on header height 
+        min-height: calc(100vh - 7.85rem);
         flex-direction: column;
         align-items: start;
 
         .heading-primary--main {
             font-weight: bold;
         }
+
+        @include respond(large) {
+            min-height: calc(100vh - 9.9rem);
+        }
     }
 
     &-404 {
         background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg");
-        min-height: 90vh;
-        // TODO: Adjust vh based on header height 
+        min-height: calc(100vh - 7.85rem);
         flex-direction: column;
         align-items: start;
+
+        @include respond(large) {
+            min-height: calc(100vh - 9.9rem);
+        }
     }
 
     &-single-service {
         color: $color-white;
-        min-height: 50vh;
+        min-height: 40vh;
         flex-direction: column;
         align-items: start;
 
-        @include respond(medium) {
+        @include respond(large) {
             .container>div {
                 text-align: unset;
             }
@@ -47,7 +53,7 @@
             height: 32vh;
         }
 
-        h3.heading-primary {
+        .heading-primary {
             margin-bottom: 0;
 
             @include respond(medium) {

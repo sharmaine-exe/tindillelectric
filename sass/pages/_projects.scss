@@ -1,15 +1,36 @@
-.projects{
-    // .projects-gallery .vp-portfolio__layout-elements .vp-filter__item-active{
-    //     color: $color-primary-dark;
-    // }
-    .vp-filter__style-minimal .vp-filter__item.vp-filter__item-active {
-        --vp-filter-minimal--items__color: #EB8F05;
-        --vp-filter-minimal--items-hover__color: #568091;
+.projects {
+
+    .vp-id-1FfFFp .vp-portfolio__items {
+        --vp-items__gap: 1.6rem;
     }
-    .vp-filter__style-minimal .vp-filter__item > a:hover, .vp-filter__style-minimal .vp-filter__item > a:focus {
-        color: #EB8F05;
-      }
-      .vp-pagination__style-default .vp-pagination__item.vp-pagination__item-active {
-        --vp-pagination-default--items__background-color:#EB8F05; 
+
+    .vp-portfolio__layout-elements {
+        margin-bottom: 5rem;
+
+        &-align-center .vp-filter__style-minimal {
+            gap: 5rem;
+        }
+    }
+
+    .vp-filter__style-minimal {
+        .vp-filter__item>* {
+            font-weight: normal;
+            font-family: $font-heading;
+            padding: 0 0 0.75rem;
+        }
+
+        .vp-filter__item>a:hover,
+        .vp-filter__item>a:focus {
+            color: $color-primary;
+        }
+
+        .vp-filter__item-active a {
+            color: $color-primary;
+            border-bottom: 0.15rem solid $color-primary;
+        }
+    }
+
+    .vp-pagination__style-default .vp-pagination__item.vp-pagination__item-active {
+        --vp-pagination-default--items__background-color: #EB8F05;
     }
 }

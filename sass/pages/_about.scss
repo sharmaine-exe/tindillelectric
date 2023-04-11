@@ -2,8 +2,8 @@
     .intro {
         background-color: $color-secondary-light-bg;
 
-        @include respond(medium) {
-            p {
+        p {
+            @include respond(medium) {
                 @include paraIntro;
             }
         }

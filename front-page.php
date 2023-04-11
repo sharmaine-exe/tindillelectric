@@ -9,20 +9,18 @@
  */
 ?>
 
-
 <?php get_header(); ?>
 
 <main id="primary" class="site-main home">
-    <h1 class="sr-only">Tindill Electric</h1>
 
     <!-- Banner -->
     <section class="banner banner-home">
         <?php while ( have_posts() ) : the_post(); ?>
             <div class="container">
                 <div>
-                    <h1 class="heading-primary heading-primary--main"><?php the_field('banner_heading'); ?></h1>
+                    <h2 class="heading-primary heading-primary--main"><?php the_field('banner_heading'); ?></h2>
                     <p class="heading-primary heading-primary--sub"><?php the_field('banner_tagline'); ?></p>
-                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn-banner">See our Services</a>
+                    <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn-content">See our Services</a>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -33,7 +31,7 @@
     <!-- Featured Projects -->
     <section class="featured-projects text-center">
         <div class="container">
-            <h3 class="heading-secondary">Featured Projects</h3>
+            <h2 class="heading-secondary">Featured Projects</h2>
             <p>
                 We have worked on multiple projects for the past year. With almost 15 years of experience, Tindill Electric will meet your electrical needs and make your unique projects come to life. 
             </p>
@@ -55,7 +53,7 @@
         <div class="container">
             <div class="why-tindill--inner">
                 <div class="wt-left">
-                    <h3 class="heading-secondary">Why Tindill Electric?</h3>
+                    <h2 class="heading-secondary">Why Tindill Electric?</h2>
                     <p>
                         Tindill Electric gives you peace of mind as we handle each project like it’s our own. As an Albertan electrician for Albertans, the quality of work will always be our focus. 
                     </p>
@@ -71,7 +69,7 @@
                         </div>
                         
                         <div class="wt-content">
-                            <h4 class="heading-tertiary">Quality of Work </h4>
+                            <h3 class="heading-tertiary">Quality of Work </h3>
                             <p>We assure to complete the job right and exceed expectations.</p>
                         </div>
                     </div>
@@ -87,12 +85,12 @@
                             </svg>  
                         </div>
                         <div class="wt-content">
-                            <h4 class="heading-tertiary">Exceptional Customer Service</h4>
+                            <h3 class="heading-tertiary">Exceptional Customer Service</h3>
                             <p>Dependability and reliability matter, so we are here to assist with your needs.</p>
                         </div>
                     </div>
 
-                        <!-- Item 3 -->
+                    <!-- Item 3 -->
                     <div class="wt-item">
                         <div class="wt-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-shield" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -103,12 +101,12 @@
                             </svg>
                         </div>
                         <div class="wt-content">
-                            <h4 class="heading-tertiary">Safety</h4>
+                            <h3 class="heading-tertiary">Safety</h3>
                             <p>Our top priority is safety and ensuring that everything is up to code. </p>
                         </div>
                     </div>
 
-                        <!-- Item 4 -->
+                    <!-- Item 4 -->
                     <div class="wt-item">
                         <div class="wt-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -119,7 +117,7 @@
                         </svg>  
                         </div>
                         <div class="wt-content">
-                            <h4 class="heading-tertiary">Expertise</h4>
+                            <h3 class="heading-tertiary">Expertise</h3>
                             <p>We have almost 15 years of knowledge to achieve the best version of your project. </p>
                         </div>
                     </div>
@@ -140,9 +138,12 @@
     <section class="testimonials text-center">
         <div class="testimonials-inner">
             <div class="container">
-                <h3 class="heading-secondary heading-secondary--white">What Our Clients Say</h3>
+                <h2 class="heading-secondary heading-secondary--white">What Our Clients Say</h2>
                 <div class="quote-icon">
-                    <img src="http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/quote-left.svg" alt="Quote SVG">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="44" viewBox="0 0 451.15 396.006">
+                    <path id="Icon_awesome-quote-left" data-name="Icon awesome-quote-left" d="M399.792,195.253h-68.93V140.109a55.2,55.2,0,0,1,55.144-55.144H392.9a20.629,20.629,0,0,0,20.679-20.679V22.929A20.629,20.629,0,0,0,392.9,2.25h-6.893A137.821,137.821,0,0,0,248.147,140.109V346.9A41.368,41.368,0,0,0,289.5,388.256H399.792A41.368,41.368,0,0,0,441.15,346.9V236.611A41.368,41.368,0,0,0,399.792,195.253Zm-248.147,0H82.716V140.109a55.2,55.2,0,0,1,55.144-55.144h6.893a20.629,20.629,0,0,0,20.679-20.679V22.929A20.629,20.629,0,0,0,144.752,2.25h-6.893A137.821,137.821,0,0,0,0,140.109V346.9a41.368,41.368,0,0,0,41.358,41.358H151.645A41.368,41.368,0,0,0,193,346.9V236.611A41.368,41.368,0,0,0,151.645,195.253Z" transform="translate(5 2.75)" fill="none" stroke="#fff" stroke-width="10"/>
+                </svg>
+
                 </div>
                 <div id="slider" class="slider">
                     <ul class="slider-slides">
@@ -153,10 +154,12 @@
                             );
                             $loop = new WP_Query($args);
                             $count = 1;
+                            $index = 0;
                             while ( $loop->have_posts() ) {
                                 $loop->the_post();
                                 get_template_part( 'template-parts/content', 'testimonials' );
                                 $count++;
+                                $index++;
                             }
                         ?>
                     </ul>
@@ -192,5 +195,22 @@
 <aside>
     <?php get_template_part( 'template-parts/content', 'contact-cta' ); ?>
 </aside>
+
+<script>// Modal
+jQuery(document).ready(function($) {
+    $(".btn-open").click(function() {
+        var modal_id = $(this).attr("data-modal");
+        $("#" + modal_id).removeClass("hidden");
+        $(".overlay").removeClass("hidden");
+    });
+
+    $(".btn-close").click(function() {
+        $(".modal").addClass("hidden");
+        $(".overlay").addClass("hidden");
+    });
+});
+
+
+</script>
 
 <?php get_footer(); ?>

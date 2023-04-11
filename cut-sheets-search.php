@@ -9,22 +9,11 @@
 
 get_header();
 ?>
-<?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package tindillelectric
- */
-
-get_header();
-?>
 
 <main id="primary" class="site-main cut-sheets-search">
     <!-- Banner -->
     <section class="banner banner-title banner-title--cut-sheets text-center">
-        <div>
+        <div class="cut-sheets-search--keyword">
             <a class="btn btn-underline" href="<?php echo get_site_url() . "/cut-sheet/"; ?>" style="border-radius: 3px;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -60,30 +49,30 @@ get_header();
         <!-- End of Search Form -->
 
 
+        <!-- Cut Sheets Grid -->
 		<?php if ( have_posts() ) : ?>
-        <div class="cut-sheets--grid-container">
+            <section class="cut-sheets--grid-container">
+                <h2 class="sr-only">Cut Sheets List</h2>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'template-parts/content', 'cut-sheets' );
+                <?php
+                /* Start the Loop */
+                while ( have_posts() ) :
+                    the_post();
+                    get_template_part( 'template-parts/content', 'cut-sheets' );
 
-			endwhile;
+                endwhile;
 
-			the_posts_navigation();
+                the_posts_navigation();
 
-            else :
+                else :
 
-                get_template_part( 'template-parts/content', 'none' );
+                    get_template_part( 'template-parts/content', 'none' );
 
-            endif;
-		?>
-        </div>
+                endif;
+            ?>
+            </section>
     </div>
 
 </main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

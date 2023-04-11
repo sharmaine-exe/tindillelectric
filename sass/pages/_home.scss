@@ -1,6 +1,4 @@
-.home .sr-only {
-    display: none;
-}
+// Banner
 
 .banner,
 .contact-cta {
@@ -9,12 +7,17 @@
             width: 100%;
         }
     }
+
+    .btn.btn-content {
+        margin-top: 0
+    }
 }
 
+// Featured Projects
 
 .featured-projects {
-    @include respond(medium) {
-        p {
+    p {
+        @include respond(medium) {
             @include paraIntro;
         }
     }
@@ -23,7 +26,11 @@
         margin: 6rem 0 3rem;
     }
 
+    .vp-id-1FfFFp .vp-portfolio__items {
+        --vp-items__gap: 1.6rem;
+    }
 }
+
 
 // Why Tindill
 
@@ -52,7 +59,7 @@
     }
 
     img {
-        height: 20rem;
+        height: 25rem;
         object-fit: cover;
         object-position: center;
         margin-bottom: 2rem;
@@ -123,7 +130,7 @@
 }
 
 
-.slider {
+.testimonials .slider {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -131,20 +138,23 @@
 
     .slider-slides {
         position: relative;
-        height: 45rem;
+        height: 50rem;
         width: 100%;
         transition: transform 0.3s ease-in-out;
+
+        @include respond(medium) {
+            height: 45rem;
+        }
+
+        @include respond(large) {
+            height: 40rem;
+        }
 
         .slider-item {
             width: 100%;
             margin-right: 30px;
             position: absolute;
             text-align: center;
-
-            p {
-                color: $color-grey-1;
-                font-style: italic;
-            }
 
             .rating p {
                 color: $color-primary-light;
@@ -159,8 +169,10 @@
             }
 
             .comment {
+                color: $color-grey-1;
+                font-style: italic;
+                line-height: 1.75;
                 margin: 4rem 0;
-                font-size: 1.4rem;
 
                 @include respond(medium) {
                     font-size: $default-font-size;
@@ -173,6 +185,10 @@
 
             &:not(.active) {
                 opacity: 0;
+            }
+
+            #seeMore {
+                color: $color-primary-light;
             }
         }
     }
@@ -202,4 +218,82 @@
             }
         }
     }
+
+
+}
+
+
+.comment-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    position: relative;
+    min-height: 100vh;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 80rem;
+    padding: 1rem 4rem 2rem;
+    position: absolute;
+    top: -20%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.modal .flex {
+    @include alignCenter;
+    justify-content: flex-end;
+}
+
+.btn-open {
+    color: $color-primary-light;
+    cursor: pointer;
+}
+
+.btn-close {
+    transform: translate(5.5rem, -3rem);
+    padding: 0.5rem 0.7rem;
+    background: $color-secondary;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    @include alignCenter;
+    height: 4rem;
+    width: 4rem;
+
+    svg {
+        color: $color-white;
+    }
+}
+
+.quote-icon {
+    margin-bottom: 1rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+.modal {
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
 }

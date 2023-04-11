@@ -8,6 +8,11 @@
     form {
         margin-top: $gutter-horizontal;
 
+        .grid {
+            @include grid(42rem, 3rem 2.5rem);
+            margin: 4rem 0;
+        }
+
         p {
             margin-bottom: 0;
 
@@ -15,6 +20,18 @@
             &:nth-of-type(4),
             &:nth-of-type(5) {
                 grid-column: 1 / -1;
+            }
+
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                .form-label {
+                    margin-bottom: 0
+                }
+
+                .caption {
+                    margin-top: 0;
+                    margin-bottom: 1.5rem;
+                }
             }
         }
 
@@ -33,6 +50,9 @@
         }
 
         .wpcf7-checkbox {
+            @include grid(20rem, 0 2.5rem);
+            margin: 1rem 0 0;
+
             .wpcf7-list-item {
                 @include alignCenter;
                 justify-content: flex-start;
@@ -49,17 +69,5 @@
                 font-size: $default-font-size;
             }
         }
-
     }
-
-    .grid {
-        @include grid(42rem, 2.5rem);
-        margin: 4rem 0;
-    }
-
-    .wpcf7-form-control.wpcf7-checkbox {
-        @include grid(20rem, 0 2.5rem);
-        margin: 1rem 0 0;
-    }
-
 }
