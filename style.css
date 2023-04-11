@@ -1370,10 +1370,19 @@ header .menu-icon {
 
 .contact form .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(42rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 	grid-gap: 3rem 2.5rem;
 	align-items: stretch;
 	margin: 4rem 0;
+}
+
+@media only screen and (min-width: 48rem) {
+	.contact form .grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(42rem, 1fr));
+		grid-gap: 3rem 2.5rem;
+		align-items: stretch;
+	}
 }
 
 .contact form p {

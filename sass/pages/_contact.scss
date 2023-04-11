@@ -9,8 +9,12 @@
         margin-top: $gutter-horizontal;
 
         .grid {
-            @include grid(42rem, 3rem 2.5rem);
+            @include grid(25rem, 3rem 2.5rem);
             margin: 4rem 0;
+
+            @include respond(medium) {
+                @include grid(42rem, 3rem 2.5rem);
+            }
         }
 
         p {
