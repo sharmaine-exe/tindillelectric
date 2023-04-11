@@ -181,10 +181,12 @@
 
             &.active {
                 opacity: 1;
+                display: block;
             }
 
             &:not(.active) {
                 opacity: 0;
+                display: none;
             }
 
             #seeMore {
@@ -223,77 +225,72 @@
 }
 
 
-.comment-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #222;
-    position: relative;
-    min-height: 100vh;
-}
-
-.modal {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.4rem;
-    max-width: 80rem;
-    padding: 1rem 4rem 2rem;
-    position: absolute;
-    top: -20%;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-}
-
-.modal .flex {
-    @include alignCenter;
-    justify-content: flex-end;
-}
-
 .btn-open {
     color: $color-primary-light;
     cursor: pointer;
-}
 
-.btn-close {
-    transform: translate(5.5rem, -3rem);
-    padding: 0.5rem 0.7rem;
-    background: $color-secondary;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    @include alignCenter;
-    height: 4rem;
-    width: 4rem;
-
-    svg {
-        color: $color-white;
+    &:hover {
+        color: $color-primary;
     }
 }
 
-.quote-icon {
-    margin-bottom: 1rem;
-}
+.single-testimonial {
+    background-color: $color-secondary-light-bg;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
 
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2px);
-    z-index: 1;
-}
+    .testimonial .container {
+        border-bottom: 0.1rem solid rgba($color: $color-secondary, $alpha: 0.25);
 
-.modal {
-    z-index: 2;
-}
+        @include respond(medium) {
+            max-width: 100rem;
+            padding: 8rem 0;
+        }
+    }
 
-.hidden {
-    display: none;
+    .rating div {
+        color: $color-primary-light;
+        margin: 4rem 0 0.5rem;
+    }
+
+    .reviewer {
+        color: $color-secondary;
+        text-transform: uppercase;
+        font-family: $font-heading;
+        font-weight: 500;
+    }
+
+    .date {
+        font-size: $default-font-size;
+        opacity: 0.8;
+        font-style: italic;
+    }
+
+    .quote-icon svg {
+        opacity: 0.3;
+    }
+
+    .next-prev .container {
+        padding: 2rem 2rem 6rem;
+
+        @include respond(medium) {
+            max-width: 100rem;
+        }
+
+        @include respond(large) {
+            padding: 2rem 0 8rem;
+        }
+    }
+
+    .nav-links {
+        @include alignCenter;
+        justify-content: space-between;
+        font-size: $default-font-size;
+        opacity: 0.8;
+
+        a {
+            color: $color-secondary;
+        }
+    }
+
+
 }

@@ -196,20 +196,6 @@
     <?php get_template_part( 'template-parts/content', 'contact-cta' ); ?>
 </aside>
 
-<script>// Modal
-jQuery(document).ready(function($) {
-    $(".btn-open").click(function() {
-        var modal_id = $(this).attr("data-modal");
-        $("#" + modal_id).removeClass("hidden");
-        $(".overlay").removeClass("hidden");
-    });
-
-    $(".btn-close").click(function() {
-        $(".modal").addClass("hidden");
-        $(".overlay").addClass("hidden");
-    });
-});
-
 
 </script>
 

@@ -47,7 +47,7 @@ const updateSlideNo = (number) => {
 const startAutoSlide = () => {
     autoSlideInterval = setInterval(() => {
         initMoveSlide();
-    }, 3500); // change interval time here (in milliseconds)
+    }, 5500); // change interval time here (in milliseconds)
 };
 
 const stopAutoSlide = () => {
