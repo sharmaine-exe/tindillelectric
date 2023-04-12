@@ -76,20 +76,33 @@
 
 }
 
-.logged-in {
+.logged-in .login {
 
     .form>div:first-child p:last-child {
         display: none;
     }
 
     .btn-content {
-        margin-top: 2rem;
+        margin: 2rem 0 1rem;
         border: 0.2rem solid #f2a024;
+
+        @include respond(medium) {
+            margin-bottom: 0;
+        }
     }
 
     .btn-yellow--outline:hover {
         background-color: unset;
         color: $color-primary-dark;
         border: 0.2rem solid $color-primary-dark;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+
+        @include respond(medium) {
+            display: inline-block;
+        }
     }
 }

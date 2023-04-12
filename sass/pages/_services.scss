@@ -100,14 +100,25 @@
 // Single Services
 
 .single-service {
-    .banner .heading-secondary {
-        color: $color-white;
-        text-transform: uppercase;
+    .banner {
+        .bg-opaque {
+            background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55));
+            width: 100%;
+            height: 40vh;
+            @include alignCenter;
+        }
+
+        .heading-secondary {
+            color: $color-white;
+            text-transform: uppercase;
+        }
     }
 
     .slider {
+        margin: 2rem;
+
         @include respond(medium) {
-            margin-top: 2rem;
+            margin: 2rem 0 0;
         }
 
         p {

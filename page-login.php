@@ -14,7 +14,7 @@
 <main id="primary" class="site-main login">
     
     <!-- Banner -->
-    <section class="banner banner-title banner-title--about text-center">
+    <section class="banner banner-title banner-title--cut-sheets text-center">
         <?php while ( have_posts() ) : the_post(); ?>
             <h2 class="heading-primary heading-primary--main"><?php the_title(); ?></h2>
         <?php endwhile; ?>

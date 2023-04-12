@@ -692,6 +692,12 @@ header nav.show {
 }
 
 @media only screen and (min-width: 75rem) {
+	header nav.show {
+		display: flex;
+	}
+}
+
+@media only screen and (min-width: 75rem) {
 	header nav {
 		display: block;
 		background-color: transparent;
@@ -719,7 +725,8 @@ header nav.show {
 	}
 }
 
-header nav .menu #menu-item-961 {
+header nav .menu .menu-item:nth-child(6),
+header nav .menu .menu-item:nth-child(7) {
 	display: none;
 }
 
@@ -953,7 +960,7 @@ header .menu-icon {
 
 .testimonials .slider .slider-slides {
 	position: relative;
-	height: 50rem;
+	height: 53rem;
 	width: 100%;
 	transition: transform 0.3s ease-in-out;
 }
@@ -1223,14 +1230,27 @@ header .menu-icon {
 	text-transform: uppercase;
 }
 
+.single-service .banner .bg-opaque {
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+	width: 100%;
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .single-service .banner .heading-secondary {
 	color: #fff;
 	text-transform: uppercase;
 }
 
+.single-service .slider {
+	margin: 2rem;
+}
+
 @media only screen and (min-width: 48rem) {
 	.single-service .slider {
-		margin-top: 2rem;
+		margin: 2rem 0 0;
 	}
 }
 
@@ -1584,26 +1604,43 @@ header .menu-icon {
 	top: 0.3rem;
 }
 
-.logged-in .form > div:first-child p:last-child {
+.logged-in .login .form > div:first-child p:last-child {
 	display: none;
 }
 
-.logged-in .btn-content {
-	margin-top: 2rem;
+.logged-in .login .btn-content {
+	margin: 2rem 0 1rem;
 	border: 0.2rem solid #f2a024;
 }
 
-.logged-in .btn-yellow--outline:hover {
+@media only screen and (min-width: 48rem) {
+	.logged-in .login .btn-content {
+		margin-bottom: 0;
+	}
+}
+
+.logged-in .login .btn-yellow--outline:hover {
 	background-color: unset;
 	color: #EB8F05;
 	border: 0.2rem solid #EB8F05;
+}
+
+.logged-in .login .btn {
+	display: block;
+	text-align: center;
+}
+
+@media only screen and (min-width: 48rem) {
+	.logged-in .login .btn {
+		display: inline-block;
+	}
 }
 
 .privacy-policy {
 	box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 }
 
-.privacy-policy section > section {
+.privacy-policy .container section {
 	margin-bottom: 4rem;
 }
 
@@ -1651,7 +1688,7 @@ header .menu-icon {
 .cut-sheets-search--grid-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-	grid-gap: 3.5rem 2.5rem;
+	grid-gap: 2rem 2.5rem;
 	align-items: stretch;
 	margin: 4rem 0;
 }
@@ -1778,6 +1815,7 @@ header .menu-icon {
 .cut-sheets--keyword .heading-primary,
 .cut-sheets-search--keyword .heading-primary {
 	width: 100%;
+	font-size: 3.5rem;
 }
 
 @media only screen and (min-width: 48rem) {

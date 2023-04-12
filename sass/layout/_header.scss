@@ -28,6 +28,10 @@ header {
 
         &.show {
             display: block !important;
+
+            @include respond(large) {
+                display: flex;
+            }
         }
 
         @include respond(large) {
@@ -53,7 +57,8 @@ header {
                 margin: 2rem 0;
             }
 
-            #menu-item-961 {
+            .menu-item:nth-child(6),
+            .menu-item:nth-child(7) {
                 display: none;
             }
 

@@ -14,7 +14,8 @@ get_header();
 
     <!-- Banner -->
     <?php $featured_image_url = get_field('featured_image'); ?>
-    <section class="banner banner-single-service" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(<?php echo $featured_image_url; ?>)">
+    <section class="banner banner-single-service" style="background: url(<?php echo $featured_image_url; ?>)">
+    <div class="bg-opaque">
         <div class="container">
             <div class="text-center">
                 <h2 class="heading-secondary"><?php the_title(); ?></h2>
@@ -22,6 +23,7 @@ get_header();
                 <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-content">Request A Quote</a>
             </div>
         </div>
+    </div>
     </section>
     <!-- End of Banner -->
 

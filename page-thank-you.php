@@ -33,7 +33,7 @@
                 Your request has been received. We will reach out to you within 1 to 2 business days.  In the meantime, why not find out more <a href="<?php echo home_url( '/about' ); ?>" class="link">about us</a>.
             </p>
             <p>
-                Alternatively, give us a call at <a href="tel:7808857744" class="link">(780) 998 4522</a>. 
+                Alternatively, give us a call at <a href="tel:7808857744" class="link">(780) 885 7744</a>. 
             </p>
             <p>
                 <a href="/" class="btn btn-underline">

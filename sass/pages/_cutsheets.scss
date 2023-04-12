@@ -20,7 +20,7 @@
     }
 
     &--grid-container {
-        @include grid(17rem, 3.5rem 2.5rem);
+        @include grid(17rem, 2rem 2.5rem);
         margin: 4rem 0;
 
         @include respond(medium) {
@@ -116,6 +116,7 @@
 
     &--keyword .heading-primary {
         width: 100%;
+        font-size: 3.5rem;
 
         @include respond(medium) {
             font-size: 5rem !important;
