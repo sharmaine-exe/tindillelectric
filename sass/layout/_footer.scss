@@ -86,7 +86,8 @@ footer {
         text-align: center;
         padding-top: 3rem;
 
-        p {
+        p,
+        a {
             color: rgba($color: $color-white, $alpha: 0.75);
         }
 
