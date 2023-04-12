@@ -4,7 +4,7 @@
     @include alignCenter;
 
     &-home {
-        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.jpg");
+        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/home-banner-bg.webp");
         min-height: calc(100vh - 7.85rem);
         flex-direction: column;
         align-items: start;
@@ -19,7 +19,7 @@
     }
 
     &-404 {
-        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.jpeg");
+        background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/404-bg.webp");
         min-height: calc(100vh - 7.85rem);
         flex-direction: column;
         align-items: start;
@@ -64,23 +64,23 @@
         }
 
         &--about {
-            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-banner.jpg");
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/about-banner.webp");
         }
 
         &--contact {
-            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/contact-banner.jpg");
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/contact-banner.webp");
         }
 
         &--projects {
-            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/projects-banner.jpg");
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/projects-banner.webp");
         }
 
         &--services {
-            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/services-banner.jpg");
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/services-banner.webp");
         }
 
         &--cut-sheets {
-            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/Commercial-10.jpg");
+            background: $bg-banner, url("http://tindill.web.dmitcapstone.ca/wp-content/uploads/2023/03/Commercial-10.webp");
         }
     }
 }
