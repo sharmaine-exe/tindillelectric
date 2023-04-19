@@ -17,6 +17,7 @@
 5. About Us
 6. Contact Us
 7. Cut Sheets (and Login)
+8. Testimonials
 
 # Page templates
 (Provided by underscores.me)
@@ -29,7 +30,7 @@ Split between team members:
 4. header.php
 5. footer.php 
 6. page-services.php (custom)
-7. single-service.php (custom)
+7. tindille-elec-service.php (custom)
 8. page-projects.php (custom)
 9. single-projects.php (custom)
 ## Marjorie:
@@ -38,7 +39,7 @@ Split between team members:
 12. 404.php
 13. front-page.php (custom)
 14. page-about.php (custom)
-15. style.css
+15. style.css through SASS
 ## Sharmaine:
 16. search.php
 17. archive.php
@@ -53,12 +54,13 @@ Split between team members:
 # Plugins 
 1. Custom Post types
 2. Advanced Custom Fields
-3. Contact 7 Form
-4. Yoast (SEO)
-5. Wordfence (Security)
-6. Lightbox (Gallery)
-7. WP Optimize (Image optimizer)
-8. All-in-one-migration
+3. Contact Form 7 + Controls for Contact Form 7
+4. Lightbox (Gallery)
+5. EWWW Optimize (Image optimizer)
+6. LoginWP
+7. Ultimate Responsive Image Slider
+8. Visual Portfolio, Posts & Image Gallery
+9. WPVivid (for migration)
 
 # Project Phases
 ### Week 1: Team Branding
